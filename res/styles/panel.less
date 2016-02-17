@@ -1,0 +1,21 @@
+.nav-panel{
+    width: @panel-width;
+    background: @main-black;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    .main-panel{
+        .nav{
+            display: inline-block;
+            width: @panel-width/3;
+            float: left;
+            margin: 0;
+        }
+        .tab-content{
+            display: inline-block;
+            width: @panel-width*2/3;
+            float: right;
+        }
+    }
+}
