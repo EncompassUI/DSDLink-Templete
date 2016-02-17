@@ -40,6 +40,7 @@ template {
 a {
   background-color: transparent;
   text-decoration: none;
+  color: black;
 }
 a:active,
 a:hover {
@@ -182,6 +183,7 @@ li {
   list-style: none;
   padding-left: 0;
   text-decoration: none;
+  margin: 10px 0;
 }
 .clearfix:before,
 .clearfix:after {
@@ -193,11 +195,25 @@ li {
 }
 .nav-panel {
   width: 360px;
-  background: #ffffff;
+  background: #141414;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
+}
+.nav-panel .logo-group {
+  padding: 10px 0;
+  text-align: center;
+}
+.nav-panel .logo-group .brand {
+  display: inline-block;
+}
+.nav-panel .logo-group .brand.dsdlogo {
+  width: 60px;
+}
+.nav-panel .logo-group .brand.encompasslogo {
+  width: 150px;
+  margin: 18px 5px;
 }
 .nav-panel .main-panel .nav {
   display: inline-block;
@@ -205,21 +221,51 @@ li {
   float: left;
   margin: 0;
 }
+.nav-panel .main-panel .nav a {
+  color: white;
+}
 .nav-panel .main-panel .tab-content {
   display: inline-block;
   width: 240px;
   float: right;
+}
+.nav-panel .main-panel .tab-content .tab-pane {
+  margin: 0 20px;
+}
+.nav-panel .main-panel .tab-content .list-group {
+  margin-top: 60px;
 }
 .img-responsive {
   display: block;
   max-width: 100%;
   height: auto;
 }
+.input-group {
+  position: relative;
+}
 .input-group input {
   border-radius: 15px;
   border: 1px solid #bbb;
   height: 25px;
+  font-size: 12px;
+  text-align: center;
+  width: 100%;
 }
 .input-group span.input-img {
-  margin-left: -25px;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+.list-group .list-title {
+  color: #a5cd00;
+  font-size: 14px;
+  margin: 0;
+}
+.list-group .list {
+  color: white;
+  font-size: 14px;
+  margin: 5px 0;
+}
+.list-group .list input {
+  margin-right: 10px;
 }

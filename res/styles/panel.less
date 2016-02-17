@@ -1,21 +1,45 @@
-.nav-panel{
+.nav-panel {
     width: @panel-width;
-    background: @main-black;
+    background: @dark-black;
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
-    .main-panel{
-        .nav{
+    .logo-group {
+        padding: 10px 0;
+        text-align: center;
+        .brand {
+            display: inline-block;
+            &.dsdlogo {
+                width: 60px;
+            }
+            &.encompasslogo {
+                width: 150px;
+                margin: 18px 5px;
+                ;
+            }
+        }
+    }
+    .main-panel {
+        .nav {
             display: inline-block;
             width: @panel-width/3;
             float: left;
             margin: 0;
+            a {
+                color: white;
+            }
         }
-        .tab-content{
+        .tab-content {
             display: inline-block;
             width: @panel-width*2/3;
             float: right;
+            .tab-pane{
+                margin: 0 20px;
+            }
+            .list-group {
+                margin-top: 60px;
+            }
         }
     }
 }

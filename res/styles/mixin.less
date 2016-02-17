@@ -3,13 +3,36 @@
   max-width: 100%;
   height: auto;
 }
+//input button
 .input-group{
+    position: relative;
     input{
         border-radius: 15px;
         border:1px solid #bbb;
         height: 25px;
+        font-size: 12px;
+        text-align: center;
+        width: 100%;
     }
     span.input-img{
-        margin-left: -25px;
+        position: absolute;
+        top: 5px;
+        right: 10px;
+    }
+}
+//list
+.list-group{
+    .list-title{
+        color: @main-green;
+        font-size: 14px;
+        margin: 0;
+    }
+    .list{
+        color: white;
+        font-size: 14px;
+        margin: 5px 0;
+        input{
+            margin-right: 10px;
+        }
     }
 }
