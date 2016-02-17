@@ -235,6 +235,9 @@ li {
 .nav-panel .main-panel .tab-content .list-group {
   margin-top: 60px;
 }
+.nav-panel .main-panel .tab-content .input-group {
+  margin: 15px 0;
+}
 .img-responsive {
   display: block;
   max-width: 100%;
@@ -243,8 +246,14 @@ li {
 .input-group {
   position: relative;
 }
+.input-group label.input-label {
+  color: #a5cd00;
+  font-size: 15px;
+  margin: 5px 0;
+  display: block;
+}
 .input-group input {
-  border-radius: 15px;
+  border-radius: 5px;
   border: 1px solid #bbb;
   height: 25px;
   font-size: 12px;
@@ -255,6 +264,16 @@ li {
   position: absolute;
   top: 5px;
   right: 10px;
+}
+.btn {
+  display: inline-block;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.btn .btn-block {
+  display: block;
 }
 .list-group .list-title {
   color: #a5cd00;
