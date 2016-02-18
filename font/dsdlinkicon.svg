@@ -2,7 +2,7 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20141024 at Thu Feb 18 07:07:42 2016
+Created by FontForge 20141024 at Thu Feb 18 08:27:32 2016
  By Jimmy Warting
 </metadata>
 <defs>
@@ -126,7 +126,7 @@ d="M40 -94v1353h677v-135h-541v-1084h1083v541h134v-675h-1353v0zM445 311l204 407l2
     <glyph glyph-name="uniE919" unicode="&#xe919;" horiz-adv-x="1604" 
 d="M1205 463q-80 0 -146 -37q-64 -38 -105 -102l-325 189q14 30 25 62q12 32 12 75q0 21 -4 44q-3 21 -7 37l334 194q41 -44 98 -71t125 -27q126 0 213 89q87 87 87 212q0 126 -87 213t-213 87q-127 0 -214 -87t-87 -213q0 -22 4 -43q3 -23 9 -39l-334 -192q-43 44 -100 69
 q-55 27 -124 27q-125 0 -212 -87q-87 -89 -87 -213q0 -127 87 -214q87 -85 212 -85q49 0 97 16q47 16 84 41l357 -208q0 -9 -2 -16q-1 -9 -1 -14q0 -127 87 -214q85 -85 213 -85q123 0 211 85q88 87 88 214q0 128 -84 209q-85 84 -211 84v0z" />
-    <glyph glyph-name="uniE91B" unicode="&#xe91b;" horiz-adv-x="1598" 
+    <glyph glyph-name="uniE91A" unicode="&#xe91a;" horiz-adv-x="1598" 
 d="M30 995l85 94l690 -658l682 628l92 -96l-774 -723z" />
     <glyph glyph-name="glyph29" 
  />
