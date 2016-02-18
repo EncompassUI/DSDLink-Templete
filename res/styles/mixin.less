@@ -1,53 +1,88 @@
-.img-responsive{
-  display: block;
-  max-width: 100%;
-  height: auto;
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
 }
+
 //input button
-.input-group{
+.input-group {
     position: relative;
-    label.input-label{
+    label.input-label {
         color: @main-green;
         font-size: 15px;
         margin: 5px 0;
         display: block;
     }
-    input{
-        border-radius: 5px;
-        border:1px solid #bbb;
+    input {
+        border-radius: @radius;
+        border: 1px solid #bbb;
         height: 25px;
         font-size: 12px;
         text-align: center;
         width: 100%;
     }
-    span.input-img{
+    span.input-img {
         position: absolute;
         top: 5px;
         right: 10px;
     }
 }
-.btn{
+
+.btn {
     display: inline-block;
     text-align: center;
-    padding: 5px;
     cursor: pointer;
-    border-radius: 5px;
-    .btn-block{
+    border-radius: @radius;
+    padding: @padding-base-vertical @padding-large-horizontal;
+    line-height: 15px;
+    border: 1px solid transparent;
+    font-size: 14px;
+    vertical-align: middle;
+    // Button Color
+    &.btn-green {
+        .button-variant(#fff, @main-green, @main-green);
+    }
+    &.btn-black {
+        .button-variant(#fff, @dark-black, @dark-black);
+    }
+    // Button Sizes
+    
+    &.btn-lg {
+        .button-size(@padding-large-vertical;
+        @padding-large-horizontal;
+        @font-size-large;
+        @line-height-large);
+    }
+    &.btn-sm {
+        .button-size(@padding-small-vertical;
+        @padding-small-horizontal;
+        @font-size-small;
+        @line-height-small);
+    }
+    &.btn-xs {
+        .button-size(@padding-xs-vertical;
+        @padding-xs-horizontal;
+        @font-size-small;
+        @line-height-small);
+    }
+    &.btn-block {
         display: block;
+        width: 100%;
     }
 }
+
 //list
-.list-group{
-    .list-title{
+.list-group {
+    .list-title {
         color: @main-green;
         font-size: 14px;
         margin: 0;
     }
-    .list{
+    .list {
         color: white;
         font-size: 14px;
         margin: 5px 0;
-        input{
+        input {
             margin-right: 10px;
         }
     }

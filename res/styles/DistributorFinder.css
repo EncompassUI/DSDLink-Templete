@@ -217,7 +217,7 @@ li {
   display: block;
 }
 .input-group input {
-  border-radius: 5px;
+  border-radius: 3px;
   border: 1px solid #bbb;
   height: 25px;
   font-size: 12px;
@@ -232,12 +232,118 @@ li {
 .btn {
   display: inline-block;
   text-align: center;
-  padding: 5px;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 3px;
+  padding: 6px 16px;
+  line-height: 15px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  vertical-align: middle;
 }
-.btn .btn-block {
+.btn.btn-green {
+  color: #ffffff;
+  background-color: #a5cd00;
+  border-color: #a5cd00;
+}
+.btn.btn-green:focus,
+.btn.btn-green.focus {
+  color: #ffffff;
+  background-color: #7c9a00;
+  border-color: #3e4e00;
+}
+.btn.btn-green:hover {
+  color: #ffffff;
+  background-color: #7c9a00;
+  border-color: #749000;
+}
+.btn.btn-green:active,
+.btn.btn-green.active {
+  color: #ffffff;
+  background-color: #7c9a00;
+  border-color: #749000;
+}
+.btn.btn-green.disabled,
+.btn.btn-green[disabled],
+fieldset[disabled] .btn.btn-green,
+.btn.btn-green.disabled:hover,
+.btn.btn-green[disabled]:hover,
+fieldset[disabled] .btn.btn-green:hover,
+.btn.btn-green.disabled:focus,
+.btn.btn-green[disabled]:focus,
+fieldset[disabled] .btn.btn-green:focus,
+.btn.btn-green.disabled.focus,
+.btn.btn-green[disabled].focus,
+fieldset[disabled] .btn.btn-green.focus,
+.btn.btn-green.disabled:active,
+.btn.btn-green[disabled]:active,
+fieldset[disabled] .btn.btn-green:active,
+.btn.btn-green.disabled.active,
+.btn.btn-green[disabled].active,
+fieldset[disabled] .btn.btn-green.active {
+  background-color: #a5cd00;
+  border-color: #a5cd00;
+}
+.btn.btn-black {
+  color: #ffffff;
+  background-color: #141414;
+  border-color: #141414;
+}
+.btn.btn-black:focus,
+.btn.btn-black.focus {
+  color: #ffffff;
+  background-color: #000000;
+  border-color: #000000;
+}
+.btn.btn-black:hover {
+  color: #ffffff;
+  background-color: #000000;
+  border-color: #000000;
+}
+.btn.btn-black:active,
+.btn.btn-black.active {
+  color: #ffffff;
+  background-color: #000000;
+  border-color: #000000;
+}
+.btn.btn-black.disabled,
+.btn.btn-black[disabled],
+fieldset[disabled] .btn.btn-black,
+.btn.btn-black.disabled:hover,
+.btn.btn-black[disabled]:hover,
+fieldset[disabled] .btn.btn-black:hover,
+.btn.btn-black.disabled:focus,
+.btn.btn-black[disabled]:focus,
+fieldset[disabled] .btn.btn-black:focus,
+.btn.btn-black.disabled.focus,
+.btn.btn-black[disabled].focus,
+fieldset[disabled] .btn.btn-black.focus,
+.btn.btn-black.disabled:active,
+.btn.btn-black[disabled]:active,
+fieldset[disabled] .btn.btn-black:active,
+.btn.btn-black.disabled.active,
+.btn.btn-black[disabled].active,
+fieldset[disabled] .btn.btn-black.active {
+  background-color: #141414;
+  border-color: #141414;
+}
+.btn.btn-lg {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+}
+.btn.btn-sm {
+  padding: 5px 10px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.btn.btn-xs {
+  padding: 1px 5px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.btn.btn-block {
   display: block;
+  width: 100%;
 }
 .list-group .list-title {
   color: #a5cd00;
@@ -963,4 +1069,7 @@ li {
 }
 .nav-panel .main-panel .tab-content .input-group {
   margin: 15px 0;
+}
+.nav-panel .main-panel .tab-content .btn {
+  margin: 25px 0;
 }
