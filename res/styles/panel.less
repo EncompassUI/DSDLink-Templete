@@ -5,6 +5,10 @@
     top: 0;
     left: 0;
     bottom: 0;
+    @media (max-width: @screen-xs-max) {
+        right: 0;
+        width: 100%;
+    }
     .logo-group {
         padding: 10px 0;
         text-align: center;
@@ -22,28 +26,28 @@
     }
     .main-panel {
         .nav {
-            display: inline-block;
-            width: @panel-width/3;
-            float: left;
-            margin: 0;
+            //display: inline-block;
+            //width: @panel-width/3;
+            //float: left;
+            //margin: 0;
             a {
                 color: white;
             }
         }
         .tab-content {
-            display: inline-block;
-            width: @panel-width*2/3;
-            float: right;
-            .tab-pane{
-                margin: 0 20px;
+            //display: inline-block;
+            //width: @panel-width*2/3;
+            //float: right;
+            .tab-pane {
+                //margin: 0 20px;
             }
             .list-group {
                 margin-top: 60px;
             }
-            .input-group{
+            .input-group {
                 margin: 15px 0;
             }
-            .btn{
+            .btn {
                 margin: 25px 0;
             }
         }

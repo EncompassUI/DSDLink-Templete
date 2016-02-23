@@ -1,3 +1,6 @@
+
+@body-bg:               #fff;
+
 @radius:3px;
 
 @padding-large-vertical:    10px;
@@ -18,19 +21,44 @@
 @dark-black:#141414;
 @light-black:@dark-black+#101010;
 @main-green:#a5cd00;
+@text-color:            #333;
+@link-color:            #337ab7;
+@link-hover-color:      darken(@link-color, 15%); 
+@hr-border:                   #eee;
+//** Link hover decoration.
+@link-hover-decoration: underline;
 //fontsize
-
+@font-family-base:        "Helvetica Neue", Helvetica, Arial, sans-serif;
 @font-size-base:          14px;
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 
+@line-height-base:        1.428571429; // 20/14
+@line-height-computed:    floor((@font-size-base * @line-height-base)); //
 //panel
 @panel-width:360px;
+//== Thumbnails
 
+//** Padding around the thumbnail image
+@thumbnail-padding:           4px;
+//** Thumbnail background color
+@thumbnail-bg:                @body-bg;
+//** Thumbnail border color
+@thumbnail-border:            #ddd;
+//** Thumbnail border radius
+@thumbnail-border-radius:     @border-radius-base;
 
+//** Custom text color for thumbnail captions
+@thumbnail-caption-color:     @text-color;
+//** Padding around the thumbnail caption
+@thumbnail-caption-padding:   9px;
 // Button variants
 //
-
+@border-radius-base:        4px;
+@border-radius-large:       6px;
+@border-radius-small:       3px;
+@thumbnail-border-radius:     @border-radius-base;
+//
 .button-variant(@color; @background; @border) {
   color: @color;
   background-color: @background;

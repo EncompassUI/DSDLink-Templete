@@ -9,20 +9,24 @@
 
 <body>
     <div class="nav-panel">
-        <div class="logo-group">
+        <div class="logo-group hidden-xs">
             <div class="brand dsdlogo"><img class="img-responsive" src="img/dsdlogo.png" alt="DSDLINK"></div>
             <div class="brand encompasslogo"><img class="img-responsive" src="img/encompasslogo.png" alt="Encompass Technologies"></div>
         </div>
         <div class="main-panel clearfix">
-                <ul class="nav nav-tabs " role="tablist">
-                    <li  class="active"><a href="#distributor"  role="tab" data-toggle="tab">Find Distributor</a></li>
-                    <li ><a href="#supplier"  role="tab" data-toggle="tab">Find Supplier</a></li>
-                    <li ><a href="#register"  role="tab" data-toggle="tab">Register</a></li>
-                    <li ><a href="#contactus"  role="tab" data-toggle="tab">Contact Us</a></li>
+               <div class="container-fluid">
+               <div class="row">
+                <ul class="nav nav-tabs col-xs-12 col-sm-12 col-md-3 col-lg-3" role="tablist">
+                   <div class="row">
+                    <li  class="col-xs-3 col-sm-3 col-md-12 col-lg-12 active"><a href="#distributor"  role="tab" data-toggle="tab">Find Distributor</a></li>
+                    <li class="col-xs-3 col-sm-3 col-md-12 col-lg-12"><a href="#supplier"  role="tab" data-toggle="tab">Find Supplier</a></li>
+                    <li class="col-xs-3 col-sm-3 col-md-12 col-lg-12"><a href="#register"  role="tab" data-toggle="tab">Register</a></li>
+                    <li class="col-xs-3 col-sm-3 col-md-12 col-lg-12"><a href="#contactus"  role="tab" data-toggle="tab">Contact Us</a></li>
+                    </div>
                 </ul>
 
-
-                <div class="tab-content">
+                <div class="tab-content col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                  
                     <div role="tabpanel" class="tab-pane active" id="distributor">
                         <div class="input-group">
                            <label class="input-label">Beverage Types</label>
@@ -47,11 +51,17 @@
                         <button class="btn btn-green btn-block">Search</button>
                         
                     </div>
+                   
                     <div role="tabpanel" class="tab-pane" id="supplier">...</div>
                     <div role="tabpanel" class="tab-pane" id="register">...</div>
                     <div role="tabpanel" class="tab-pane" id="contactus">...</div>
                 </div>
+                </div>
+                </div>
         </div>
+    </div>
+    <div class="map-container">
+        
     </div>
 </body>
 
