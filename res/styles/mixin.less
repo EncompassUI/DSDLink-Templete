@@ -10,7 +10,15 @@
   height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
 }
 // WebKit-style focus
-
+.fade.in {
+    opacity: 1;
+}
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
 .tab-focus() {
   // Default
   outline: thin dotted;

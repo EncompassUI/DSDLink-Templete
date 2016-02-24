@@ -1,8 +1,8 @@
 .nav-panel {
-    .map-panel&{
-       width: @panel-width; 
+    .map-panel& {
+        width: @panel-width;
     }
-    .profile-panel&{
+    .profile-panel& {
         width: @panel-width/4;
     }
     background: @dark-black;
@@ -31,20 +31,29 @@
     }
     .main-panel {
         .nav {
-            //display: inline-block;
-            //width: @panel-width/3;
-            //float: left;
-            //margin: 0;
-            a {
-                color: white;
+            margin: 0;
+            li {
+                margin: 0;
+                padding: 10px;
+                text-align: center;
+                a {
+                    color: white;
+                }
+                &.active {
+                    background: @light-black;
+                    a {
+                        color: @main-green;
+                    }
+                }
             }
         }
         .tab-content {
-            //display: inline-block;
-            //width: @panel-width*2/3;
-            //float: right;
+            background: @light-black;
             .tab-pane {
-                //margin: 0 20px;
+                display: none;
+                &.active {
+                    display: block;
+                }
             }
             .list-group {
                 margin-top: 60px;
@@ -58,17 +67,24 @@
         }
     }
 }
+
 .state-list-wrapper {
     background: @light-black;
-    .state-list-title{
-        text-align: center;
+    .state-list-title {
         font-weight: bold;
         color: white;
         padding: 15px;
+        text-align: center;
+        span {
+            text-align: center;
+            line-height: 30px;
+            height: 30px;
+            margin-left: -@padding-xs-horizontal*4;
+        }
     }
-    .state-list{
+    .state-list {
         background: @body-bg;
-        margin: 0 10px ;
+        margin: 0 10px;
         padding: 20px;
         overflow-y: scroll;
     }

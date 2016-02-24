@@ -2,12 +2,37 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 *:before,
 *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+  background: transparent;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+::-webkit-scrollbar-button {
+  background: transparent;
 }
 html {
   font-size: 10px;
@@ -35,7 +60,6 @@ a {
 a:hover,
 a:focus {
   color: #22527b;
-  text-decoration: underline;
 }
 a:focus {
   outline: thin dotted;
@@ -315,6 +339,15 @@ li {
 }
 .right {
   float: right;
+}
+.fade.in {
+  opacity: 1;
+}
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity .15s linear;
+  -o-transition: opacity .15s linear;
+  transition: opacity .15s linear;
 }
 .input-group {
   position: relative;
@@ -1386,10 +1419,10 @@ fieldset[disabled] .btn.btn-black.active {
   bottom: 0;
 }
 .map-panel.nav-panel {
-  width: 360px;
+  width: 300px;
 }
 .profile-panel.nav-panel {
-  width: 90px;
+  width: 75px;
 }
 @media (max-width: 767px) {
   .nav-panel {
@@ -1411,8 +1444,31 @@ fieldset[disabled] .btn.btn-black.active {
   width: 150px;
   margin: 18px 5px;
 }
-.nav-panel .main-panel .nav a {
+.nav-panel .main-panel .nav {
+  margin: 0;
+}
+.nav-panel .main-panel .nav li {
+  margin: 0;
+  padding: 10px;
+  text-align: center;
+}
+.nav-panel .main-panel .nav li a {
   color: white;
+}
+.nav-panel .main-panel .nav li.active {
+  background: #242424;
+}
+.nav-panel .main-panel .nav li.active a {
+  color: #a5cd00;
+}
+.nav-panel .main-panel .tab-content {
+  background: #242424;
+}
+.nav-panel .main-panel .tab-content .tab-pane {
+  display: none;
+}
+.nav-panel .main-panel .tab-content .tab-pane.active {
+  display: block;
 }
 .nav-panel .main-panel .tab-content .list-group {
   margin-top: 60px;
@@ -1427,19 +1483,25 @@ fieldset[disabled] .btn.btn-black.active {
   background: #242424;
 }
 .state-list-wrapper .state-list-title {
-  text-align: center;
   font-weight: bold;
   color: white;
   padding: 15px;
+  text-align: center;
+}
+.state-list-wrapper .state-list-title span {
+  text-align: center;
+  line-height: 30px;
+  height: 30px;
+  margin-left: -20px;
 }
 .state-list-wrapper .state-list {
   background: #ffffff;
-  margin: 0 10px ;
+  margin: 0 10px;
   padding: 20px;
   overflow-y: scroll;
 }
 .profile-container {
-  margin-left: 90px;
+  margin-left: 75px;
 }
 .profile-container .headbar {
   text-align: center;
