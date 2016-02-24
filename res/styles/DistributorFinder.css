@@ -160,6 +160,14 @@ h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
 mark {
   background: #ff0;
   color: #000;
@@ -302,6 +310,12 @@ li {
 .row:after {
   clear: both;
 }
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
 .input-group {
   position: relative;
 }
@@ -441,17 +455,22 @@ fieldset[disabled] .btn.btn-black.active {
   width: 100%;
 }
 .list-group .list-title {
-  color: #a5cd00;
-  font-size: 14px;
+  color: black;
+  font-size: 16px;
   margin: 0;
 }
 .list-group .list {
-  color: white;
+  color: black;
   font-size: 14px;
-  margin: 5px 0;
+  margin: 5px 5px 5px 20px;
+  padding-left: 20px;
 }
 .list-group .list input {
   margin-right: 10px;
+}
+.list-group .list i {
+  margin-left: -20px;
+  margin-right: 5px;
 }
 .container {
   margin-right: auto;
@@ -1331,12 +1350,17 @@ fieldset[disabled] .btn.btn-black.active {
   }
 }
 .nav-panel {
-  width: 360px;
   background: #141414;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
+}
+.map-panel.nav-panel {
+  width: 360px;
+}
+.profile-panel.nav-panel {
+  width: 90px;
 }
 @media (max-width: 767px) {
   .nav-panel {
@@ -1369,4 +1393,28 @@ fieldset[disabled] .btn.btn-black.active {
 }
 .nav-panel .main-panel .tab-content .btn {
   margin: 25px 0;
+}
+.state-list-wrapper {
+  background: #242424;
+}
+.state-list-wrapper .state-list-title {
+  text-align: center;
+  font-weight: bold;
+  color: white;
+  padding: 15px;
+}
+.state-list-wrapper .state-list {
+  background: #ffffff;
+  margin: 0 10px ;
+  padding: 20px;
+  overflow-y: scroll;
+}
+.profile-container {
+  margin-left: 90px;
+}
+.profile-container .headbar {
+  text-align: center;
+  padding: 10px 20px;
+  color: white;
+  background: #242424;
 }

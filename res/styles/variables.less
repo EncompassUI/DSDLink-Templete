@@ -1,8 +1,10 @@
 
-@body-bg:               #fff;
-
-@radius:3px;
-
+//
+@border-radius-base:        4px;
+@border-radius-large:       6px;
+@border-radius-small:       3px;
+@radius:@border-radius-small;
+//padding
 @padding-large-vertical:    10px;
 @padding-large-horizontal:  16px;
 
@@ -14,12 +16,15 @@
 
 @padding-xs-vertical:       1px;
 @padding-xs-horizontal:     5px;
-
+//line-height
+@line-height-base:        1.428571429; // 20/14
+@line-height-computed:    floor((@font-size-base * @line-height-base)); //
 @line-height-large:         1.3333333; 
 @line-height-small:         1.5;
 //color
+@body-bg:               #fff;
 @dark-black:#141414;
-@light-black:@dark-black+#101010;
+@light-black:fadein(@dark-black+#101010,0.2);
 @main-green:#a5cd00;
 @text-color:            #333;
 @link-color:            #337ab7;
@@ -33,13 +38,9 @@
 @font-size-large:         ceil((@font-size-base * 1.25)); // ~18px
 @font-size-small:         ceil((@font-size-base * 0.85)); // ~12px
 
-@line-height-base:        1.428571429; // 20/14
-@line-height-computed:    floor((@font-size-base * @line-height-base)); //
 //panel
 @panel-width:360px;
 //== Thumbnails
-
-//** Padding around the thumbnail image
 @thumbnail-padding:           4px;
 //** Thumbnail background color
 @thumbnail-bg:                @body-bg;
@@ -47,16 +48,11 @@
 @thumbnail-border:            #ddd;
 //** Thumbnail border radius
 @thumbnail-border-radius:     @border-radius-base;
-
 //** Custom text color for thumbnail captions
 @thumbnail-caption-color:     @text-color;
 //** Padding around the thumbnail caption
 @thumbnail-caption-padding:   9px;
 // Button variants
-//
-@border-radius-base:        4px;
-@border-radius-large:       6px;
-@border-radius-small:       3px;
 @thumbnail-border-radius:     @border-radius-base;
 //
 .button-variant(@color; @background; @border) {

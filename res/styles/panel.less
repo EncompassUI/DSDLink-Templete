@@ -1,5 +1,10 @@
 .nav-panel {
-    width: @panel-width;
+    .map-panel&{
+       width: @panel-width; 
+    }
+    .profile-panel&{
+        width: @panel-width/4;
+    }
     background: @dark-black;
     position: absolute;
     top: 0;
@@ -51,5 +56,20 @@
                 margin: 25px 0;
             }
         }
+    }
+}
+.state-list-wrapper {
+    background: @light-black;
+    .state-list-title{
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        padding: 15px;
+    }
+    .state-list{
+        background: @body-bg;
+        margin: 0 10px ;
+        padding: 20px;
+        overflow-y: scroll;
     }
 }
