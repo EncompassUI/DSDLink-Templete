@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'Icons';
+    src: url('../../../Controls/Command.eot?v=4.4.0');
+    src: url('../../../Command.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('../../../Command.ttf?v=4.4.0') format('truetype'), url('../../../Command.svg?v=4.4.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class*="dsd-icon-"] {
+    display: inline-block;
+    font: normal normal normal 14px/1 Icons;
+    font-size: inherit;
+    text-rendering: auto;
+}
+
+.dsd-icon-warehouse:before {/*Distributor*/
+    content:"\f287";
+}
+
+.dsd-icon-beer:before {/*Supplier*/
+    content:"\f287";
+}
+
+.dsd-icon-register:before {/*Register*/
+    content:"\f289";
+}
+
+.dsd-icon-logo:before {/*Contact Us*/
+    content:"\f28A";
+}
+
+.dsd-icon-smile:before {
+    content:"\f28B";
+}
+
+.dsd-icon-search:before {
+    content:"\f002";
+}
+
+.dsd-icon-location:before {
+    content:"\f28C";
+}
+
+.dsd-icon-location-o:before {/*Where We Sell*/
+    content:"\f294";
+}
+
+.dsd-icon-phone:before {
+    content:"\f095";
+}
+
+.dsd-icon-share:before {
+    content:"\f28D";
+}
+
+.dsd-icon-pencil:before {/*Update Profile*/
+    content:"\f28E";
+}
+
+.dsd-icon-other-location:before {/*Other Location*/
+    content:"\f28F";
+}
+
+.dsd-icon-tag:before {/*What we sell*/
+    content:"\f02b";
+}
+
+.dsd-icon-chart:before {/*Profile Visits*/
+    content:"\f291";
+}
+
+.dsd-icon-user-group:before {/*Key People*/
+    content:"\f0c0";
+}
+
+.dsd-icon-user-group-o:before {/*Key People*/
+    content:"\f296";
+}
+
+.dsd-icon-user:before {/*Owner*/
+    content:"\f007";
+}
+
+.dsd-icon-converage:before {/*Market Converage*/
+    content:"\f292";
+}
+
+.dsd-icon-globe:before {/*Website*/
+    content:"\f287";
+}
+
+.dsd-icon-information:before {/*Company Information*/
+    content:"\f299";
+}
+
+.dsd-icon-media:before {/*Social Media*/
+    content:"\f298";
+}
+
+.dsd-icon-flag:before {/*Associations*/
+    content:"\f295";
+}
+
+.dsd-icon-key:before {/*Set Password*/
+    content:"\f297";
+}
+
+/* Band Icons */
+.dsd-icon-youtube-square:before {
+    content:"\f166";
+}
+
+.dsd-icon-facebook-square:before {
+    content:"\f082";
+}
+
+.dsd-icon-twitter-square:before {
+    content:"\f081";
+}
+
+.dsd-icon-instagram:before {
+    content:"\f29A";
+}
+
+.dsd-icon-linkin-square:before {
+    content:"\f08c";
+}
