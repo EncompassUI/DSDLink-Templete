@@ -1,9 +1,88 @@
-.profile-container{
+.profile-container {
     margin-left: @panel-width/4;
-    .headbar{
+    .headbar {
         text-align: center;
         padding: 10px 20px;
         color: white;
         background: @light-black;
     }
+    .profile-content {
+        section {
+            .card {
+                padding-top: 30px;
+                .btn-share {
+                    position: absolute;
+                    top: 15px;
+                    right: 20px;
+                    i {
+                        margin-right: 2px;
+                    }
+                }
+                .brands-logo {
+                    margin: 5px;
+                    display: inline-block;
+                    img {
+                        display: inline-block;
+                        height: 50px;
+                        cursor: pointer;
+                        width: auto;
+                        max-width: 100%;
+                    }
+                }
+                .wheresell i {
+                    height: 12px;
+                    width: 12px;
+                    background: #b3c06c;
+                }
+            }
+        }
+    }
+}
+
+.card .address {
+    margin-top: 30px;
+}
+
+.card .associations .color {
+    color: #0063be;
+}
+
+.card .awards .color {
+    color: #ff9c00;
+}
+
+.card .keyperson {
+    margin-left: 20px;
+}
+
+.card .keyperson p {
+    display: block;
+}
+
+.card .location a {
+    text-decoration: underline;
+}
+
+.card .profile-head .dis-logo {
+    text-align: center;
+}
+
+.card .profile-head .dis-logo img {
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.card .profile-head .dis-media {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.card .profile-head .dis-media a {
+    font-size: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.card .profile-head .dis-media a:hover {
+    text-decoration: none;
 }
