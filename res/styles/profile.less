@@ -1,26 +1,50 @@
+
+.logo-group {
+    .dsdlogo {
+        padding: 0 10px;
+    }
+}
+
 .profile-container {
-    margin-left: @panel-width/4;
+    /*margin-left: @panel-width/4;*/
+    padding: 0;
+
     .headbar {
         text-align: center;
-        padding: 10px 20px;
+        padding: 15px 20px;
         color: white;
         background: @light-black;
+
+        h3 {
+            span {
+                cursor: pointer;
+
+                &:hover {
+                    color: @main-green;
+                }
+            }
+        }
     }
+
     .profile-content {
         section {
             .card {
                 padding-top: 30px;
+
                 .btn-share {
                     position: absolute;
                     top: 15px;
                     right: 20px;
+
                     i {
                         margin-right: 2px;
                     }
                 }
+
                 .brands-logo {
                     margin: 5px;
                     display: inline-block;
+
                     img {
                         display: inline-block;
                         height: 50px;
@@ -29,6 +53,7 @@
                         max-width: 100%;
                     }
                 }
+
                 .wheresell i {
                     height: 12px;
                     width: 12px;
@@ -85,4 +110,51 @@
 
 .card .profile-head .dis-media a:hover {
     text-decoration: none;
+}
+
+@media (max-width: @screen-xs-max){
+    .profile-container {
+        .mobile {
+            display: inline-block;
+            width: 50px;
+            height: 52px;
+            line-height: 55px;
+            margin: -15px;
+
+            i {
+                font-size: 20px;
+            }
+
+            .mobile-label {
+                position: absolute;
+                top: 18px;
+                right: 5px;
+                font-size: 12px;
+            }
+        }
+    }
+}
+
+@media (min-width: @screen-md-min) {
+    .logo-group {
+        .dsdlogo {
+            padding: 0 20px;
+        }
+    }
+}
+
+@media (min-width: @screen-lg-min) {
+    .logo-group {
+        .dsdlogo {
+            padding: 0 30px;
+        }
+    }
+}
+
+@media (min-width: @screen-sp-min) {
+    .logo-group {
+        .dsdlogo {
+            padding: 0 50px;
+        }
+    }
 }

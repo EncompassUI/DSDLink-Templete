@@ -71,6 +71,7 @@ figure {
 }
 img {
   vertical-align: middle;
+  width: 100%;
 }
 .img-responsive {
   display: block;
@@ -191,6 +192,7 @@ h4,
 h5,
 h6 {
   margin: 0;
+  font-weight: normal;
 }
 mark {
   background: #ff0;
@@ -1422,15 +1424,11 @@ fieldset[disabled] .btn.btn-black.active {
   }
 }
 .nav-panel {
-  padding: 0;
-  background: #141414;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-}
-.profile-panel.nav-panel {
-  width: 75px;
+  background-image: url("../../img/bg-nav-panel.jpg");
+  background-size: contain;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.87);
 }
 @media (max-width: 767px) {
   .nav-panel {
@@ -1438,17 +1436,22 @@ fieldset[disabled] .btn.btn-black.active {
     width: 100%;
   }
 }
-.nav-panel .logo-group {
+.nav-panel > div:first-child {
+  background: rgba(0, 0, 0, 0.2);
+}
+.nav-panel > div:first-child .logo-group {
   padding: 10px 0;
   text-align: center;
 }
-.nav-panel .logo-group .encompasslogo {
+.nav-panel > div:first-child .logo-group .encompasslogo {
   margin-left: -20px;
-  margin-top: 18px;
+  margin-top: 12px;
   text-align: left;
 }
 .nav-panel .main-panel .nav {
   margin: 0;
+  padding: 0 8px;
+  background: #141414;
 }
 .nav-panel .main-panel .nav li {
   margin: 0;
@@ -1474,7 +1477,6 @@ fieldset[disabled] .btn.btn-black.active {
 }
 .nav-panel .main-panel .tab-content {
   background: #242424;
-  height: 100%;
 }
 .nav-panel .main-panel .tab-content .tab-pane {
   display: none;
@@ -1504,7 +1506,7 @@ fieldset[disabled] .btn.btn-black.active {
   text-align: center;
   line-height: 30px;
   height: 30px;
-  margin-left: -50px;
+  margin-left: -20px;
 }
 .state-list-wrapper .state-list {
   background: #ffffff;
@@ -1512,6 +1514,7 @@ fieldset[disabled] .btn.btn-black.active {
   padding: 20px;
   overflow-y: scroll;
 }
+<<<<<<< HEAD
 .nav-list li {
   border-radius: 4px;
   color: white;
@@ -1523,15 +1526,26 @@ fieldset[disabled] .btn.btn-black.active {
 }
 .nav-list li i {
   margin-right: 10px;
+=======
+.logo-group .dsdlogo {
+  padding: 0 10px;
+>>>>>>> origin/master
 }
 .profile-container {
-  margin-left: 75px;
+  /*margin-left: @panel-width/4;*/
+  padding: 0;
 }
 .profile-container .headbar {
   text-align: center;
-  padding: 10px 20px;
+  padding: 15px 20px;
   color: white;
   background: #242424;
+}
+.profile-container .headbar h3 span {
+  cursor: pointer;
+}
+.profile-container .headbar h3 span:hover {
+  color: #a5cd00;
 }
 .profile-container .profile-content section .card {
   padding-top: 30px;
@@ -1596,4 +1610,43 @@ fieldset[disabled] .btn.btn-black.active {
 }
 .card .profile-head .dis-media a:hover {
   text-decoration: none;
+}
+@media (max-width: 767px) {
+  .profile-container .mobile {
+    display: inline-block;
+    width: 50px;
+    height: 52px;
+    line-height: 55px;
+    margin: -15px;
+  }
+  .profile-container .mobile i {
+    font-size: 20px;
+  }
+  .profile-container .mobile .mobile-label {
+    position: absolute;
+    top: 18px;
+    right: 5px;
+    font-size: 12px;
+  }
+}
+@media (min-width: 992px) {
+  .logo-group .dsdlogo {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .logo-group .dsdlogo {
+    padding: 0 30px;
+  }
+}
+@media (min-width: 1600px) {
+  .logo-group .dsdlogo {
+    padding: 0 50px;
+  }
+}
+.supplier-container {
+  background-image: url("../../img/bg-supplier.jpg");
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
 }

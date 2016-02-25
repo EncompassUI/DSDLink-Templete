@@ -42,7 +42,7 @@
 }
 
 .dsd-icon-location-o:before {/*Where We Sell*/
-    content:"\f294";
+    content:"\f293";
 }
 
 .dsd-icon-phone:before {
@@ -51,6 +51,10 @@
 
 .dsd-icon-share:before {
     content:"\f28D";
+}
+
+.dsd-icon-mail:before {/* Mistake */
+    content:"\f0e0";
 }
 
 .dsd-icon-pencil:before {/*Update Profile*/
@@ -74,7 +78,7 @@
 }
 
 .dsd-icon-user-group-o:before {/*Key People*/
-    content:"\f296";
+    content:"\f295";
 }
 
 .dsd-icon-user:before {/*Owner*/
@@ -90,19 +94,23 @@
 }
 
 .dsd-icon-information:before {/*Company Information*/
-    content:"\f299";
-}
-
-.dsd-icon-media:before {/*Social Media*/
     content:"\f298";
 }
 
+.dsd-icon-media:before {/*Social Media*/
+    content:"\f297";
+}
+
 .dsd-icon-flag:before {/*Associations*/
-    content:"\f295";
+    content:"\f294";
 }
 
 .dsd-icon-key:before {/*Set Password*/
-    content:"\f297";
+    content:"\f296";
+}
+
+.dsd-icon-back:before {
+    content:"\f286";
 }
 
 /* Band Icons */
@@ -119,7 +127,7 @@
 }
 
 .dsd-icon-instagram:before {
-    content:"\f29A";
+    content:"\f299";
 }
 
 .dsd-icon-linkin-square:before {
