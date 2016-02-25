@@ -71,6 +71,7 @@ figure {
 }
 img {
   vertical-align: middle;
+  width: 100%;
 }
 .img-responsive {
   display: block;
@@ -191,6 +192,7 @@ h4,
 h5,
 h6 {
   margin: 0;
+  font-weight: normal;
 }
 mark {
   background: #ff0;
@@ -1415,14 +1417,14 @@ fieldset[disabled] .btn.btn-black.active {
   /*.map-panel& {
         width: @panel-width;
     }*/
+  /*.profile-panel& {
+        width: @panel-width/4;
+    }*/
   background: #141414;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-}
-.profile-panel.nav-panel {
-  width: 75px;
+  /*position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;*/
 }
 @media (max-width: 767px) {
   .nav-panel {
@@ -1503,14 +1505,24 @@ fieldset[disabled] .btn.btn-black.active {
   padding: 20px;
   overflow-y: scroll;
 }
+.logo-group .dsdlogo {
+  padding: 0 10px;
+}
 .profile-container {
-  margin-left: 75px;
+  /*margin-left: @panel-width/4;*/
+  padding: 0;
 }
 .profile-container .headbar {
   text-align: center;
-  padding: 10px 20px;
+  padding: 15px 20px;
   color: white;
   background: #242424;
+}
+.profile-container .headbar h3 span {
+  cursor: pointer;
+}
+.profile-container .headbar h3 span:hover {
+  color: #a5cd00;
 }
 .profile-container .profile-content section .card {
   padding-top: 30px;
@@ -1575,4 +1587,37 @@ fieldset[disabled] .btn.btn-black.active {
 }
 .card .profile-head .dis-media a:hover {
   text-decoration: none;
+}
+@media (max-width: 767px) {
+  .profile-container .mobile {
+    display: inline-block;
+    width: 50px;
+    height: 52px;
+    line-height: 55px;
+    margin: -15px;
+  }
+  .profile-container .mobile i {
+    font-size: 20px;
+  }
+  .profile-container .mobile .mobile-label {
+    position: absolute;
+    top: 18px;
+    right: 5px;
+    font-size: 12px;
+  }
+}
+@media (min-width: 992px) {
+  .logo-group .dsdlogo {
+    padding: 0 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .logo-group .dsdlogo {
+    padding: 0 30px;
+  }
+}
+@media (min-width: 1600px) {
+  .logo-group .dsdlogo {
+    padding: 0 50px;
+  }
 }
