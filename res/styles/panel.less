@@ -1,20 +1,27 @@
 .nav-panel {
-
-    background: @dark-black;
+    background-image: url("@{background-url-prefix}bg-nav-panel.jpg");
+    background-size: contain;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-color: rgba(0,0,0,0.87);
 
     @media (max-width: @screen-xs-max) {
         right: 0;
         width: 100%;
     }
 
-    .logo-group {
-        padding: 10px 0;
-        text-align: center;
+    & > div:first-child {
+        background: rgba(0,0,0,.2);
 
-        .encompasslogo {
-            margin-left: -20px;
-            margin-top: 18px;
-            text-align: left;
+        .logo-group {
+            padding: 10px 0;
+            text-align: center;
+
+            .encompasslogo {
+                margin-left: -20px;
+                margin-top: 12px;
+                text-align: left;
+            }
         }
     }
 
@@ -22,6 +29,8 @@
 
         .nav {
             margin: 0;
+            padding:0 8px;
+            background:@dark-black;
 
             li {
                 margin: 0;
@@ -35,9 +44,10 @@
                         cursor: pointer;
                         display: block;
                     }
-                    i{
-                        display:block;
-                        font-size:24px;
+
+                    i {
+                        display: block;
+                        font-size: 24px;
                     }
                 }
 

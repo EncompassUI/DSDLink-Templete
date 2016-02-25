@@ -12,9 +12,20 @@ $(document).ready(function () {
 });
 
 function SetLayoutHeight() {
-    var height = $(window).height();
+    var fullheight = $(window).height();
+
 
     var navPanel = $('.nav-panel');
+    var mainPanel = navPanel.find('.main-panel');
+    var navTab = mainPanel.find('.nav.nav-tabs');
+    var logoGroup = navPanel.find('.row:first');
+    var rightPanel = $('.right-panel');
+    var supplierPanel = rightPanel;
 
-    navPanel.css('height', height);
+    var mainPanelHeight = fullheight - logoGroup.height();
+
+    navPanel.css('height', fullheight);
+    mainPanel.css('height', mainPanelHeight);
+    navTab.css('height', mainPanelHeight);
+    supplierPanel.css('height',fullheight);
 }

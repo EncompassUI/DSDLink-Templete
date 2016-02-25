@@ -1414,7 +1414,11 @@ fieldset[disabled] .btn.btn-black.active {
   }
 }
 .nav-panel {
-  background: #141414;
+  background-image: url("../../img/bg-nav-panel.jpg");
+  background-size: contain;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.87);
 }
 @media (max-width: 767px) {
   .nav-panel {
@@ -1422,17 +1426,22 @@ fieldset[disabled] .btn.btn-black.active {
     width: 100%;
   }
 }
-.nav-panel .logo-group {
+.nav-panel > div:first-child {
+  background: rgba(0, 0, 0, 0.2);
+}
+.nav-panel > div:first-child .logo-group {
   padding: 10px 0;
   text-align: center;
 }
-.nav-panel .logo-group .encompasslogo {
+.nav-panel > div:first-child .logo-group .encompasslogo {
   margin-left: -20px;
-  margin-top: 18px;
+  margin-top: 12px;
   text-align: left;
 }
 .nav-panel .main-panel .nav {
   margin: 0;
+  padding: 0 8px;
+  background: #141414;
 }
 .nav-panel .main-panel .nav li {
   margin: 0;
@@ -1610,4 +1619,10 @@ fieldset[disabled] .btn.btn-black.active {
   .logo-group .dsdlogo {
     padding: 0 50px;
   }
+}
+.supplier-container {
+  background-image: url("../../img/bg-supplier.jpg");
+  background-size: cover;
+  background-position: top left;
+  background-repeat: no-repeat;
 }
