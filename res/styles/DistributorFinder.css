@@ -1414,17 +1414,7 @@ fieldset[disabled] .btn.btn-black.active {
   }
 }
 .nav-panel {
-  /*.map-panel& {
-        width: @panel-width;
-    }*/
-  /*.profile-panel& {
-        width: @panel-width/4;
-    }*/
   background: #141414;
-  /*position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;*/
 }
 @media (max-width: 767px) {
   .nav-panel {
