@@ -1,7 +1,7 @@
  $(document).ready(function () {
 
      (function ($) {
-         $('.nav-tabs li a').click(function (g) {
+         $('.nav-tabs li a[role="tab"]').click(function (g) {
              var tab = $(this).closest('.nav-tabs'),
                  index = $(this).closest('li').index();
 

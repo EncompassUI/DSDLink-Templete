@@ -340,6 +340,9 @@ li {
 .right {
   float: right;
 }
+.main-green {
+  color: #a5cd00;
+}
 .fade.in {
   opacity: 1;
 }
@@ -366,7 +369,7 @@ li {
   text-align: center;
   width: 100%;
 }
-.input-group span.input-img {
+.input-group span.input-logo {
   position: absolute;
   top: 5px;
   right: 10px;
@@ -505,20 +508,19 @@ fieldset[disabled] .btn.btn-black.active {
   margin-left: -20px;
   margin-right: 5px;
 }
+.categories {
+  margin-top: 60px;
+}
+.categories ul li {
+  color: white;
+  cursor: pointer;
+}
 .card,
 .map-card {
   background: #fff;
   padding: 15px;
   border-radius: 5px;
   margin: 10px 0;
-}
-.map-card .map-logo {
-  vertical-align: top;
-  width: 150px;
-}
-.map-card .map-logo img {
-  max-height: 150px;
-  max-width: 100%;
 }
 .card ul,
 .map-card ul {
@@ -533,6 +535,14 @@ fieldset[disabled] .btn.btn-black.active {
 .card ul li a,
 .map-card ul li a {
   cursor: pointer;
+}
+.map-card .map-logo {
+  vertical-align: top;
+  width: 150px;
+}
+.map-card .map-logo img {
+  max-height: 150px;
+  max-width: 100%;
 }
 .container {
   margin-right: auto;
@@ -1501,6 +1511,18 @@ fieldset[disabled] .btn.btn-black.active {
   margin: 0 10px;
   padding: 20px;
   overflow-y: scroll;
+}
+.nav-list li {
+  border-radius: 4px;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+}
+.nav-list li:hover {
+  background: #a5cd00;
+}
+.nav-list li i {
+  margin-right: 10px;
 }
 .profile-container {
   margin-left: 75px;
