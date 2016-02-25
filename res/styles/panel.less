@@ -1,66 +1,84 @@
 .nav-panel {
-    .map-panel& {
+    /*.map-panel& {
         width: @panel-width;
-    }
+    }*/
     .profile-panel& {
         width: @panel-width/4;
     }
+
     background: @dark-black;
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
+
     @media (max-width: @screen-xs-max) {
         right: 0;
         width: 100%;
     }
+
     .logo-group {
         padding: 10px 0;
         text-align: center;
-        .brand {
-            display: inline-block;
-            &.dsdlogo {
-                width: 60px;
-            }
-            &.encompasslogo {
-                width: 150px;
-                margin: 18px 5px;
-                ;
-            }
+
+        .encompasslogo {
+            margin-left: -20px;
+            margin-top: 18px;
+            text-align: left;
         }
     }
+
     .main-panel {
         .nav {
             margin: 0;
+
             li {
                 margin: 0;
                 padding: 10px;
                 text-align: center;
+
                 a {
                     color: white;
+
+                    label {
+                        cursor: pointer;
+                        display: block;
+                    }
+                    i{
+                        display:block;
+                        font-size:24px;
+                    }
                 }
+
                 &.active {
                     background: @light-black;
+
                     a {
                         color: @main-green;
                     }
                 }
             }
         }
+
         .tab-content {
             background: @light-black;
+
             .tab-pane {
                 display: none;
+
                 &.active {
                     display: block;
                 }
             }
+
             .list-group {
                 margin-top: 60px;
             }
+
             .input-group {
                 margin: 15px 0;
             }
+
             .btn {
                 margin: 25px 0;
             }

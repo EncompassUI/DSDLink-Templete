@@ -1412,14 +1412,14 @@ fieldset[disabled] .btn.btn-black.active {
   }
 }
 .nav-panel {
+  /*.map-panel& {
+        width: @panel-width;
+    }*/
   background: #141414;
   position: absolute;
   top: 0;
   left: 0;
   bottom: 0;
-}
-.map-panel.nav-panel {
-  width: 300px;
 }
 .profile-panel.nav-panel {
   width: 75px;
@@ -1434,15 +1434,10 @@ fieldset[disabled] .btn.btn-black.active {
   padding: 10px 0;
   text-align: center;
 }
-.nav-panel .logo-group .brand {
-  display: inline-block;
-}
-.nav-panel .logo-group .brand.dsdlogo {
-  width: 60px;
-}
-.nav-panel .logo-group .brand.encompasslogo {
-  width: 150px;
-  margin: 18px 5px;
+.nav-panel .logo-group .encompasslogo {
+  margin-left: -20px;
+  margin-top: 18px;
+  text-align: left;
 }
 .nav-panel .main-panel .nav {
   margin: 0;
@@ -1454,6 +1449,14 @@ fieldset[disabled] .btn.btn-black.active {
 }
 .nav-panel .main-panel .nav li a {
   color: white;
+}
+.nav-panel .main-panel .nav li a label {
+  cursor: pointer;
+  display: block;
+}
+.nav-panel .main-panel .nav li a i {
+  display: block;
+  font-size: 24px;
 }
 .nav-panel .main-panel .nav li.active {
   background: #242424;

@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Icons';
-    src: url('../../../Controls/Command.eot?v=4.4.0');
-    src: url('../../../Command.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('../../../Command.ttf?v=4.4.0') format('truetype'), url('../../../Command.svg?v=4.4.0#fontawesomeregular') format('svg');
+    src: url('Command.eot?v=4.4.0');
+    src: url('Command.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('Command.ttf?v=4.4.0') format('truetype'), url('Command.svg?v=4.4.0#fontawesomeregular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -18,7 +18,7 @@
 }
 
 .dsd-icon-beer:before {/*Supplier*/
-    content:"\f287";
+    content:"\f288";
 }
 
 .dsd-icon-register:before {/*Register*/
