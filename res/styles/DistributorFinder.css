@@ -1412,9 +1412,7 @@ fieldset[disabled] .btn.btn-black.active {
   }
 }
 .nav-panel {
-  /*.map-panel& {
-        width: @panel-width;
-    }*/
+  padding: 0;
   background: #141414;
   position: absolute;
   top: 0;
@@ -1466,6 +1464,7 @@ fieldset[disabled] .btn.btn-black.active {
 }
 .nav-panel .main-panel .tab-content {
   background: #242424;
+  height: 100%;
 }
 .nav-panel .main-panel .tab-content .tab-pane {
   display: none;
@@ -1495,7 +1494,7 @@ fieldset[disabled] .btn.btn-black.active {
   text-align: center;
   line-height: 30px;
   height: 30px;
-  margin-left: -20px;
+  margin-left: -50px;
 }
 .state-list-wrapper .state-list {
   background: #ffffff;

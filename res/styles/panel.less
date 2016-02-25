@@ -1,7 +1,5 @@
 .nav-panel {
-    /*.map-panel& {
-        width: @panel-width;
-    }*/
+    padding: 0;
     .profile-panel& {
         width: @panel-width/4;
     }
@@ -29,6 +27,7 @@
     }
 
     .main-panel {
+       
         .nav {
             margin: 0;
 
@@ -62,6 +61,7 @@
 
         .tab-content {
             background: @light-black;
+            height: 100%;
 
             .tab-pane {
                 display: none;
@@ -97,7 +97,7 @@
             text-align: center;
             line-height: 30px;
             height: 30px;
-            margin-left: -@padding-xs-horizontal*4;
+            margin-left: -@padding-xs-horizontal*10;
         }
     }
     .state-list {
