@@ -1514,7 +1514,6 @@ fieldset[disabled] .btn.btn-black.active {
   padding: 20px;
   overflow-y: scroll;
 }
-<<<<<<< HEAD
 .nav-list li {
   border-radius: 4px;
   color: white;
@@ -1526,10 +1525,9 @@ fieldset[disabled] .btn.btn-black.active {
 }
 .nav-list li i {
   margin-right: 10px;
-=======
+}
 .logo-group .dsdlogo {
   padding: 0 10px;
->>>>>>> origin/master
 }
 .profile-container {
   /*margin-left: @panel-width/4;*/
