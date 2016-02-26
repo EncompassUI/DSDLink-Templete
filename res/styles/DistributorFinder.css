@@ -1451,7 +1451,7 @@ fieldset[disabled] .btn.btn-black.active {
 }
 .nav-panel > div:first-child .logo-group .encompasslogo {
   margin-left: -20px;
-  margin-top: 12px;
+  margin-top: 5px;
   text-align: left;
 }
 .nav-panel .main-panel .nav {
@@ -1480,9 +1480,6 @@ fieldset[disabled] .btn.btn-black.active {
 }
 .nav-panel .main-panel .nav li.active a {
   color: #a5cd00;
-}
-.nav-panel .main-panel .tab-content {
-  background: #242424;
 }
 .nav-panel .main-panel .tab-content .tab-pane {
   display: none;
@@ -1657,4 +1654,8 @@ fieldset[disabled] .btn.btn-black.active {
 }
 .supplier-container .box-margin {
   margin: 10px 0 0 0;
+}
+.form-wrapper .form-head {
+  background: #4c4c4c;
+  padding: 3px 5px;
 }
