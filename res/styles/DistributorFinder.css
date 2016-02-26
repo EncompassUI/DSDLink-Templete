@@ -1647,5 +1647,27 @@ fieldset[disabled] .btn.btn-black.active {
 }
 .form-wrapper .form-head {
   background: #4c4c4c;
-  padding: 3px 5px;
+  padding: 5px 20px;
+}
+.form-wrapper .form-head h3 {
+  display: inline-block;
+  color: #b5b5b5;
+  font-size: 20px;
+}
+.form-wrapper .form-head h3 i {
+  margin-right: 10px;
+}
+.form-wrapper .form-content {
+  margin: 30px;
+}
+.form-wrapper .form-content .input-group {
+  text-align: right;
+  margin: 20px 0;
+}
+.form-wrapper .form-content .input-group i {
+  margin-right: 10px;
+}
+.form-wrapper .form-content .input-group input {
+  height: 30px;
+  width: 95%;
 }
