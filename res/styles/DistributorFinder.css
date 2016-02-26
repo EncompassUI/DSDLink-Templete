@@ -1645,3 +1645,7 @@ fieldset[disabled] .btn.btn-black.active {
   background-position: top left;
   background-repeat: no-repeat;
 }
+.form-wrapper .form-head {
+  background: #4c4c4c;
+  padding: 3px 5px;
+}
