@@ -549,6 +549,9 @@ fieldset[disabled] .btn.btn-black.active {
   max-height: 150px;
   max-width: 100%;
 }
+.box-title i.dsd-icon-square {
+  color: #a5cd00;
+}
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -1654,6 +1657,10 @@ fieldset[disabled] .btn.btn-black.active {
 }
 .supplier-container .box-margin {
   margin: 10px 0 0 0;
+}
+.supplier-container .box-title {
+  padding: 10px 16px;
+  font-weight: bold;
 }
 .form-wrapper .form-head {
   background: #4c4c4c;
