@@ -3,14 +3,47 @@
     background-size: cover;
     background-position: top left;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-
+    /*background-attachment: fixed;*/
     .box-margin {
         margin: @margin-base 0 0 0;
     }
 
-    .box-title{
-        padding:@padding-large-vertical @padding-large-horizontal;
-        font-weight:bold;
+    .box-title {
+        padding: @padding-large-vertical @padding-large-horizontal;
+        font-weight: bold;
+        color: #000;
+
+        .strong {
+            color: @main-green;
+        }
     }
+
+    .company-logos {
+        text-align: center;
+
+        .company-unit {
+            padding: @padding-large-vertical @padding-small-horizontal;
+
+            img {
+                max-width: 240px;
+            }
+        }
+    }
+
+    .supplier-search-list {
+        background: @body-bg;
+        margin:15px;
+    }
+}
+
+@media screen and (max-width:@screen-xs-max){
+    .supplier-container{
+        .col-xs-12{
+            padding: 0 ;
+        }
+        .two-ads-group .box-margin:last-child{
+            margin-top:@margin-large;
+        }
+    }
+
 }

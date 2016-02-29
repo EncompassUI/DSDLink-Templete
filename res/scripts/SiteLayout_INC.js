@@ -1,18 +1,19 @@
 
 $(document).ready(function () {
-    SetLayoutHeight();
+    //SetLayoutHeight();
 
     $(window).resize(function(){
-        SetLayoutHeight();
+       //SetLayoutHeight();
     });
   
 });
 
 function SetLayoutHeight() {
     var fullheight = $(window).height();
-    var contentheight = $('.right-panel').height();
-
     var rightPanel = $('.right-panel');
+    var contentheight = rightPanel.height();
+
+
 
     if(contentheight > fullheight){
         rightPanel.css('height',contentheight);

@@ -1653,7 +1653,7 @@ fieldset[disabled] .btn.btn-black.active {
   background-size: cover;
   background-position: top left;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  /*background-attachment: fixed;*/
 }
 .supplier-container .box-margin {
   margin: 10px 0 0 0;
@@ -1661,6 +1661,31 @@ fieldset[disabled] .btn.btn-black.active {
 .supplier-container .box-title {
   padding: 10px 16px;
   font-weight: bold;
+  color: #000;
+}
+.supplier-container .box-title .strong {
+  color: #a5cd00;
+}
+.supplier-container .company-logos {
+  text-align: center;
+}
+.supplier-container .company-logos .company-unit {
+  padding: 10px 10px;
+}
+.supplier-container .company-logos .company-unit img {
+  max-width: 240px;
+}
+.supplier-container .supplier-search-list {
+  background: #ffffff;
+  margin: 15px;
+}
+@media screen and (max-width: 767px) {
+  .supplier-container .col-xs-12 {
+    padding: 0 ;
+  }
+  .supplier-container .two-ads-group .box-margin:last-child {
+    margin-top: 20px;
+  }
 }
 .form-wrapper .form-head {
   background: #4c4c4c;
