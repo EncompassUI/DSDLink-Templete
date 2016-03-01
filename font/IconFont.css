@@ -124,20 +124,25 @@
 /* Band Icons */
 .dsd-icon-youtube-square:before {
     content:"\f166";
+    color: #f12b2b;
 }
 
 .dsd-icon-facebook-square:before {
     content:"\f082";
+    color: #667eb9;
 }
 
 .dsd-icon-twitter-square:before {
     content:"\f081";
+    color: #5dd7fc;
 }
 
 .dsd-icon-instagram:before {
     content:"\f299";
+    color:#c5ac86;
 }
 
 .dsd-icon-linkin-square:before {
     content:"\f08c";
+    color: #38a6d7;
 }

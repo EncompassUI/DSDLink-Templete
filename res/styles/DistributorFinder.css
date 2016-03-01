@@ -345,6 +345,9 @@ li {
 .main-green {
   color: #a5cd00;
 }
+.input-block {
+  width: 100% !important;
+}
 .box-border-radius {
   border-radius: 10px;
 }
@@ -432,6 +435,49 @@ fieldset[disabled] .btn.btn-green:active,
 fieldset[disabled] .btn.btn-green.active {
   background-color: #a5cd00;
   border-color: #a5cd00;
+}
+.btn.btn-delete {
+  color: #ffffff;
+  background-color: #dd524d;
+  border-color: #dd524d;
+}
+.btn.btn-delete:focus,
+.btn.btn-delete.focus {
+  color: #ffffff;
+  background-color: #cf2d28;
+  border-color: #8f1f1b;
+}
+.btn.btn-delete:hover {
+  color: #ffffff;
+  background-color: #cf2d28;
+  border-color: #c72c26;
+}
+.btn.btn-delete:active,
+.btn.btn-delete.active {
+  color: #ffffff;
+  background-color: #cf2d28;
+  border-color: #c72c26;
+}
+.btn.btn-delete.disabled,
+.btn.btn-delete[disabled],
+fieldset[disabled] .btn.btn-delete,
+.btn.btn-delete.disabled:hover,
+.btn.btn-delete[disabled]:hover,
+fieldset[disabled] .btn.btn-delete:hover,
+.btn.btn-delete.disabled:focus,
+.btn.btn-delete[disabled]:focus,
+fieldset[disabled] .btn.btn-delete:focus,
+.btn.btn-delete.disabled.focus,
+.btn.btn-delete[disabled].focus,
+fieldset[disabled] .btn.btn-delete.focus,
+.btn.btn-delete.disabled:active,
+.btn.btn-delete[disabled]:active,
+fieldset[disabled] .btn.btn-delete:active,
+.btn.btn-delete.disabled.active,
+.btn.btn-delete[disabled].active,
+fieldset[disabled] .btn.btn-delete.active {
+  background-color: #dd524d;
+  border-color: #dd524d;
 }
 .btn.btn-black {
   color: #ffffff;
@@ -1839,12 +1885,61 @@ fieldset[disabled] .btn.btn-black.active {
   height: 40px;
   margin-bottom: 5px;
 }
-.input-group-addon {
+.form-wrapper .form-content .input-group-addon {
   display: table;
+  border-collapse: separate;
 }
-.input-group-addon .input-addon {
-  height: 40px;
+.form-wrapper .form-content .input-group-addon .input-addon {
   border-radius: 4px;
   border: 1px solid #bbb;
   display: table-cell;
+  width: 1%;
+  padding: 8px;
+  font-size: 20px;
+  border-radius: 4px 0 0 4px;
+  border-right: 0;
+}
+.form-wrapper .form-content .input-group-addon input {
+  display: table-cell;
+  width: 100%;
+  border-radius: 0 4px 4px 0;
+}
+.form-wrapper .form-state .input-group,
+.form-wrapper .form-association .input-group {
+  margin: 0;
+  text-align: left;
+}
+.form-wrapper .form-state .input-group input,
+.form-wrapper .form-association .input-group input {
+  width: 100%;
+}
+.form-wrapper .form-state button.btn.btn-green,
+.form-wrapper .form-association button.btn.btn-green {
+  height: 38px;
+}
+.form-wrapper .form-award .btn-green {
+  height: 38px;
+}
+.form-wrapper .form-award .input-group input {
+  width: 100%;
+}
+.card-content {
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+.card-content h4 {
+  margin: 20px;
+}
+.card-content h4 button.btn-delete {
+  float: right;
+}
+.card-content .card-list {
+  margin: 0 20px;
+}
+.card-content .card-list li {
+  font-size: 16px;
+}
+.card-content .card-list li .btn.btn-delete {
+  float: right;
 }
