@@ -1,3 +1,17 @@
+.nav-panel {
+    .main-panel {
+        .nav-tabs {
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+
+            li {
+                padding: 10px 0;
+            }
+        }
+    }
+}
+
 .supplier-container {
     background-image: url("@{background-url-prefix}bg-supplier.jpg");
     background-size: cover;
@@ -63,6 +77,82 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width:@screen-sm-max) {
+    .nav-panel {
+        position: inherit;
+        background-image: none;
+
+        .main-panel {
+            .nav-tabs {
+                -webkit-flex-direction: row;
+                -moz-flex-direction: row;
+                flex-direction: row;
+
+                li {
+                    flex: 1;
+                }
+            }
+        }
+
+        #supplier {
+            .input-group {
+                input {
+                    padding: 4px 10px;
+                    height: 36px;
+                    text-align: left;
+                }
+
+                .input-logo {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    .category-unit {
+        padding: 0px;
+        margin-bottom: 10px;
+        cursor: pointer;
+
+        .category-frame {
+            margin: 5px;
+            position: relative;
+
+            img {
+            }
+
+            .category-title {
+                position: absolute;
+                z-index: 1;
+                top: 50%;
+                left: 0;
+                margin-top: -10px;
+                width: 100%;
+                padding: 2px 0;
+                text-align: center;
+                color: #fff;
+                background: rgba(0,0,0,.8);
+                box-sizing: border-box;
+
+                label {
+                    cursor: pointer;
+                }
+            }
+
+            &.active {
+                .category-title {
+                    background: @main-green;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .supplier-container {
+        padding-top: 5px;
     }
 }
 

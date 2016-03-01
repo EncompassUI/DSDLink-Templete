@@ -1,28 +1,23 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" id="viewport" content="width=device-width, initial-scale=1">
     <title>Find Supplier</title>
     <link rel="stylesheet" href="res/styles/DistributorFinder.css">
     <link rel="stylesheet" href="font/IconFont.css">
-
     <script src="lib/jquery.min.js"></script>
-    <script src="res/scripts/tab.js"></script>    
+    <script src="res/scripts/tab.js"></script>
     <script type="text/javascript" src="res/scripts/SiteLayout_INC.js"></script>
 </head>
-
 <body>
     <div class="container-fluid">
-
         <div class="row">
-
             <!-- Left -->
-            <div class="col-xs-12 col-sm-4 col-md-3 col-lg-3 nav-panel map-panel">
+            <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 nav-panel map-panel">
                 <div class="row">
-                    <div class="col-sm-1"></div>
-                    <div class="logo-group hidden-xs col-sm-10">
+                    <div class="hidden-xs hidden-sm col-md-1"></div>
+                    <div class="logo-group hidden-xs hidden-sm col-md-10">
                         <div class="row">
                             <div class="col-sm-4 dsdlogo">
                                 <img class="img-responsive" src="img/dsdlogo.png" alt="DSDLINK">
@@ -32,22 +27,22 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-1"></div>
+                    <div class="hidden-xs hidden-sm col-md-1"></div>
                 </div>
                 <div class="row">
                     <div class="main-panel clearfix" style="display:block;">
                         <div class="container-fluid">
                             <div class="row">
                                 <ul class="nav nav-tabs col-xs-12 col-sm-12 col-md-3 col-lg-3" role="tablist">
-                                    <div class="row">
-                                        <li class="col-xs-3 col-sm-3 col-md-12 col-lg-12 col-sm-push-0 col-xs-push-3"><a href="" role="tab" data-toggle="tab"><i class="dsd-icon-warehouse"></i>Find Distributor</a></li>
-                                        <li class="col-xs-3 col-sm-3 col-md-12 col-lg-12 col-sm-push-0 col-xs-push-3 active"><a href="" role="tab" data-toggle="tab"><i class="dsd-icon-beer"></i>Find Supplier</a></li>
-                                        <li class="col-xs-3 col-sm-3 col-md-12 col-lg-12 col-sm-push-0 col-xs-push-3"><a href="" role="tab" data-toggle="tab"><i class="dsd-icon-register"></i>Register</a></li>
-                                        <li class="col-xs-3 col-sm-3 col-md-12 col-lg-12 col-sm-pull-0 col-xs-pull-9"><a href=""><i class="dsd-icon-logo"></i>Contact Us</a></li>
-                                    </div>
+
+                                    <li class="col-xs-3 col-sm-3 col-md-12 col-lg-12 col-md-push-0 col-sm-push-3 col-xs-push-3"><a href="" role="tab" data-toggle="tab"><i class="dsd-icon-warehouse"></i>Find Distributor</a></li>
+                                    <li class="col-xs-3 col-sm-3 col-md-12 col-lg-12 col-md-push-0 col-sm-push-3 col-xs-push-3 active"><a href="" role="tab" data-toggle="tab"><i class="dsd-icon-beer"></i>Find Supplier</a></li>
+                                    <li class="col-xs-3 col-sm-3 col-md-12 col-lg-12 col-md-push-0 col-sm-push-3 col-xs-push-3"><a href="" role="tab" data-toggle="tab"><i class="dsd-icon-register"></i>Register</a></li>
+                                    <li class="col-xs-3 col-sm-3 col-md-12 col-lg-12 col-md-pull-0 col-sm-pull-9 col-xs-pull-9"><a href=""><i class="dsd-icon-logo"></i>Contact Us</a></li>
+
                                 </ul>
                                 <div class="tab-content col-xs-12 col-sm-12 col-md-9 col-lg-9">
-                                    <div role="tabpanel" class="tab-pane active ">
+                                    <div role="tabpanel" class="tab-pane">
                                         <div class="input-group">
                                             <label class="input-label">Beverage Types</label>
                                             <input type="text">
@@ -70,12 +65,12 @@
                                         </div>
                                         <button class="btn btn-green btn-block">Search</button>
                                     </div>
-                                    <div id="supplier" role="tabpanel" class="tab-pane ">
+                                    <div id="supplier" role="tabpanel" class="tab-pane active">
                                         <div class="input-group">
                                             <input type="text">
                                             <span class="input-logo dsd-icon-search main-green"></span>
                                         </div>
-                                        <div class="categories">
+                                        <div class="categories hidden-xs hidden-sm">
                                             <h4 class="main-green">Categories</h4>
                                             <ul>
                                                 <li>Beer( <span>5</span> )</li>
@@ -99,151 +94,173 @@
                     </div>
                 </div>
             </div>
-
             <!-- Right: Supplier Container -->
-            <div class="col-xs-12 col-sm-8 col-md-9 col-lg-9 col-sm-offset-4 col-md-offset-3 col-lg-offset-3 right-panel supplier-container">
-               
-                    <!-- Category in mobile -->
-                    <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
-                        <div class="row">
-                            <div class="col-xs-4"></div>
-                            <div class="col-xs-4"></div>
-                            <div class="col-xs-4"></div>
+            <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9 col-md-offset-3 col-lg-offset-3 right-panel supplier-container">
+                <!-- Category in mobile -->
+                <div class="col-xs-12 col-sm-12 hidden-md hidden-lg">
+                    <div class="row">
+                        <div class="col-xs-4 col-sm-2 category-unit">
+                            <div class="category-frame active">
+                                <img class="box-border-radius" src="img/category1.jpg" alt="Alternate Text" />
+                                <span class="category-title">BEER<label>(10)</label></span>
+                            </div>
                         </div>
-                        <div class="row">
-                            <div class="col-xs-4"></div>
-                            <div class="col-xs-4"></div>
-                            <div class="col-xs-4"></div>
+                        <div class="col-xs-4 col-sm-2 category-unit">
+                            <div class="category-frame">
+                                <img class="box-border-radius" src="img/category2.jpg" alt="Alternate Text" />
+                                <span class="category-title">BEER<label>(10)</label></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-2 category-unit">
+                            <div class="category-frame">
+                                <img class="box-border-radius" src="img/category3.jpg" alt="Alternate Text" />
+                                <span class="category-title">BEER<label>(10)</label></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-2 category-unit">
+                            <div class="category-frame">
+                                <img class="box-border-radius" src="img/category4.jpg" alt="Alternate Text" />
+                                <span class="category-title">BEER<label>(10)</label></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-2 category-unit">
+                            <div class="category-frame">
+                                <img class="box-border-radius" src="img/category5.jpg" alt="Alternate Text" />
+                                <span class="category-title">BEER<label>(10)</label></span>
+                            </div>
+                        </div>
+                        <div class="col-xs-4 col-sm-2 category-unit">
+                            <div class="category-frame">
+                                <img class="box-border-radius" src="img/category6.jpg" alt="Alternate Text" />
+                                <span class="category-title">BEER<label>(10)</label></span>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- Advertisements -->
-                    <div class="row box-margin ads-group">
-                        <div class="col-xs-12 box-margin">
-                            <img class="box-border-radius" src="img/ad1.jpg">
+                </div>
+                <!-- Advertisements -->
+                <div class="row box-margin ads-group">
+                    <div class="col-xs-12 box-margin">
+                        <img class="box-border-radius" src="img/ad1.jpg">
+                    </div>
+                </div>
+                <div class="row box-margin two-ads-group">
+                    <div class="col-xs-12 col-sm-6 box-margin">
+                        <img class="box-border-radius" src="img/ad2.jpg">
+                    </div>
+                    <div class="col-xs-12 col-sm-6 box-margin">
+                        <img class="box-border-radius" src="img/ad3.jpg">
+                    </div>
+                </div>
+                <!-- Company logos -->
+                <div class="row box-margin company-frame">
+                    <h3 class="box-title">
+                        <i class="dsd-icon-square"></i>
+                        <span>RECENTLY JOINED</span>
+                    </h3>
+                    <div class="container-fluid company-logos">
+                        <div class="row">
+                            <div class="col-xs-4 col-sm-2 company-unit">
+                                <img class="box-border-radius" src="img/brandlogo1.jpg" alt="Company Logo" />
+                            </div>
+                            <div class="col-xs-4 col-sm-2 company-unit">
+                                <img class="box-border-radius" src="img/brandlogo2.jpg" alt="Company Logo" />
+                            </div>
+                            <div class="col-xs-4 col-sm-2 company-unit">
+                                <img class="box-border-radius" src="img/brandlogo3.jpg" alt="Company Logo" />
+                            </div>
+                            <div class="col-xs-4 col-sm-2 company-unit">
+                                <img class="box-border-radius" src="img/brandlogo1.jpg" alt="Company Logo" />
+                            </div>
+                            <div class="col-xs-4 col-sm-2 company-unit">
+                                <img class="box-border-radius" src="img/brandlogo2.jpg" alt="Company Logo" />
+                            </div>
+                            <div class="col-xs-4 col-sm-2 company-unit">
+                                <img class="box-border-radius" src="img/brandlogo3.jpg" alt="Company Logo" />
+                            </div>
                         </div>
-                    </div> 
-                    <div class="row box-margin two-ads-group">
-                        <div class="col-xs-12 col-sm-6 box-margin">
-                            <img class="box-border-radius" src="img/ad2.jpg">
-                        </div>
-                        <div class="col-xs-12 col-sm-6 box-margin">
-                            <img class="box-border-radius" src="img/ad3.jpg">
-                        </div>
-                    </div> 
-
-                    <!-- Company logos -->
-                    <div class="row box-margin company-frame">
+                    </div>
+                </div>
+                <!--Supplier Search Result-->
+                <div class="row box-margin">
+                    <div class="supplier-search-list box-margin box-border-radius">
                         <h3 class="box-title">
                             <i class="dsd-icon-square"></i>
-                            <span>RECENTLY JOINED</span>
+                            <span>GUINNESS <label class="strong">BEER</label> ALCOHOL AND BEVERAGE JOINT STOCK CORPORATION</span>
                         </h3>
-                        <div class="container-fluid company-logos">
-                            <div class="row">
-                                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 company-unit">
-                                    <img class="box-border-radius" src="img/brandlogo1.jpg" alt="Company Logo" />
+                        <div class="row supplier-search-list-content">
+                            <div class="col-xs-12 col-sm-8 ">
+                                <div class="col-xs-4 supplier-logos">
+                                    <div class="company-img-frame">
+                                        <img class="box-border-radius" src="img/brandlogo1.jpg" alt="Alternate Text" />
+                                    </div>
+                                    <h4><span class="strong">GUINESS</span> DRAUGHT</h4>
                                 </div>
-                                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 company-unit">
-                                    <img class="box-border-radius" src="img/brandlogo2.jpg" alt="Company Logo" />
+                                <div class="col-xs-4 supplier-logos">
+                                    <div class="company-img-frame">
+                                        <img class="box-border-radius" src="img/brandlogo2.jpg" alt="Alternate Text" />
+                                    </div>
+                                    <h4><span class="strong">GUINESS</span> SHARA</h4>
                                 </div>
-                                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 company-unit">
-                                    <img class="box-border-radius" src="img/brandlogo3.jpg" alt="Company Logo" />
+                                <div class="col-xs-4 supplier-logos">
+                                    <div class="company-img-frame">
+                                        <img class="box-border-radius" src="img/brandlogo3.jpg" alt="Alternate Text" />
+                                    </div>
+                                    <h4><span class="strong">GUINESS</span> HARP</h4>
                                 </div>
-                                <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 company-unit">
-                                    <img class="box-border-radius" src="img/brandlogo1.jpg" alt="Company Logo" />
-                                </div>
+                            </div>
+
+                            <div class="hidden-xs col-sm-4">
+                                <h4 class="strong">COMPANY PROFILE</h4>
+                                <p>Guinness s the famous beer Diageo's brand, is the world's largest beer brand. Guinness s the famous beer Diageo's brand, is the world's largest beer brand.</p>
+                                <p>
+                                    <i class="dsd-icon-globe"></i>
+                                    <a href="#" target="_blank">http://guinness.com</a>
+                                </p>
                             </div>
                         </div>
                     </div>
 
-                    <!--Supplier Search Result-->
-                    <div class="row box-margin">
-                        <div class="supplier-search-list box-margin box-border-radius">
-                            <h3 class="box-title">
-                                <i class="dsd-icon-square"></i>
-                                <span>GUINNESS <label class="strong">BEER</label> ALCOHOL AND BEVERAGE JOINT STOCK CORPORATION</span>
-                            </h3>
-
-                            <div class="row supplier-search-list-content">
-                                <div class="col-xs-12 col-sm-8 ">
-                                    <div class="col-xs-4 supplier-logos">
-                                        <div class="company-img-frame">
-                                            <img class="box-border-radius" src="img/brandlogo1.jpg" alt="Alternate Text" />
-                                        </div>
-                                        <h4><span class="strong">GUINESS</span> DRAUGHT</h4>
+                    <div class="supplier-search-list box-margin box-border-radius">
+                        <h3 class="box-title">
+                            <i class="dsd-icon-square"></i>
+                            <span>GUINNESS <label class="strong">BEER</label> ALCOHOL AND BEVERAGE JOINT STOCK CORPORATION</span>
+                        </h3>
+                        <div class="row supplier-search-list-content">
+                            <div class="col-xs-12 col-sm-8 ">
+                                <div class="col-xs-4 supplier-logos">
+                                    <div class="company-img-frame">
+                                        <img class="box-border-radius" src="img/brandlogo1.jpg" alt="Alternate Text" />
                                     </div>
-                                    <div class="col-xs-4 supplier-logos">
-                                        <div class="company-img-frame">
-                                            <img class="box-border-radius" src="img/brandlogo2.jpg" alt="Alternate Text" />
-                                        </div>
-                                        <h4><span class="strong">GUINESS</span> SHARA</h4>
-                                    </div>
-                                    <div class="col-xs-4 supplier-logos">
-                                        <div class="company-img-frame">
-                                            <img class="box-border-radius" src="img/brandlogo3.jpg" alt="Alternate Text" />
-                                        </div>
-                                        <h4><span class="strong">GUINESS</span> HARP</h4>
-                                    </div>
+                                    <h4><span class="strong">GUINESS</span> DRAUGHT</h4>
                                 </div>
-
-                                <div class="hidden-xs col-sm-4">
-                                    <h4 class="strong">COMPANY PROFILE</h4>
-                                    <p>Guinness s the famous beer Diageo's brand, is the world's largest beer brand. Guinness s the famous beer Diageo's brand, is the world's largest beer brand.</p>
-                                    <p>
-                                        <i class="dsd-icon-globe"></i>
-                                        <a href="#" target="_blank">http://guinness.com</a>
-                                    </p>
+                                <div class="col-xs-4 supplier-logos">
+                                    <div class="company-img-frame">
+                                        <img class="box-border-radius" src="img/brandlogo2.jpg" alt="Alternate Text" />
+                                    </div>
+                                    <h4><span class="strong">GUINESS</span> SHARA</h4>
+                                </div>
+                                <div class="col-xs-4 supplier-logos">
+                                    <div class="company-img-frame">
+                                        <img class="box-border-radius" src="img/brandlogo3.jpg" alt="Alternate Text" />
+                                    </div>
+                                    <h4><span class="strong">GUINESS</span> HARP</h4>
                                 </div>
                             </div>
 
-                        </div>
-
-                        <div class="supplier-search-list box-margin box-border-radius">
-                            <h3 class="box-title">
-                                <i class="dsd-icon-square"></i>
-                                <span>GUINNESS <label class="strong">BEER</label> ALCOHOL AND BEVERAGE JOINT STOCK CORPORATION</span>
-                            </h3>
-                            <div class="row supplier-search-list-content">
-                                <div class="col-xs-12 col-sm-8 ">
-                                    <div class="col-xs-4 supplier-logos">
-                                        <div class="company-img-frame">
-                                            <img class="box-border-radius" src="img/brandlogo1.jpg" alt="Alternate Text" />
-                                        </div>
-                                        <h4><span class="strong">GUINESS</span> DRAUGHT</h4>
-                                    </div>
-                                    <div class="col-xs-4 supplier-logos">
-                                        <div class="company-img-frame">
-                                            <img class="box-border-radius" src="img/brandlogo2.jpg" alt="Alternate Text" />
-                                        </div>
-                                        <h4><span class="strong">GUINESS</span> SHARA</h4>
-                                    </div>
-                                    <div class="col-xs-4 supplier-logos">
-                                        <div class="company-img-frame">
-                                            <img class="box-border-radius" src="img/brandlogo3.jpg" alt="Alternate Text" />
-                                        </div>
-                                        <h4><span class="strong">GUINESS</span> HARP</h4>
-                                    </div>
-                                </div>
-
-                                <div class="hidden-xs col-sm-4">
-                                    <h4 class="strong">COMPANY PROFILE</h4>
-                                    <p>Guinness s the famous beer Diageo's brand, is the world's largest beer brand. Guinness s the famous beer Diageo's brand, is the world's largest beer brand.</p>
-                                    <p>
-                                        <i class="dsd-icon-globe"></i>
-                                        <a href="#" target="_blank">http://guinness.com</a>
-                                    </p>
-                                </div>
+                            <div class="hidden-xs col-sm-4">
+                                <h4 class="strong">COMPANY PROFILE</h4>
+                                <p>Guinness s the famous beer Diageo's brand, is the world's largest beer brand. Guinness s the famous beer Diageo's brand, is the world's largest beer brand.</p>
+                                <p>
+                                    <i class="dsd-icon-globe"></i>
+                                    <a href="#" target="_blank">http://guinness.com</a>
+                                </p>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                
             </div>
-
         </div>
-
     </div>
-
 </body>
-
 </html>
