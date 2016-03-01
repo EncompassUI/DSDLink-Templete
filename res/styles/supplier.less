@@ -8,18 +8,19 @@
         margin: @margin-base 0 0 0;
     }
 
+    .strong {
+        color: @main-green;
+    }
+
     .box-title {
         padding: @padding-large-vertical @padding-large-horizontal;
         font-weight: bold;
         color: #000;
-
-        .strong {
-            color: @main-green;
-        }
     }
 
     .company-logos {
         text-align: center;
+        padding: 0 18px 18px 18px;
 
         .company-unit {
             padding: @padding-large-vertical @padding-small-horizontal;
@@ -31,19 +32,77 @@
     }
 
     .supplier-search-list {
-        background: @body-bg;
-        margin:15px;
+        background: #fff;
+        margin: -15px 15px 40px 15px;
+        padding-bottom: 5px;
+
+        .box-title {
+            span {
+                max-width: 90%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: inline-block;
+                vertical-align: top;
+                white-space: nowrap;
+            }
+        }
+
+        .supplier-search-list-content {
+            margin: 0px;
+
+            .supplier-logos {
+                padding: 0 3px;
+
+                .company-img-frame {
+                    border: solid 1px #ccc;
+                    margin-bottom: @margin-small;
+                }
+
+                h4 {
+                    text-align: center;
+                }
+            }
+        }
     }
 }
 
-@media screen and (max-width:@screen-xs-max){
-    .supplier-container{
-        .col-xs-12{
-            padding: 0 ;
+@media screen and (max-width:@screen-xs-max) {
+    .supplier-container {
+        .company-frame {
+            h3.box-title {
+                padding: 10px 0;
+            }
         }
-        .two-ads-group .box-margin:last-child{
-            margin-top:@margin-large;
+
+        .ads-group, .two-ads-group {
+            .col-xs-12 {
+                padding: 0;
+            }
+        }
+
+        .two-ads-group .box-margin:last-child {
+            margin-top: @margin-large;
+        }
+
+        .company-logos {
+            padding: 0 5px 5px 5px;
+            margin-top: -5px;
+        }
+
+        .supplier-search-list {
+            margin: 0 0 20px 0;
+
+            .supplier-search-list-content {
+
+                h4.strong {
+                    margin-top: 15px;
+                    margin-bottom: 0px;
+                }
+
+                p {
+                    margin-top: 5px;
+                }
+            }
         }
     }
-
 }

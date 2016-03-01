@@ -117,6 +117,10 @@
     content:"\f0c8";
 }
 
+.dsd-icon-delete:before {
+    content:"\f014";
+}
+
 /* Band Icons */
 .dsd-icon-youtube-square:before {
     content:"\f166";

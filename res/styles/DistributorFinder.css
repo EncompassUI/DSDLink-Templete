@@ -1658,16 +1658,17 @@ fieldset[disabled] .btn.btn-black.active {
 .supplier-container .box-margin {
   margin: 10px 0 0 0;
 }
+.supplier-container .strong {
+  color: #a5cd00;
+}
 .supplier-container .box-title {
   padding: 10px 16px;
   font-weight: bold;
   color: #000;
 }
-.supplier-container .box-title .strong {
-  color: #a5cd00;
-}
 .supplier-container .company-logos {
   text-align: center;
+  padding: 0 18px 18px 18px;
 }
 .supplier-container .company-logos .company-unit {
   padding: 10px 10px;
@@ -1676,15 +1677,55 @@ fieldset[disabled] .btn.btn-black.active {
   max-width: 240px;
 }
 .supplier-container .supplier-search-list {
-  background: #ffffff;
-  margin: 15px;
+  background: #fff;
+  margin: -15px 15px 40px 15px;
+  padding-bottom: 5px;
+}
+.supplier-container .supplier-search-list .box-title span {
+  max-width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  vertical-align: top;
+  white-space: nowrap;
+}
+.supplier-container .supplier-search-list .supplier-search-list-content {
+  margin: 0px;
+}
+.supplier-container .supplier-search-list .supplier-search-list-content .supplier-logos {
+  padding: 0 3px;
+}
+.supplier-container .supplier-search-list .supplier-search-list-content .supplier-logos .company-img-frame {
+  border: solid 1px #ccc;
+  margin-bottom: 5px;
+}
+.supplier-container .supplier-search-list .supplier-search-list-content .supplier-logos h4 {
+  text-align: center;
 }
 @media screen and (max-width: 767px) {
-  .supplier-container .col-xs-12 {
-    padding: 0 ;
+  .supplier-container .company-frame h3.box-title {
+    padding: 10px 0;
+  }
+  .supplier-container .ads-group .col-xs-12,
+  .supplier-container .two-ads-group .col-xs-12 {
+    padding: 0;
   }
   .supplier-container .two-ads-group .box-margin:last-child {
     margin-top: 20px;
+  }
+  .supplier-container .company-logos {
+    padding: 0 5px 5px 5px;
+    margin-top: -5px;
+  }
+  .supplier-container .supplier-search-list {
+    margin: 0 0 20px 0;
+  }
+  .supplier-container .supplier-search-list .supplier-search-list-content h4.strong {
+    margin-top: 15px;
+    margin-bottom: 0px;
+  }
+  .supplier-container .supplier-search-list .supplier-search-list-content p {
+    margin-top: 5px;
   }
 }
 .form-wrapper .form-head {
