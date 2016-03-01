@@ -4,9 +4,12 @@
     background-position: center right;
     background-repeat: no-repeat;
     background-color: rgba(0,0,0,0.87);
-    position:fixed;
-    top:0;
-    bottom:0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
 
     @media (max-width: @screen-xs-max) {
         right: 0;
@@ -32,8 +35,8 @@
 
         .nav {
             margin: 0;
-            padding:0 8px;
-            background:@dark-black;
+            padding: 0 8px;
+            background: @dark-black;
 
             li {
                 margin: 0;
@@ -123,4 +126,29 @@
             margin-right: 10px;
         }
     }
+}
+
+
+@media screen and (max-width:@screen-sm-max) {
+    .nav-panel {
+        position: inherit;
+        background-image: none;
+
+        .main-panel {
+            .nav-tabs {
+                -webkit-flex-direction: row;
+                -moz-flex-direction: row;
+                flex-direction: row;
+
+                li {
+                    flex: 1;
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:@screen-xs-max) {
+    
 }
