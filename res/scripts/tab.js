@@ -14,4 +14,5 @@
          $('.tab-content').find('.tab-pane:eq(' + index + ')').addClass('active');
          g.preventDefault();
      });
+     
  };
