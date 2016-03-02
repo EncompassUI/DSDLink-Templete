@@ -3,25 +3,21 @@
     background-size: contain;
     background-position: center right;
     background-repeat: no-repeat;
-    background-color: rgba(0,0,0,0.87);
+    background-color: rgba(0, 0, 0, 0.87);
     position: fixed;
     top: 0;
     bottom: 0;
     display: flex;
     flex-direction: column;
-
     @media (max-width: @screen-xs-max) {
         right: 0;
         width: 100%;
     }
-
     & > div:first-child {
-        background: rgba(0,0,0,.2);
-
+        background: rgba(0, 0, 0, .2);
         .logo-group {
             padding: 10px 0;
             text-align: center;
-
             .encompasslogo {
                 margin-left: -20px;
                 margin-top: 5px;
@@ -29,60 +25,59 @@
             }
         }
     }
-
     .main-panel {
-
         .nav {
             margin: 0;
             padding: 0 8px;
             background: @dark-black;
-
             li {
                 margin: 0;
                 padding: 10px;
                 text-align: center;
-
                 a {
                     color: white;
-
                     label {
                         cursor: pointer;
                         display: block;
                     }
-
                     i {
                         display: block;
                         font-size: 24px;
                     }
                 }
-
                 &.active {
                     background: @light-black;
-
                     a {
                         color: @main-green;
                     }
                 }
             }
         }
-
         .tab-content {
             .tab-pane {
                 display: none;
-
+                position: relative;
+                .nav-sublist {
+                    position: absolute;
+                    top: 0;
+                    left: 120%;
+                    &.active{
+                        left: 0;
+                    }
+                    .btn-black{
+                        margin: 5px 0 0 0;
+                    }
+                }
                 &.active {
                     display: block;
                 }
             }
-
             .list-group {
                 margin-top: 60px;
             }
-
             .input-group {
                 margin: 15px 0;
             }
-
             .btn {
                 margin: 25px 0;
             }
@@ -111,43 +106,37 @@
         overflow-y: scroll;
     }
 }
-.nav-list{
-    li{
-        
+
+.nav-list {
+    li {
         border-radius: @border-radius-base;
         color: white;
         padding: 5px;
         cursor: pointer;
-        &:hover{
+        &:hover {
             background: @main-green;
         }
-        i{
+        i {
             margin-right: 10px;
         }
     }
 }
 
-
 @media screen and (max-width:@screen-sm-max) {
     .nav-panel {
         position: inherit;
         background-image: none;
-
         .main-panel {
             .nav-tabs {
                 -webkit-flex-direction: row;
                 -moz-flex-direction: row;
                 flex-direction: row;
-
                 li {
                     flex: 1;
                 }
             }
         }
     }
-
 }
 
-@media screen and (max-width:@screen-xs-max) {
-    
-}
+@media screen and (max-width:@screen-xs-max) {}
