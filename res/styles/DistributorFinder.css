@@ -1486,7 +1486,6 @@ fieldset[disabled] .btn.btn-black.active {
   bottom: 0;
   display: flex;
   flex-direction: column;
-  padding: 0;
 }
 @media (max-width: 767px) {
   .nav-panel {
