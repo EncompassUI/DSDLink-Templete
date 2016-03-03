@@ -1478,6 +1478,10 @@ fieldset[disabled] .btn.btn-black.active {
     display: none !important;
   }
 }
+.MainContent {
+  background: white;
+  z-index: 10;
+}
 .nav-panel {
   background-image: url("../../img/bg-nav-panel.jpg");
   background-size: contain;
@@ -1542,10 +1546,10 @@ fieldset[disabled] .btn.btn-black.active {
 .nav-panel .main-panel .tab-content .tab-pane .nav-sublist {
   position: absolute;
   top: 0;
-  left: 120%;
+  transform: translateX(120%);
 }
 .nav-panel .main-panel .tab-content .tab-pane .nav-sublist.active {
-  left: 0;
+  transform: translateX(0);
 }
 .nav-panel .main-panel .tab-content .tab-pane .nav-sublist .btn-black {
   margin: 5px 0 0 0;
@@ -1589,7 +1593,8 @@ fieldset[disabled] .btn.btn-black.active {
   padding: 5px;
   cursor: pointer;
 }
-.nav-list li:hover {
+.nav-list li:hover,
+.nav-list li.active {
   background: #a5cd00;
 }
 .nav-list li i {
@@ -1869,6 +1874,10 @@ fieldset[disabled] .btn.btn-black.active {
 }
 .form-wrapper {
   background: white;
+  display: none;
+}
+.form-wrapper.active {
+  display: block;
 }
 .form-wrapper .form-head {
   background: #4c4c4c;

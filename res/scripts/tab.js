@@ -1,6 +1,7 @@
  $(document).ready(function () {
      TabToggle();
-     SubTabToggle()
+     SubTabToggle();
+     ProfileSwitch();
  });
 
  function TabToggle() {
@@ -21,13 +22,31 @@
  function SubTabToggle() {
      $('.sub-tabpane').click(function (g) {
          var index = $(this).index();
-         $(this).closest('.nav-list').addClass('hidden');
+         
          $('.nav-sublist').not('.nav-sublist:eq(' + index + ')').removeClass('active');
          $('.nav-sublist:eq(' + index + ')').addClass('active');
+         
+//         setTimeout(function(){
+             $(this).closest('.nav-list').delay(100).hide(1);
+//         },60);
+         
          g.preventDefault();
      });
-     $('#subListBack').click(function(){
+     $('#subListBack').click(function () {
          $('.nav-sublist').removeClass('active');
-         $('.nav-list').removeClass('hidden');
+         $('.nav-list').delay(200).show(1);
      });
- }
+ };
+
+ function ProfileSwitch() {
+     $('.profile-tabpane').click(function () {
+         var index = $(this).index(),
+             tab = $(this).closest('.nav-list');
+
+         tab.find('li').removeClass('active');
+         $(this).addClass('active');
+         
+         $('.form-wrapper').not('.form-wrapper:eq(' + index + ')').removeClass('active');
+         $('.form-wrapper:eq(' + index + ')').addClass('active');
+     });
+ };
