@@ -7,69 +7,69 @@
 //
 //ga('create', 'UA-254841-2', 'auto');
 //ga('send', 'pageview');
-//
-//(function (w) {
-//    var Class = function (parent) {
-//        var _class = function () {
-//            this.init.apply(this, arguments);
-//        };
-//
-//        if (parent) {
-//            var subClass = function () { };
-//            subClass.prototype = parent.prototype;
-//            _class.prototype = new subClass();
-//        }
-//        _class.prototype.init = function () { };
-//
-//        _class.fn = _class.prototype;
-//        _class.fn.parent = _class;
-//        _class._super = _class.__proto__;
-//
-//        _class.proxy = function (func) {
-//            var self = this;
-//            var _arguments = [];
-//
-//            for (var i = 1; i < arguments.length; i++) {
-//                _arguments.push(arguments[i]);
-//            }
-//
-//            return (function () {
-//                if (_arguments.length <= 0) {
-//                    _arguments = arguments;
-//                }
-//                return func.apply(self, _arguments);
-//            });
-//        };
-//
-//        _class.fn.proxy = _class.proxy;
-//
-//        _class.extend = function (obj) {
-//            var extended = obj.extended;
-//            for (var i in obj) {
-//                _class[i] = obj[i];
-//            }
-//
-//            if (extended) {
-//                extended(_class);
-//            }
-//        };
-//
-//        _class.include = function (obj) {
-//            var included = obj.included;
-//            for (var i in obj) {
-//                _class.fn[i] = obj[i];
-//            }
-//
-//            if (included) {
-//                included(_class);
-//            }
-//        };
-//
-//        return _class;
-//    };
-//
-//    w.Class = Class;
-//}(window));
+
+(function (w) {
+    var Class = function (parent) {
+        var _class = function () {
+            this.init.apply(this, arguments);
+        };
+
+        if (parent) {
+            var subClass = function () { };
+            subClass.prototype = parent.prototype;
+            _class.prototype = new subClass();
+        }
+        _class.prototype.init = function () { };
+
+        _class.fn = _class.prototype;
+        _class.fn.parent = _class;
+        _class._super = _class.__proto__;
+
+        _class.proxy = function (func) {
+            var self = this;
+            var _arguments = [];
+
+            for (var i = 1; i < arguments.length; i++) {
+                _arguments.push(arguments[i]);
+            }
+
+            return (function () {
+                if (_arguments.length <= 0) {
+                    _arguments = arguments;
+                }
+                return func.apply(self, _arguments);
+            });
+        };
+
+        _class.fn.proxy = _class.proxy;
+
+        _class.extend = function (obj) {
+            var extended = obj.extended;
+            for (var i in obj) {
+                _class[i] = obj[i];
+            }
+
+            if (extended) {
+                extended(_class);
+            }
+        };
+
+        _class.include = function (obj) {
+            var included = obj.included;
+            for (var i in obj) {
+                _class.fn[i] = obj[i];
+            }
+
+            if (included) {
+                included(_class);
+            }
+        };
+
+        return _class;
+    };
+
+    w.Class = Class;
+}(window));
 
 var DistributorFinder = {};
 
@@ -1175,7 +1175,7 @@ DistributorFinder.Business = (function () {
 })();
 
 $(function () {
-    FastClick.attach(document.body);
+//    FastClick.attach(document.body);
 
     if (DistributorFinder.Helper.judgeContainPage("distributorfinderqunit")) {
         return;

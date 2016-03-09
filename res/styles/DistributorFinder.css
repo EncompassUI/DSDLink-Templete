@@ -1546,7 +1546,7 @@ fieldset[disabled] .btn.btn-black.active {
 .nav-panel .main-panel .tab-content .tab-pane .nav-sublist {
   position: absolute;
   top: 0;
-  transform: translateX(120%);
+  transform: translateX(1200%);
 }
 .nav-panel .main-panel .tab-content .tab-pane .nav-sublist.active {
   transform: translateX(0);
@@ -1894,6 +1894,19 @@ fieldset[disabled] .btn.btn-black.active {
 .form-wrapper .form-content {
   margin: 30px;
 }
+.form-wrapper .form-content .card-state {
+  margin: 10px 0;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  padding: 10px;
+}
+.form-wrapper .form-content .card-state .card-state-title {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.form-wrapper .form-content .card-state .card-state-title button {
+  float: right;
+}
 .form-wrapper .form-content .input-group {
   text-align: right;
   margin: 20px 0;
@@ -1914,6 +1927,9 @@ fieldset[disabled] .btn.btn-black.active {
   position: relative;
   text-align: left;
   margin-right: -3px;
+}
+.form-wrapper .form-content .input-group .uploadimg .img-thumb {
+  width: 30px;
 }
 .form-wrapper .form-content .input-group .uploadimg input {
   width: 100%;

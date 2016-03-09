@@ -9,9 +9,11 @@
     <link rel="stylesheet" href="font/IconFont.css">
 
     <script src="lib/jquery.min.js"></script>
+    <script src="lib/topojson.v1.min.js"></script>
+    <script src="lib/underscore-min.js"></script>
     <script src="res/scripts/tab.js"></script>
     <script type="text/javascript" src="res/scripts/SiteLayout_INC.js"></script>
-    <script type="text/javascript" src="res/scripts/DistributorFinder_INC.js"></script>
+    <script type="text/javascript" src="res/scripts/DistributorFinder.js"></script>
 </head>
 
 <body>
@@ -129,7 +131,7 @@
             </div>
             <!-- Right: Map Container -->
             <div class="MainContent col-xs-12 col-sm-12 col-md-9 col-lg-9 col-md-offset-3 col-lg-offset-3">
-            <div class="hidden-xs map-container" >
+            <div class="hidden-xs map-container" id="#map-container">
                 
             </div>
             <div class=" form-wrapper" >
@@ -140,7 +142,7 @@
                     </div>
                     <div class="form-content">
                         <div class="input-group">
-                            <i class="dsd-icon-location"></i>
+                            <i class="dsd-icon-information"></i>
                             <input type="text" placeholder="Company">
                         </div>
                         <div class="input-group">
@@ -170,7 +172,7 @@
                         <div class="input-group">
                             <div class="uploadimg">
                                 <input type="text" placeholder="Company Logo" class="">
-                                <span class="input-logo">a</span>
+                                <span class="input-logo img-thumb"><img class="img-responsive" src="img/iconfont-tupian.png" alt=""></span>
                             </div>
                             <div class="uploadbtn">
                                 <button class="btn btn-green">UPLOAD LOGO</button>
@@ -228,7 +230,7 @@
 
                         </div>
                         <div class="card-state">
-                            <h4>MT <button class="btn btn-delete dsd-icon-delete"></button></h4>
+                            <h4 class="card-state-title">MT <button class="btn btn-delete dsd-icon-delete"></button></h4>
                             <div class="card-state-content">
 
                             </div>
@@ -244,7 +246,7 @@
                         <h3><i class="dsd-icon-location-o"></i>WHAT WE SELL</h3>
                         <button class="right btn btn-green">Save</button>
                     </div>
-                    <div class="form-content ">
+                    <div class="form-content form-state">
                         <div class="row">
                             <div class="input-group col-xs-10">
                                 <input type="text" placeholder="State">
