@@ -39,7 +39,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: roboto, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #333333;
@@ -388,13 +388,14 @@ li {
 .btn {
   display: inline-block;
   text-align: center;
-  cursor: pointer;
   border-radius: 3px;
   padding: 6px 16px;
   line-height: 15px;
   border: 1px solid transparent;
   font-size: 14px;
   vertical-align: middle;
+  outline: none;
+  cursor: pointer;
 }
 .btn.btn-green {
   color: #ffffff;
