@@ -52,6 +52,7 @@ textarea {
   font-family: inherit;
   font-size: inherit;
   line-height: inherit;
+  outline: none;
 }
 a {
   color: #337ab7;
@@ -379,6 +380,9 @@ li {
   font-size: 12px;
   text-align: center;
   width: 100%;
+}
+.input-group input:focus {
+  border: solid 1px #a5cd00;
 }
 .input-group span.input-logo {
   position: absolute;
