@@ -5,11 +5,13 @@
         };
 
         if (parent) {
-            var subClass = function () { };
+            var subClass = function () {
+            };
             subClass.prototype = parent.prototype;
             _class.prototype = new subClass();
         }
-        _class.prototype.init = function () { };
+        _class.prototype.init = function () {
+        };
 
         _class.fn = _class.prototype;
         _class.fn.parent = _class;
@@ -151,9 +153,7 @@ DistributorFinder.DataProvider = {
     },
 };
 
-DistributorFinder.CustomEvent = {
-
-};
+DistributorFinder.CustomEvent = {};
 
 DistributorFinder.Helper = {
 //    rgb2hex: function (rgb) {
@@ -262,8 +262,8 @@ DistributorFinder.Helper = {
                     result = r;
                     dtd.resolve(result);
                 }).fail(function () {
-                    console.log("county data error");
-                }
+                        console.log("county data error");
+                    }
                 );
             } else {
                 dtd.resolve(result);
@@ -353,14 +353,15 @@ DistributorFinder.Helper = {
         //});
         //return q;
     }
-}
-DistributorFinder.Business = (function() {
-    
+};
+DistributorFinder.Business = (function () {
+
     var DistributorFinderClass = (function () {
         var distributorFinderClass = new Class();
 
         distributorFinderClass.include({
-            init: function () { },
+            init: function () {
+            },
             initData: function () {
                 switch (DistributorFinder.Helper.hrefRequest("Action")) {
                     case "ShowMap":
@@ -387,7 +388,7 @@ DistributorFinder.Business = (function() {
                         var isGeoCounty = false;
                         if (DistributorFinder.Helper.hrefRequest("ShareProfileType") == "GeoCounty") {
                             isGeoCounty = true;
-                        } 
+                        }
                         DistributorFinderProfilePageClass.init(true, isGeoCounty);
                         break;
                     case "Brand":
@@ -410,29 +411,27 @@ DistributorFinder.Business = (function() {
 
         return distributorFinderClass;
     })();
-   var DistributorFinderHomePageClass = (function () {
+    var DistributorFinderHomePageClass = (function () {
         var distributorFinderHomePageClass = new Class();
 
-        var drawSymbol = function (svgWidth,svgHeight) {
+        var drawSymbol = function (svgWidth, svgHeight) {
             var symbol = d3.select("body")
-                            .append("svg")
-                            .attr("id","symbolPoint")
-                            .attr("display", "none")
-                            .append("defs")
-                            .append("symbol")
-                            .attr("viewBox", "0 0 " + svgWidth * 90 + " " + svgHeight * 90)
-                            .attr("id", "icon-location");
+                .append("svg")
+                .attr("id", "symbolPoint")
+                .attr("display", "none")
+                .append("defs")
+                .append("symbol")
+                .attr("viewBox", "0 0 " + svgWidth * 90 + " " + svgHeight * 90)
+                .attr("id", "icon-location");
             symbol.append("path").attr("fill", "#F54436")
-                  .attr("d", "M306,70.4c-135.3,0-244.9,109.7-244.9,244.9S306,723.6,306,723.6s244.9-273,244.9-408.2S441.3,70.4,306,70.4z");
+                .attr("d", "M306,70.4c-135.3,0-244.9,109.7-244.9,244.9S306,723.6,306,723.6s244.9-273,244.9-408.2S441.3,70.4,306,70.4z");
             symbol.append("path").attr("fill", "#FFFFFF")
-                  .attr("d", "M306,167.1c-77.4,0-140.1,62.8-140.1,140.1S228.6,447.3,306,447.3s140.1-62.8,140.1-140.1S383.4,167.1,306,167.1z");
+                .attr("d", "M306,167.1c-77.4,0-140.1,62.8-140.1,140.1S228.6,447.3,306,447.3s140.1-62.8,140.1-140.1S383.4,167.1,306,167.1z");
         };
 
-    
-           
 
         distributorFinderHomePageClass.extend({
-            
+
             init: function () {
 
                 var windowWidth = $(window).width();
@@ -444,7 +443,7 @@ DistributorFinder.Business = (function() {
 //                    svgHeight = $(window).height() - $("nav").height() - $("footer").height();
 //                }
 
-              
+
                 distributorFinderHomePageClass.drawSvgMap(svgHeight).done(function (projection) {
                     distributorFinderHomePageClass.drawCustomersPointer(projection, DistributorFinder.Global.distributorFilter);
                 });
@@ -479,7 +478,6 @@ DistributorFinder.Business = (function() {
 //                });
             },
 
-           
 
             drawSvgMap: function (svgHeight) {
                 var dtd = $.Deferred();
@@ -494,7 +492,7 @@ DistributorFinder.Business = (function() {
                     projection.scale(1).translate([0, 0]);
                     var b = path.bounds(topojson.feature(us, us.objects.usa));
                     s = .95 / Math.max((b[1][0] - b[0][0]) / svgWidth, (b[1][1] - b[0][1]) / svgHeight),
-                    t = [(svgWidth - s * (b[1][0] + b[0][0])) / 2, (svgHeight - s * (b[1][1] + b[0][1])) / 2];
+                        t = [(svgWidth - s * (b[1][0] + b[0][0])) / 2, (svgHeight - s * (b[1][1] + b[0][1])) / 2];
                     projection.scale(s).translate(t);
                     d3.select("#usMapSvg").append("g")
                         .attr("id", "usmap")
@@ -513,13 +511,13 @@ DistributorFinder.Business = (function() {
                             if (distributorByState.length === 0) {
                                 return;
                             } else {
-                                var supplier = encodeURIComponent( DistributorFinder.Helper.hrefRequest("Supplier", DistributorFinder.Global.ajaxPostData));
-                                var brand = encodeURIComponent( DistributorFinder.Helper.hrefRequest("Brand", DistributorFinder.Global.ajaxPostData));
+                                var supplier = encodeURIComponent(DistributorFinder.Helper.hrefRequest("Supplier", DistributorFinder.Global.ajaxPostData));
+                                var brand = encodeURIComponent(DistributorFinder.Helper.hrefRequest("Brand", DistributorFinder.Global.ajaxPostData));
                                 var state = d.id;
                                 var beverageTypes = DistributorFinder.Helper.hrefRequest("beverageTypes", DistributorFinder.Global.ajaxPostData);
-                                var customer = encodeURIComponent( DistributorFinder.Helper.hrefRequest("Customer", DistributorFinder.Global.ajaxPostData));
+                                var customer = encodeURIComponent(DistributorFinder.Helper.hrefRequest("Customer", DistributorFinder.Global.ajaxPostData));
                                 location.href = "DistributorFinder.aspx" + "?Action=ShowMap" + "&Supplier=" + supplier + "&Brand=" + brand + "&State=" + d.id + "&Customer=" + customer + "&beverageTypes=" + beverageTypes;
-                              
+
                             }
 
                         });
@@ -530,7 +528,7 @@ DistributorFinder.Business = (function() {
             },
 
             drawCustomersPointer: function (projection, filterCustomers) {
-                if(_.isUndefined(projection)){
+                if (_.isUndefined(projection)) {
                     projection = DistributorFinder.Global.projection;
                 }
                 $("#customerSvg").remove();
@@ -543,7 +541,7 @@ DistributorFinder.Business = (function() {
                     .enter().append("use")
                     .attr("xlink:href", "#icon-location")
                     .attr("transform", function (d) {
-                        return "translate(" + (projection([d.Longitude, d.Latitude])[0]-5) + "," + (projection([d.Longitude, d.Latitude])[1]-10) + ")";
+                        return "translate(" + (projection([d.Longitude, d.Latitude])[0] - 5) + "," + (projection([d.Longitude, d.Latitude])[1] - 10) + ")";
                     });
             }
         });
