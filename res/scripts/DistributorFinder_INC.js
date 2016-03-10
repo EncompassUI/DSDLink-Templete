@@ -15,11 +15,13 @@
         };
 
         if (parent) {
-            var subClass = function () { };
+            var subClass = function () {
+            };
             subClass.prototype = parent.prototype;
             _class.prototype = new subClass();
         }
-        _class.prototype.init = function () { };
+        _class.prototype.init = function () {
+        };
 
         _class.fn = _class.prototype;
         _class.fn.parent = _class;
@@ -161,9 +163,7 @@ DistributorFinder.DataProvider = {
     },
 };
 
-DistributorFinder.CustomEvent = {
-
-};
+DistributorFinder.CustomEvent = {};
 
 DistributorFinder.Helper = {
     rgb2hex: function (rgb) {
@@ -228,11 +228,11 @@ DistributorFinder.Helper = {
         var ajaxSource = _.isUndefined(ajaxUrl) ? DistributorFinder.Constant.AjaxPage + '?Action=' + "Autocomplete&Type=" + source : ajaxUrl + source;
         var input = $('<input>');
         input.attr("placeholder", searchText)
-             .attr("class", "form-control")
-             .attr("type", "text")
-             .on('focus', function () {
-                 this.value = "";
-             });
+            .attr("class", "form-control")
+            .attr("type", "text")
+            .on('focus', function () {
+                this.value = "";
+            });
 
         input.autocomplete({
             max: 3,
@@ -241,7 +241,7 @@ DistributorFinder.Helper = {
             source: function (request, response) {
                 $.getJSON(ajaxSource + "&term=" + encodeURIComponent(request.term)).done(function (result) {
                     response($.map(result, function (item) {
-                        return  item.label;
+                        return item.label;
                     }));
                 });
             }
@@ -272,8 +272,8 @@ DistributorFinder.Helper = {
                     result = r;
                     dtd.resolve(result);
                 }).fail(function () {
-                    console.log("county data error");
-                }
+                        console.log("county data error");
+                    }
                 );
             } else {
                 dtd.resolve(result);
@@ -365,9 +365,7 @@ DistributorFinder.Helper = {
     }
 };
 
-DistributorFinder.Common = {
-
-};
+DistributorFinder.Common = {};
 
 DistributorFinder.Business = (function () {
 
@@ -375,7 +373,8 @@ DistributorFinder.Business = (function () {
         var distributorFinderClass = new Class();
 
         distributorFinderClass.include({
-            init: function () { },
+            init: function () {
+            },
             initData: function () {
                 switch (DistributorFinder.Helper.hrefRequest("Action")) {
                     case "ShowMap":
@@ -402,7 +401,7 @@ DistributorFinder.Business = (function () {
                         var isGeoCounty = false;
                         if (DistributorFinder.Helper.hrefRequest("ShareProfileType") == "GeoCounty") {
                             isGeoCounty = true;
-                        } 
+                        }
                         DistributorFinderProfilePageClass.init(true, isGeoCounty);
                         break;
                     case "Brand":
@@ -429,19 +428,19 @@ DistributorFinder.Business = (function () {
     var DistributorFinderHomePageClass = (function () {
         var distributorFinderHomePageClass = new Class();
 
-        var drawSymbol = function (svgWidth,svgHeight) {
+        var drawSymbol = function (svgWidth, svgHeight) {
             var symbol = d3.select("body")
-                            .append("svg")
-                            .attr("id","symbolPoint")
-                            .attr("display", "none")
-                            .append("defs")
-                            .append("symbol")
-                            .attr("viewBox", "0 0 " + svgWidth * 90 + " " + svgHeight * 90)
-                            .attr("id", "icon-location");
+                .append("svg")
+                .attr("id", "symbolPoint")
+                .attr("display", "none")
+                .append("defs")
+                .append("symbol")
+                .attr("viewBox", "0 0 " + svgWidth * 90 + " " + svgHeight * 90)
+                .attr("id", "icon-location");
             symbol.append("path").attr("fill", "#F54436")
-                  .attr("d", "M306,70.4c-135.3,0-244.9,109.7-244.9,244.9S306,723.6,306,723.6s244.9-273,244.9-408.2S441.3,70.4,306,70.4z");
+                .attr("d", "M306,70.4c-135.3,0-244.9,109.7-244.9,244.9S306,723.6,306,723.6s244.9-273,244.9-408.2S441.3,70.4,306,70.4z");
             symbol.append("path").attr("fill", "#FFFFFF")
-                  .attr("d", "M306,167.1c-77.4,0-140.1,62.8-140.1,140.1S228.6,447.3,306,447.3s140.1-62.8,140.1-140.1S383.4,167.1,306,167.1z");
+                .attr("d", "M306,167.1c-77.4,0-140.1,62.8-140.1,140.1S228.6,447.3,306,447.3s140.1-62.8,140.1-140.1S383.4,167.1,306,167.1z");
         };
 
         var drawSlider = function (distributors) {
@@ -489,7 +488,7 @@ DistributorFinder.Business = (function () {
         };
 
         distributorFinderHomePageClass.extend({
-            
+
             init: function () {
                 $(".home").on("click", function () {
                     location.href = "DistributorFinder.aspx";
@@ -512,7 +511,7 @@ DistributorFinder.Business = (function () {
                     svgHeight = $(window).height() - $("nav").height() - $("footer").height();
                 }
 
-               var slider = drawSlider(initMapCustomers());
+                var slider = drawSlider(initMapCustomers());
                 distributorFinderHomePageClass.drawSvgMap(svgHeight).done(function (projection) {
                     distributorFinderHomePageClass.drawCustomersPointer(projection, DistributorFinder.Global.distributorFilter);
                 });
@@ -555,14 +554,14 @@ DistributorFinder.Business = (function () {
                 var beverageDiv = $(".beverage-select");
 
                 if (navigator.userAgent.toLowerCase().indexOf("pad") > -1) {
-                    $("<option>").attr("disabled","disabled").attr("selected","selected").text("Beverage").prependTo(beverageDiv);
+                    $("<option>").attr("disabled", "disabled").attr("selected", "selected").text("Beverage").prependTo(beverageDiv);
                     beverageDiv.on("change", function () {
                         beverageDiv.find("option:first").removeAttr("selected");
                     });
-                    
+
                 } else {
                     beverageDiv.multiselect({
-                        header:false,
+                        header: false,
                         selectedList: 1,
                         noneSelectedText: DistributorFinder.SearchText.SelectBeverage
                     });
@@ -572,7 +571,7 @@ DistributorFinder.Business = (function () {
                     customerDiv.addClass("text-center");
                     stateDiv.addClass("text-center");
                 }
-                
+
 
                 $("#search").on("click", function () {
 
@@ -587,9 +586,9 @@ DistributorFinder.Business = (function () {
                         beverageTypes = beverageTypes.toString()
                     }
                     if (DistributorFinder.Helper.isEmptyOrNull(supplierText) && DistributorFinder.Helper.isEmptyOrNull(brandText) && DistributorFinder.Helper.isEmptyOrNull(stateText) && DistributorFinder.Helper.isEmptyOrNull(customerText) && DistributorFinder.Helper.isEmptyOrNull(beverageTypes)) {
-                            DistributorFinder.Global.distributorFilter = initMapCustomers();
-                            DistributorFinder.Global.ajaxPostData = "&Supplier=&Brand=&State=&Customer=&beverageTypes=";
-                            distributorFinderHomePageClass.drawCustomersPointer(undefined, DistributorFinder.Global.distributorFilter);
+                        DistributorFinder.Global.distributorFilter = initMapCustomers();
+                        DistributorFinder.Global.ajaxPostData = "&Supplier=&Brand=&State=&Customer=&beverageTypes=";
+                        distributorFinderHomePageClass.drawCustomersPointer(undefined, DistributorFinder.Global.distributorFilter);
                     } else {
                         DistributorFinder.DataProvider.getDataBySearch(supplierText, brandText, stateText, customerText, beverageTypes).done(function (result) {
                             if (result.length > 0) {
@@ -672,7 +671,7 @@ DistributorFinder.Business = (function () {
                     projection.scale(1).translate([0, 0]);
                     var b = path.bounds(topojson.feature(us, us.objects.usa));
                     s = .95 / Math.max((b[1][0] - b[0][0]) / svgWidth, (b[1][1] - b[0][1]) / svgHeight),
-                    t = [(svgWidth - s * (b[1][0] + b[0][0])) / 2, (svgHeight - s * (b[1][1] + b[0][1])) / 2];
+                        t = [(svgWidth - s * (b[1][0] + b[0][0])) / 2, (svgHeight - s * (b[1][1] + b[0][1])) / 2];
                     projection.scale(s).translate(t);
                     d3.select("#usMapSvg").append("g")
                         .attr("id", "usmap")
@@ -691,13 +690,13 @@ DistributorFinder.Business = (function () {
                             if (distributorByState.length === 0) {
                                 return;
                             } else {
-                                var supplier = encodeURIComponent( DistributorFinder.Helper.hrefRequest("Supplier", DistributorFinder.Global.ajaxPostData));
-                                var brand = encodeURIComponent( DistributorFinder.Helper.hrefRequest("Brand", DistributorFinder.Global.ajaxPostData));
+                                var supplier = encodeURIComponent(DistributorFinder.Helper.hrefRequest("Supplier", DistributorFinder.Global.ajaxPostData));
+                                var brand = encodeURIComponent(DistributorFinder.Helper.hrefRequest("Brand", DistributorFinder.Global.ajaxPostData));
                                 var state = d.id;
                                 var beverageTypes = DistributorFinder.Helper.hrefRequest("beverageTypes", DistributorFinder.Global.ajaxPostData);
-                                var customer = encodeURIComponent( DistributorFinder.Helper.hrefRequest("Customer", DistributorFinder.Global.ajaxPostData));
+                                var customer = encodeURIComponent(DistributorFinder.Helper.hrefRequest("Customer", DistributorFinder.Global.ajaxPostData));
                                 location.href = "DistributorFinder.aspx" + "?Action=ShowMap" + "&Supplier=" + supplier + "&Brand=" + brand + "&State=" + d.id + "&Customer=" + customer + "&beverageTypes=" + beverageTypes;
-                              
+
                             }
 
                         });
@@ -708,7 +707,7 @@ DistributorFinder.Business = (function () {
             },
 
             drawCustomersPointer: function (projection, filterCustomers) {
-                if(_.isUndefined(projection)){
+                if (_.isUndefined(projection)) {
                     projection = DistributorFinder.Global.projection;
                 }
                 $("#customerSvg").remove();
@@ -721,7 +720,7 @@ DistributorFinder.Business = (function () {
                     .enter().append("use")
                     .attr("xlink:href", "#icon-location")
                     .attr("transform", function (d) {
-                        return "translate(" + (projection([d.Longitude, d.Latitude])[0]-5) + "," + (projection([d.Longitude, d.Latitude])[1]-10) + ")";
+                        return "translate(" + (projection([d.Longitude, d.Latitude])[0] - 5) + "," + (projection([d.Longitude, d.Latitude])[1] - 10) + ")";
                     });
             }
         });
@@ -765,7 +764,7 @@ DistributorFinder.Business = (function () {
                     var listMaxHeight = mapHeight - $(".listbar").find("h4")[0].offsetHeight;
                     $(".list").css("max-height", listMaxHeight);
                 });
-               
+
             },
         });
         return distributorFinderMapPageClass;
@@ -870,7 +869,7 @@ DistributorFinder.Business = (function () {
                             tmpResultArr.push(p.placeName + ", " + p.adminCode1);
                         });
                         resultArr = _.uniq(tmpResultArr);
-                        
+
                         _.each(resultArr, function (result) {
                             $("<li>").text(result).append("<i class=\"fa fa-map-marker\"></i>").appendTo(radiusDom);
                         });
@@ -990,16 +989,16 @@ DistributorFinder.Business = (function () {
             }
             if (!_.isEmpty(stateCustomer.Website)) {
                 if (stateCustomer.Website.indexOf("http") > -1) {
-                    tmpHtml += "<li><i class=\"fa fa-link\"></i><p><a target=\"_blank\" title=\"" + stateCustomer.Company + "\""+ "href=\"" + stateCustomer.Website + "\">" + stateCustomer.Company + "</a></p></li>";
+                    tmpHtml += "<li><i class=\"fa fa-link\"></i><p><a target=\"_blank\" title=\"" + stateCustomer.Company + "\"" + "href=\"" + stateCustomer.Website + "\">" + stateCustomer.Company + "</a></p></li>";
                 } else {
-                    tmpHtml += "<li><i class=\"fa fa-link\"></i><p><a target=\"_blank\" title=\"" + stateCustomer.Company + "\""+ "href=\"http://" + stateCustomer.Website + "\">" + stateCustomer.Company + "</a></p></li>";
+                    tmpHtml += "<li><i class=\"fa fa-link\"></i><p><a target=\"_blank\" title=\"" + stateCustomer.Company + "\"" + "href=\"http://" + stateCustomer.Website + "\">" + stateCustomer.Company + "</a></p></li>";
                 }
             }
             tmpHtml += "</ul>";
 
             if (!_.isEmpty(stateCustomer.LogoUrl)) {
                 tmpHtml += "<div class=\"inline-block map-logo\">";
-                tmpHtml += "<img src =\" " + stateCustomer.LogoUrl + "?cacherandom=" + Math.random()+"\"" + "alt=\"" + stateCustomer.Company + "\">";
+                tmpHtml += "<img src =\" " + stateCustomer.LogoUrl + "?cacherandom=" + Math.random() + "\"" + "alt=\"" + stateCustomer.Company + "\">";
                 tmpHtml += "</div>";
             }
             var locationHref = "DistributorFinder.aspx" + '?Action=' + DistributorFinder.Action.Profile + "&CustomerID=" + stateCustomer.CustomerID + "&ShortName=" + stateCustomer.ShortName;
@@ -1007,13 +1006,13 @@ DistributorFinder.Business = (function () {
             tmpHtml += "<button class=\"btn btn-block btn-primary margintop10\" onclick= \"window.goProfile()\" >Company Profile</button>"
             tmpHtml += "</div>";
 
-            var  goProfile = function() {
+            var goProfile = function () {
                 window.location.href = locationHref;
             }
 
             window.goProfile = goProfile;
             return tmpHtml;
-          
+
         }
 
         var drawGoogleMarker = function (g, stateCustomers) {
@@ -1027,29 +1026,29 @@ DistributorFinder.Business = (function () {
                     eventHandlerArr: [
                         {
                             event: "click", handler: function (r) {
-                                g.clearInfowindow();
-                                
-                                var infowindowOptions = {
-                                    key: stateCustomer.CustomerID,
-                                    content: joinCardDom(stateCustomer)
-                                }
-                                g.createInfowindow(infowindowOptions).openInfowindow(stateCustomer.CustomerID, stateCustomer.CustomerID);
+                            g.clearInfowindow();
 
-                                var defultOption = {
-                                    icon: "",
-                                    zIndex: 10
-                                }
-                                g.clearMarkerStyle(defultOption);
-                                var styleOption = {
-                                    icon: "./images/MapMarkerBlue.png",
-                                    zIndex: 100
-                                }
-                                g.setMarkersStyle(styleOption, stateCustomer.CustomerID);
-                                g.setCenterByPoint(stateCustomer.Latitude, stateCustomer.Longitude);
+                            var infowindowOptions = {
+                                key: stateCustomer.CustomerID,
+                                content: joinCardDom(stateCustomer)
                             }
+                            g.createInfowindow(infowindowOptions).openInfowindow(stateCustomer.CustomerID, stateCustomer.CustomerID);
+
+                            var defultOption = {
+                                icon: "",
+                                zIndex: 10
+                            }
+                            g.clearMarkerStyle(defultOption);
+                            var styleOption = {
+                                icon: "./images/MapMarkerBlue.png",
+                                zIndex: 100
+                            }
+                            g.setMarkersStyle(styleOption, stateCustomer.CustomerID);
+                            g.setCenterByPoint(stateCustomer.Latitude, stateCustomer.Longitude);
+                        }
                         }
                     ],
-                    customData: { stateCustomer: stateCustomer }
+                    customData: {stateCustomer: stateCustomer}
                 };
                 markerOptionsArr.push(markerOption);
             });
@@ -1057,18 +1056,22 @@ DistributorFinder.Business = (function () {
         };
 
         distributorFinderMapClass.extend({
-            init: function () { },
+            init: function () {
+            },
 
             drawGoogleMap: function () {
                 var dtd = $.Deferred();
 
                 var g = new GoogleMap();
-                
+
                 $(".listbar").on("click", "li", function () {
                     g.markerBehavior($(this).attr("data-customerid"), g.MarkerAction.TRIGGER, "click");
                 });
 
-                var mapCanvas = $("<div>").attr("id", "map-canvas").appendTo($(".map-container")).css({ "width": "100%", "height": "100%" });
+                var mapCanvas = $("<div>").attr("id", "map-canvas").appendTo($(".map-container")).css({
+                    "width": "100%",
+                    "height": "100%"
+                });
                 var stateCustomersFilter = initMapCustomers();
                 var stateCustomers = _.filter(stateCustomersFilter, function (customer) {
                     for (var i = 0; i < stateCustomersFilter.length; i++) {
@@ -1094,14 +1097,14 @@ DistributorFinder.Business = (function () {
                         drawGoogleCountyPolygon(g, DistributorFinder.Helper.hrefRequest("State").toUpperCase());
                         if (statePolygon[0].geometry.coordinates.length == 1) {
                             g.setLatLngBounds(statePolygon[0].geometry.coordinates[0])
-                             .setCenterByLatLngBounds()
-                             .drawMarkers(markerOptionsArr);
+                                .setCenterByLatLngBounds()
+                                .drawMarkers(markerOptionsArr);
                         }
                         if (statePolygon[0].geometry.coordinates.length > 1) {
                             var tmp = _.flatten(_.flatten(statePolygon[0].geometry.coordinates, true), true);
                             g.setLatLngBounds(tmp)
-                             .setCenterByLatLngBounds()
-                             .drawMarkers(markerOptionsArr);
+                                .setCenterByLatLngBounds()
+                                .drawMarkers(markerOptionsArr);
                         }
                         dtd.resolve();
                     });
@@ -1114,10 +1117,13 @@ DistributorFinder.Business = (function () {
 
                 var countyNames = GeoCountiesNames;
                 getStateCentroidDeferred(GeoState, svgCountyWidth, svgCountyHeight).done(function (result) {
-                    var geoCountiesMapDiv = $("<div>").appendTo(parentDom).attr("class", "geoCountiesMap").attr("id", GeoState).css({ "width": svgCountyWidth, "height": svgCountyHeight });
+                    var geoCountiesMapDiv = $("<div>").appendTo(parentDom).attr("class", "geoCountiesMap").attr("id", GeoState).css({
+                        "width": svgCountyWidth,
+                        "height": svgCountyHeight
+                    });
                     var svg = d3.select(geoCountiesMapDiv[0]).append("svg")
-                                .attr("width", svgCountyWidth)
-                                .attr("height", svgCountyHeight).append("g").attr("id", "countyMap");
+                        .attr("width", svgCountyWidth)
+                        .attr("height", svgCountyHeight).append("g").attr("id", "countyMap");
                     var projection = d3.geo.mercator().center(result).scale(1000).translate([svgCountyWidth / 2, svgCountyHeight / 2]);
                     var path = d3.geo.path().projection(projection);
 
