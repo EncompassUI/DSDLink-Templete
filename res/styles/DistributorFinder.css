@@ -394,9 +394,9 @@ li {
   display: block;
 }
 .input-group input {
-  border-radius: 3px;
-  border: 1px solid #bbb;
-  height: 25px;
+  background: #eee;
+  border: 1px solid #eee;
+  height: 18px;
   font-size: 12px;
   text-align: center;
   width: 100%;
@@ -466,25 +466,25 @@ fieldset[disabled] .btn.btn-green.active {
 }
 .btn.btn-delete {
   color: #ffffff;
-  background-color: #dd524d;
-  border-color: #dd524d;
+  background-color: #ff9d02;
+  border-color: #ff9d02;
 }
 .btn.btn-delete:focus,
 .btn.btn-delete.focus {
   color: #ffffff;
-  background-color: #cf2d28;
-  border-color: #8f1f1b;
+  background-color: #ce7e00;
+  border-color: #824f00;
 }
 .btn.btn-delete:hover {
   color: #ffffff;
-  background-color: #cf2d28;
-  border-color: #c72c26;
+  background-color: #ce7e00;
+  border-color: #c47800;
 }
 .btn.btn-delete:active,
 .btn.btn-delete.active {
   color: #ffffff;
-  background-color: #cf2d28;
-  border-color: #c72c26;
+  background-color: #ce7e00;
+  border-color: #c47800;
 }
 .btn.btn-delete.disabled,
 .btn.btn-delete[disabled],
@@ -504,8 +504,8 @@ fieldset[disabled] .btn.btn-delete:active,
 .btn.btn-delete.disabled.active,
 .btn.btn-delete[disabled].active,
 fieldset[disabled] .btn.btn-delete.active {
-  background-color: #dd524d;
-  border-color: #dd524d;
+  background-color: #ff9d02;
+  border-color: #ff9d02;
 }
 .btn.btn-black {
   color: #ffffff;
@@ -1940,97 +1940,91 @@ fieldset[disabled] .btn.btn-black.active {
   background: white;
   display: none;
 }
-@media (max-width: 767px) {
-  .form-wrapper {
-    display: none;
-  }
-}
 .form-wrapper.active {
   display: block;
 }
 .form-wrapper .form-head {
-  background: #4c4c4c;
-  padding: 5px 20px;
+  border-bottom: 1px dashed #ccc;
+  margin: 0 50px;
+  padding: 5px 0px;
 }
 .form-wrapper .form-head h3 {
   display: inline-block;
-  color: #b5b5b5;
+  color: black;
   font-size: 20px;
 }
 .form-wrapper .form-head h3 i {
   margin-right: 10px;
 }
+.form-wrapper .form-head button {
+  margin-left: 10px;
+}
 .form-wrapper .form-content {
-  margin: 30px;
+  margin: 10px 35px;
 }
 .form-wrapper .form-content .card-state {
   margin: 10px 0;
-  border: 1px solid #bbb;
-  border-radius: 4px;
-  padding: 10px;
+  border-top: 1px solid #ccc;
 }
 .form-wrapper .form-content .card-state .card-state-title {
-  margin-bottom: 10px;
+  margin: 10px 0;
   font-size: 18px;
 }
-.form-wrapper .form-content .card-state .card-state-title button {
+.form-wrapper .form-content .card-state .card-state-title b {
+  margin-left: 10px;
+}
+.form-wrapper .form-content .card-state .card-state-title span {
   float: right;
+  font-size: 16px;
+  vertical-align: text-bottom;
+}
+.form-wrapper .form-content .card-state .card-state-title button i.dsd-icon-delete {
+  margin-right: 10px;
 }
 .form-wrapper .form-content .input-group {
   text-align: right;
-  margin: 20px 0;
+  margin: 15px 0;
+  position: relative;
 }
 .form-wrapper .form-content .input-group i {
-  margin-right: 10px;
+  position: absolute;
+  left: -10px;
+  top: 10px;
 }
 .form-wrapper .form-content .input-group input {
   text-align: left;
   font-size: 16px;
   padding: 0 10px;
-  height: 40px;
-  width: 93%;
+  height: 30px;
+  width: 100%;
+  font-weight: lighter;
 }
 .form-wrapper .form-content .input-group .uploadimg {
-  display: inline-block;
-  width: 60%;
-  position: relative;
-  text-align: left;
-  margin-right: -3px;
+  font-size: 0;
 }
-.form-wrapper .form-content .input-group .uploadimg .img-thumb {
-  width: 30px;
+.form-wrapper .form-content .input-group .uploadimg .uploadbtn {
+  font-size: 16px;
+  color: white;
+  width: 30%;
+  background: #a5cd00;
+  height: 30px;
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
 }
 .form-wrapper .form-content .input-group .uploadimg input {
-  width: 100%;
+  width: 70%;
 }
-.form-wrapper .form-content .input-group .uploadbtn {
-  text-align: left;
-  width: 33%;
-  display: inline-block;
+.form-wrapper .form-content .input-group-addon i.input-addon {
+  top: 2px;
+  left: -15px;
+  font-size: 28px;
 }
-.form-wrapper .form-content .input-group .uploadbtn button {
-  margin-left: 20px;
-  height: 40px;
-  margin-bottom: 5px;
-}
-.form-wrapper .form-content .input-group-addon {
-  display: table;
-  border-collapse: separate;
-}
-.form-wrapper .form-content .input-group-addon .input-addon {
-  border-radius: 4px;
-  border: 1px solid #bbb;
-  display: table-cell;
-  width: 1%;
-  padding: 8px;
-  font-size: 20px;
-  border-radius: 4px 0 0 4px;
-  border-right: 0;
-}
-.form-wrapper .form-content .input-group-addon input {
-  display: table-cell;
-  width: 100%;
-  border-radius: 0 4px 4px 0;
+.form-wrapper .form-state .input-with-button button,
+.form-wrapper .form-association .input-with-button button {
+  height: 30px;
 }
 .form-wrapper .form-state .input-group,
 .form-wrapper .form-association .input-group {
@@ -2040,10 +2034,6 @@ fieldset[disabled] .btn.btn-black.active {
 .form-wrapper .form-state .input-group input,
 .form-wrapper .form-association .input-group input {
   width: 100%;
-}
-.form-wrapper .form-state button.btn.btn-green,
-.form-wrapper .form-association button.btn.btn-green {
-  height: 38px;
 }
 .form-wrapper .form-award .btn-green {
   height: 38px;
