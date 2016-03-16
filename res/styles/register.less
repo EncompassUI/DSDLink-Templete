@@ -5,99 +5,105 @@
         display: block;
     }
     .form-head {
-        background: @main-grey;
-        padding: 5px 20px;
+        border-bottom: 1px dashed #ccc;
+        margin: 0 50px;
+        padding: 5px 0px;
         h3 {
             display: inline-block;
-            color: #b5b5b5;
+            color: black;
             font-size: 20px;
             i {
                 margin-right: 10px;
             }
         }
+        
+        button{
+        margin-left: 10px;    
+        }
+        
     }
     .form-content {
-        margin: 30px;
+        margin: 10px 35px;
         .card-state{
             margin: 10px 0;
-            border: 1px solid #bbb;
-            border-radius: 4px;
-            padding: 10px;
+           border-top: 1px solid #ccc;
+
             .card-state-title{
-                margin-bottom: 10px;
+                margin: 10px 0;
                 font-size: 18px;
-                button{
+                b{
+                    margin-left: 10px;
+                }
+                span{
                     float: right;
+                    font-size: 16px;
+                    vertical-align: text-bottom;
+                }
+                button{
+                    i.dsd-icon-delete{
+                        margin-right: 10px;
+                    }
                 }
             }
         }
         .input-group {
+            @height:30px;
             text-align: right;
-            margin: 20px 0;
+            margin: 15px 0;
+            position: relative;
             i {
-                margin-right: 10px;
+                position: absolute;
+                left: -10px;
+                top: 10px;
             }
             input {
                 text-align: left;
                 font-size: 16px;
                 padding: 0 10px;
-                height: 40px;
-                width: 93%;
+                height: @height;
+                width: 100%;
+                font-weight: lighter;
             }
             .uploadimg {
-                display: inline-block;
-                width: 60%;
-                position: relative;
-                text-align: left;
-                margin-right: -3px;
-                .img-thumb{
-                    width: 30px;
+                font-size: 0;
+                .uploadbtn{
+                    font-size: 16px;
+                    color: white;
+                    width: 30%;
+                    background: @main-green;
+                    height: @height;
+                    display: inline-block;
+                    vertical-align: top;
+                    text-align: center;
+                    line-height: @height;
+                    cursor: pointer;
                 }
-                input {
-                    width: 100%;
+                input{
+                    width: 70%;
                 }
             }
-            .uploadbtn {
-                button {
-                    margin-left: 20px;
-                    height: 40px;
-                    margin-bottom: 5px;
-                }
-                text-align: left;
-                width: 33%;
-                display: inline-block;
-            }
+           
         }
         .input-group-addon {
-            display: table;
-            border-collapse: separate;
-            .input-addon {
-                border-radius: 4px;
-                border: 1px solid #bbb;
-                display: table-cell;
-                width: 1%;
-                padding: 8px;
-                font-size: 20px;
-                .border-radius(4px 0 0 4px);
-                border-right: 0;
-            }
-            input {
-                display: table-cell;
-                width: 100%;
-                .border-radius(0 4px 4px 0);
+            i.input-addon{
+                top: 2px;
+                left: -15px;
+             font-size: 28px;   
             }
         }
     }
     .form-state , .form-association {
+        .input-with-button{
+            button{
+                height: 30px;
+            }
+        }
         .input-group {
             margin: 0;
             text-align: left;
             input {
                 width: 100%;
             }
-        }
-        button.btn.btn-green {
-            height: 38px;
         }
     }
     .form-award {
