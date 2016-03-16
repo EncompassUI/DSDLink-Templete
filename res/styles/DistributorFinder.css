@@ -1665,16 +1665,16 @@ fieldset[disabled] .btn.btn-black.active {
   }
 }
 @media screen and (max-width: 767px) {
-  .nav-panel .main-panel .filter-content {
+  .register-panel .main-panel .filter-content {
     background: url("../../img/bg-supplier.jpg") no-repeat;
     background-size: cover;
   }
-  .nav-panel .main-panel .filter-content .nav-sublist .nav-list li {
+  .register-panel .main-panel .filter-content .nav-sublist .nav-list li {
     background: rgba(0, 0, 0, 0.8);
     margin-top: 10px;
     padding: 6px 10px;
   }
-  .nav-panel .main-panel .filter-content .nav-sublist .nav-list:active {
+  .register-panel .main-panel .filter-content .nav-sublist .nav-list:active {
     background-color: #a5cd00;
   }
 }
@@ -1940,11 +1940,6 @@ fieldset[disabled] .btn.btn-black.active {
   background: white;
   display: none;
 }
-@media (max-width: 767px) {
-  .form-wrapper {
-    display: none;
-  }
-}
 .form-wrapper.active {
   display: block;
 }
@@ -2070,4 +2065,49 @@ fieldset[disabled] .btn.btn-black.active {
 }
 .card-content .card-list li .btn.btn-delete {
   float: right;
+}
+@media (max-width: 767px) {
+  .form-wrapper {
+    -moz-transform: translateX(-200%);
+    -ms-transform: translateX(-200%);
+    -o-transform: translateX(-200%);
+    -webkit-transform: translateX(-200%);
+    transform: translateX(-200%);
+  }
+  .form-wrapper.active {
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  .form-wrapper .form-head {
+    padding: 12px 0;
+    color: #ffffff;
+    background: #141414;
+    line-height: 32px;
+    height: 52px;
+  }
+  .form-wrapper .form-head h3 {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    z-index: 1;
+  }
+  .form-wrapper .form-head .btn {
+    position: absolute;
+  }
+  .form-wrapper .form-head .btn.btn-green {
+    background: transparent;
+    color: #a5cd00;
+    border: none;
+    margin-top: 2px;
+    right: 0;
+    z-index: 2;
+  }
+  .form-wrapper .form-head .btn.btn-back {
+    left: 0;
+    z-index: 2;
+  }
 }

@@ -1,7 +1,14 @@
- $(document).ready(function () {
+$(document).ready(function () {
+    var isMobile = navigator.appVersion.indexOf("Mobile") != -1;
+
+    if (isMobile) {
+        $('.form-wrapper:first').removeClass('active');
+    }
+
      TabToggle();
      SubTabToggle();
      ProfileSwitch();
+     RegistBack();
  });
 
  function TabToggle() {
@@ -39,14 +46,37 @@
  };
 
  function ProfileSwitch() {
+     var isMobile = navigator.appVersion.indexOf("Mobile") != -1;
+
      $('.profile-tabpane').click(function () {
          var index = $(this).index(),
-             tab = $(this).closest('.nav-list');
+             tab = $(this).closest('.nav-list'),
+             navPanel = $('.nav-panel');
 
-         tab.find('li').removeClass('active');
-         $(this).addClass('active');
+         if (isMobile) {
+             navPanel.hide();
+
+         }
+         else {
+             tab.find('li').removeClass('active');
+             $(this).addClass('active');
+         }
          
          $('.form-wrapper').not('.form-wrapper:eq(' + index + ')').removeClass('active');
          $('.form-wrapper:eq(' + index + ')').addClass('active');
      });
  };
+
+ function RegistBack() {
+     var isMobile = navigator.appVersion.indexOf("Mobile") != -1,
+         navPanel = $('.nav-panel');
+
+     $('.btn-back').click(function () {
+         var form = $(this).closest('.form-wrapper');
+
+         form.removeClass('active');
+         if (isMobile) {
+             navPanel.show();
+         }
+     });
+ }
