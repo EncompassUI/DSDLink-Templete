@@ -1660,8 +1660,12 @@ fieldset[disabled] .btn.btn-black.active {
   .nav-panel .main-panel .filter-content {
     padding-bottom: 0;
   }
-  .nav-panel .main-panel .filter-content .nav-sublist .nav-list li {
-    margin: 1px 0;
+  .nav-panel .main-panel .filter-content .tab-pane {
+    margin: 0 5px;
+  }
+  .nav-panel .main-panel .filter-content .tab-pane .nav-sublist .nav-list li {
+    margin: 5px 0;
+    background: rgba(255, 255, 255, 0.05);
   }
 }
 @media screen and (max-width: 767px) {
@@ -1669,12 +1673,12 @@ fieldset[disabled] .btn.btn-black.active {
     background: url("../../img/bg-supplier.jpg") no-repeat;
     background-size: cover;
   }
-  .register-panel .main-panel .filter-content .nav-sublist .nav-list li {
+  .register-panel .main-panel .filter-content .tab-pane .nav-sublist .nav-list li {
     background: rgba(0, 0, 0, 0.8);
     margin-top: 10px;
     padding: 6px 10px;
   }
-  .register-panel .main-panel .filter-content .nav-sublist .nav-list:active {
+  .register-panel .main-panel .filter-content .tab-pane .nav-sublist .nav-list:active {
     background-color: #a5cd00;
   }
 }
@@ -2061,6 +2065,13 @@ fieldset[disabled] .btn.btn-black.active {
 .card-content .card-list li .btn.btn-delete {
   float: right;
 }
+@media (max-width: 991px) {
+  .MainContent .form-wrapper .form-head {
+    background: #f0f0f0;
+    margin: 0;
+    padding: 8px 50px;
+  }
+}
 @media (max-width: 767px) {
   .MainContent {
     padding: 0;
@@ -2092,5 +2103,16 @@ fieldset[disabled] .btn.btn-black.active {
   .form-wrapper .form-head .btn.btn-back {
     left: 0;
     z-index: 2;
+  }
+  .form-wrapper .form-content .input-group input {
+    height: 36px;
+  }
+  .form-wrapper .form-content .input-group .uploadimg .uploadbtn {
+    height: 36px;
+    line-height: 36px;
+  }
+  .form-wrapper .form-content .input-group .uploadimg input {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 }

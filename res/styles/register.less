@@ -141,6 +141,21 @@
     }
 }
 
+@media (max-width: @screen-sm-max) {
+    .MainContent {
+
+        .form-wrapper {
+
+            .form-head {
+                background: #f0f0f0;
+                margin: 0;
+                padding: 8px 50px;
+            }
+        }
+    }
+
+}
+
 @media (max-width: @screen-xs-max) {
     .MainContent{
         padding:0;
@@ -176,6 +191,24 @@
                 &.btn-back {
                     left: 0;
                     z-index: 2;
+                }
+            }
+        }
+
+        .form-content {
+            .input-group {
+                input {
+                    height: 36px;
+                }
+                .uploadimg{
+                    .uploadbtn{
+                        height:36px;
+                        line-height:36px;
+                    }
+                    input{
+                        border-top-left-radius:0;
+                        border-bottom-left-radius:0;
+                    }
                 }
             }
         }
