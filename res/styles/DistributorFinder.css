@@ -35,7 +35,6 @@
   background: transparent;
 }
 html {
-  font-size: 10px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
@@ -337,6 +336,14 @@ li {
 .row:after {
   clear: both;
 }
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 18px;
+  }
+  [class*="dsd-icon-"] {
+    font-size: 18px;
+  }
+}
 /*Reset*/
 .left {
   float: left;
@@ -387,9 +394,9 @@ li {
   display: block;
 }
 .input-group input {
-  background: #eee;
-  border: 1px solid #eee;
-  height: 18px;
+  border-radius: 3px;
+  border: 1px solid #bbb;
+  height: 25px;
   font-size: 12px;
   text-align: center;
   width: 100%;
@@ -409,7 +416,7 @@ li {
   padding: 6px 16px;
   line-height: 15px;
   border: 1px solid transparent;
-  font-size: 14px;
+  /*font-size: 14px;*/
   vertical-align: middle;
   outline: none;
   cursor: pointer;
@@ -459,25 +466,25 @@ fieldset[disabled] .btn.btn-green.active {
 }
 .btn.btn-delete {
   color: #ffffff;
-  background-color: #ff9d02;
-  border-color: #ff9d02;
+  background-color: #dd524d;
+  border-color: #dd524d;
 }
 .btn.btn-delete:focus,
 .btn.btn-delete.focus {
   color: #ffffff;
-  background-color: #ce7e00;
-  border-color: #824f00;
+  background-color: #cf2d28;
+  border-color: #8f1f1b;
 }
 .btn.btn-delete:hover {
   color: #ffffff;
-  background-color: #ce7e00;
-  border-color: #c47800;
+  background-color: #cf2d28;
+  border-color: #c72c26;
 }
 .btn.btn-delete:active,
 .btn.btn-delete.active {
   color: #ffffff;
-  background-color: #ce7e00;
-  border-color: #c47800;
+  background-color: #cf2d28;
+  border-color: #c72c26;
 }
 .btn.btn-delete.disabled,
 .btn.btn-delete[disabled],
@@ -497,8 +504,8 @@ fieldset[disabled] .btn.btn-delete:active,
 .btn.btn-delete.disabled.active,
 .btn.btn-delete[disabled].active,
 fieldset[disabled] .btn.btn-delete.active {
-  background-color: #ff9d02;
-  border-color: #ff9d02;
+  background-color: #dd524d;
+  border-color: #dd524d;
 }
 .btn.btn-black {
   color: #ffffff;
@@ -569,7 +576,7 @@ fieldset[disabled] .btn.btn-black.active {
 }
 .list-group .list {
   color: black;
-  font-size: 14px;
+  /*font-size: 14px;*/
   margin: 5px 5px 5px 20px;
   padding-left: 20px;
 }
@@ -1561,22 +1568,38 @@ fieldset[disabled] .btn.btn-black.active {
   padding-bottom: 20px;
 }
 .nav-panel .main-panel .filter-content .tab-pane {
-  display: none;
-  position: relative;
+  /*display: none;*/
+  /*position: relative;*/
+  /*height:100%;*/
+  /*&.active {
+                    display: block;
+                }*/
 }
 .nav-panel .main-panel .filter-content .tab-pane .nav-sublist {
-  position: absolute;
-  top: 0;
-  transform: translateX(1200%);
+  /*position: absolute;
+                    top: 0;*/
+  /*-moz-transform: translateX(-200%);
+                    -ms-transform: translateX(-200%);
+                    -o-transform: translateX(-200%);
+                    -webkit-transform: translateX(-200%);
+                    transform: translateX(-200%);*/
 }
 .nav-panel .main-panel .filter-content .tab-pane .nav-sublist.active {
-  transform: translateX(0);
+  /*-moz-transform: translateX(0);
+                        -ms-transform: translateX(0);
+                        -o-transform: translateX(0);
+                        -webkit-transform:translateX(0);
+                        transform: translateX(0);*/
 }
 .nav-panel .main-panel .filter-content .tab-pane .nav-sublist .btn-black {
   margin: 5px 0 0 0;
 }
-.nav-panel .main-panel .filter-content .tab-pane.active {
-  display: block;
+.nav-panel .main-panel .filter-content .tab-pane .nav-sublist .btn-black:hover {
+  background: #a5cd00;
+}
+.nav-panel .main-panel .filter-content .tab-pane .nav-sublist .link a {
+  color: #a5cd00;
+  text-decoration: underline;
 }
 .nav-panel .main-panel .filter-content .list-group {
   margin-top: 60px;
@@ -1614,7 +1637,7 @@ fieldset[disabled] .btn.btn-black.active {
   padding: 5px;
   cursor: pointer;
 }
-.nav-list li:hover,
+.nav-list li.profile-tabpane:hover,
 .nav-list li.active {
   background: #a5cd00;
 }
@@ -1633,6 +1656,26 @@ fieldset[disabled] .btn.btn-black.active {
   }
   .nav-panel .main-panel .nav li {
     flex: 1;
+  }
+  .nav-panel .main-panel .filter-content {
+    padding-bottom: 0;
+  }
+  .nav-panel .main-panel .filter-content .nav-sublist .nav-list li {
+    margin: 1px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nav-panel .main-panel .filter-content {
+    background: url("../../img/bg-supplier.jpg") no-repeat;
+    background-size: cover;
+  }
+  .nav-panel .main-panel .filter-content .nav-sublist .nav-list li {
+    background: rgba(0, 0, 0, 0.8);
+    margin-top: 10px;
+    padding: 6px 10px;
+  }
+  .nav-panel .main-panel .filter-content .nav-sublist .nav-list:active {
+    background-color: #a5cd00;
   }
 }
 .logo-group .dsdlogo {
@@ -1897,91 +1940,97 @@ fieldset[disabled] .btn.btn-black.active {
   background: white;
   display: none;
 }
+@media (max-width: 767px) {
+  .form-wrapper {
+    display: none;
+  }
+}
 .form-wrapper.active {
   display: block;
 }
 .form-wrapper .form-head {
-  border-bottom: 1px dashed #ccc;
-  margin: 0 50px;
-  padding: 5px 0px;
+  background: #4c4c4c;
+  padding: 5px 20px;
 }
 .form-wrapper .form-head h3 {
   display: inline-block;
-  color: black;
+  color: #b5b5b5;
   font-size: 20px;
 }
 .form-wrapper .form-head h3 i {
   margin-right: 10px;
 }
-.form-wrapper .form-head button {
-  margin-left: 10px;
-}
 .form-wrapper .form-content {
-  margin: 10px 35px;
+  margin: 30px;
 }
 .form-wrapper .form-content .card-state {
   margin: 10px 0;
-  border-top: 1px solid #ccc;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  padding: 10px;
 }
 .form-wrapper .form-content .card-state .card-state-title {
-  margin: 10px 0;
+  margin-bottom: 10px;
   font-size: 18px;
 }
-.form-wrapper .form-content .card-state .card-state-title b {
-  margin-left: 10px;
-}
-.form-wrapper .form-content .card-state .card-state-title span {
+.form-wrapper .form-content .card-state .card-state-title button {
   float: right;
-  font-size: 16px;
-  vertical-align: text-bottom;
-}
-.form-wrapper .form-content .card-state .card-state-title button i.dsd-icon-delete {
-  margin-right: 10px;
 }
 .form-wrapper .form-content .input-group {
   text-align: right;
-  margin: 15px 0;
-  position: relative;
+  margin: 20px 0;
 }
 .form-wrapper .form-content .input-group i {
-  position: absolute;
-  left: -10px;
-  top: 10px;
+  margin-right: 10px;
 }
 .form-wrapper .form-content .input-group input {
   text-align: left;
   font-size: 16px;
   padding: 0 10px;
-  height: 30px;
-  width: 100%;
-  font-weight: lighter;
+  height: 40px;
+  width: 93%;
 }
 .form-wrapper .form-content .input-group .uploadimg {
-  font-size: 0;
-}
-.form-wrapper .form-content .input-group .uploadimg .uploadbtn {
-  font-size: 16px;
-  color: white;
-  width: 30%;
-  background: #a5cd00;
-  height: 30px;
   display: inline-block;
-  vertical-align: top;
-  text-align: center;
-  line-height: 30px;
-  cursor: pointer;
+  width: 60%;
+  position: relative;
+  text-align: left;
+  margin-right: -3px;
+}
+.form-wrapper .form-content .input-group .uploadimg .img-thumb {
+  width: 30px;
 }
 .form-wrapper .form-content .input-group .uploadimg input {
-  width: 70%;
+  width: 100%;
 }
-.form-wrapper .form-content .input-group-addon i.input-addon {
-  top: 2px;
-  left: -15px;
-  font-size: 28px;
+.form-wrapper .form-content .input-group .uploadbtn {
+  text-align: left;
+  width: 33%;
+  display: inline-block;
 }
-.form-wrapper .form-state .input-with-button button,
-.form-wrapper .form-association .input-with-button button {
-  height: 30px;
+.form-wrapper .form-content .input-group .uploadbtn button {
+  margin-left: 20px;
+  height: 40px;
+  margin-bottom: 5px;
+}
+.form-wrapper .form-content .input-group-addon {
+  display: table;
+  border-collapse: separate;
+}
+.form-wrapper .form-content .input-group-addon .input-addon {
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  display: table-cell;
+  width: 1%;
+  padding: 8px;
+  font-size: 20px;
+  border-radius: 4px 0 0 4px;
+  border-right: 0;
+}
+.form-wrapper .form-content .input-group-addon input {
+  display: table-cell;
+  width: 100%;
+  border-radius: 0 4px 4px 0;
 }
 .form-wrapper .form-state .input-group,
 .form-wrapper .form-association .input-group {
@@ -1991,6 +2040,10 @@ fieldset[disabled] .btn.btn-black.active {
 .form-wrapper .form-state .input-group input,
 .form-wrapper .form-association .input-group input {
   width: 100%;
+}
+.form-wrapper .form-state button.btn.btn-green,
+.form-wrapper .form-association button.btn.btn-green {
+  height: 38px;
 }
 .form-wrapper .form-award .btn-green {
   height: 38px;

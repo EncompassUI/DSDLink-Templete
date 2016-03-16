@@ -174,3 +174,9 @@
     content:"\f08c";
     color: #38a6d7;
 }
+.dsd-icon-viewprofile:before {
+    content:"\f022";
+}
+.dsd-icon-cretdown:before {
+    content:"\f0d7";
+}

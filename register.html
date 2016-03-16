@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
-    <title>DSDLink</title>
+    <meta name="apple-touch-fullscreen" content="yes">
+    <title>DSD Register</title>
     <link rel="stylesheet" href="res/styles/DistributorFinder.css">
     <link rel="stylesheet" href="font/IconFont.css">
 
@@ -22,7 +23,7 @@
             <!-- Left -->
             <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 nav-panel map-panel">
                 <div class="row">
-                    <div class="col-sm-1 hidden-xs"></div>
+                    <div class="hidden-xs hidden-sm col-md-1"></div>
                     <div class="logo-group hidden-xs hidden-sm col-md-10">
                         <div class="row">
                             <div class="col-sm-4 dsdlogo">
@@ -33,85 +34,43 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-1 hidden-xs"></div>
+                    <div class="hidden-xs hidden-sm col-md-1"></div>
                 </div>
                 <div class="row">
-                    <div class="main-panel clearfix" style="display:block;">
+                    <div class="main-panel clearfix">
                         <div class="container-fluid">
                             <div class="row">
                                 <ul class="nav col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                                    <li class="col-xs-3 col-sm-3 col-md-12 col-lg-12 col-md-push-0 col-sm-push-3 col-xs-push-3"><a href="distributor.html" role="tab" data-toggle="tab"><i class="dsd-icon-warehouse"></i>Find Distributor</a></li>
-                                    <li class="col-xs-3 col-sm-3 col-md-12 col-lg-12 col-md-push-0 col-sm-push-3 col-xs-push-3 "><a href="supplier.html" role="tab" data-toggle="tab"><i class="dsd-icon-beer"></i>Find Supplier</a></li>
+                                    <li class="col-xs-3 col-sm-3 col-md-12 col-lg-12 col-md-push-0 col-sm-push-3 col-xs-push-3"><a href="distributor.html" role="tab" data-toggle="tab"><i class="dsd-icon-warehouse"></i>Distributor</a></li>
+                                    <li class="col-xs-3 col-sm-3 col-md-12 col-lg-12 col-md-push-0 col-sm-push-3 col-xs-push-3 "><a href="supplier.html" role="tab" data-toggle="tab"><i class="dsd-icon-beer"></i>Supplier</a></li>
                                     <li class="col-xs-3 col-sm-3 col-md-12 col-lg-12 col-md-push-0 col-sm-push-3 col-xs-push-3 active"><a href="register.html" role="tab" data-toggle="tab"><i class="dsd-icon-register"></i>Register</a></li>
                                     <li class="col-xs-3 col-sm-3 col-md-12 col-lg-12 col-md-pull-0 col-sm-pull-9 col-xs-pull-9"><a href="www.encompass8.com" target="_blank"><i class="dsd-icon-logo"></i>Contact Us</a></li>
                                 </ul>
                                 <div class="filter-content col-xs-12 col-sm-12 col-md-9 col-lg-9">
-                                    <!--<div role="tabpanel" class="tab-pane active ">
-                                        <div class="input-group">
-                                            <label class="input-label">Beverage Types</label>
-                                            <input type="text">
-                                        </div>
-                                        <div class="input-group">
-                                            <label class="input-label">Supplier</label>
-                                            <input type="text">
-                                        </div>
-                                        <div class="input-group">
-                                            <label class="input-label">Brand</label>
-                                            <input type="text">
-                                        </div>
-                                        <div class="input-group">
-                                            <label class="input-label">State</label>
-                                            <input type="text">
-                                        </div>
-                                        <div class="input-group">
-                                            <label class="input-label">Distributor</label>
-                                            <input type="text">
-                                        </div>
-                                        <button class="btn btn-green btn-block">Search</button>
-                                    </div>-->
-                                    <!--<div id="supplier" role="tabpanel" class="tab-pane ">
-                                        <div class="input-group">
-                                            <input type="text">
-                                            <span class="input-logo dsd-icon-search main-green"></span>
-                                        </div>
-                                        <div class="categories">
-                                            <h4 class="main-green">Categories</h4>
-                                            <ul>
-                                                <li>Beer( <span>5</span> )</li>
-                                                <li>Cider( <span>5</span> )</li>
-                                                <li>Energy( <span>5</span> )</li>
-                                                <li>Soda( <span>5</span> )</li>
-                                                <li>Spiritis( <span>5</span> )</li>
-                                                <li>Wine( <span>5</span> )</li>
-                                            </ul>
-                                        </div>
-                                    </div>-->
-                                    <div class="tab-pane active" role="tablist">
-                                        <ul class="nav-list margin-neer-base">
-                                            <li class="sub-tabpane"><i class="dsd-icon-warehouse"></i>I'm Distributor<span class=""></span></li>
-                                            <li class="sub-tabpane"><i class="dsd-icon-beer"></i>I'm Supplier<span class=""></span></li>
-                                        </ul>
+                                    <div class="tab-pane">
 
-                                        <div class="nav-sublist margin-neer-small width-reset">
-                                            <span class="btn btn-black subListBack"> <i class="dsd-icon-back"></i> Back</span>
-                                            <ul class="nav-list margin-right-neer-base">
-                                                <li class="profile-tabpane"><i class="dsd-icon-information"></i>Company Information <span class=""></span></li>
-                                                <li class="profile-tabpane"><i class="dsd-icon-media"></i>Social Media <span class=""></span></li>
-                                                <li class="profile-tabpane"><i class="dsd-icon-location-o"></i>Where We Sell <span class=""></span></li>
-                                                <li class="profile-tabpane"><i class="dsd-icon-tag"></i>What We Sell <span class=""></span></li>
-                                                <li class="profile-tabpane"><i class="dsd-icon-awards"></i>Awards <span class=""></span></li>
-                                                <li class="profile-tabpane"><i class="dsd-icon-flag"></i>Association <span class=""></span></li>
-                                                <li class="profile-tabpane"><i class="dsd-icon-key-people"></i>Key People <span class=""></span></li>
-                                                <li class="profile-tabpane"><i class="dsd-icon-key"></i>Set Password <span class=""></span></li>
+                                        <div class="nav-sublist margin-neer-small width-reset container-fluid">
+                                            <!--<span class="btn btn-black subListBack"> <i class="dsd-icon-back"></i> Back</span>-->
+                                            <ul class="nav-list margin-right-neer-base row">
+                                                <li class="profile-tabpane col-xs-12 col-sm-4 col-md-12 active"><i class="dsd-icon-information"></i>Company Information</li>
+                                                <li class="profile-tabpane col-xs-12 col-sm-4 col-md-12"><i class="dsd-icon-media"></i>Social Media</li>
+                                                <li class="profile-tabpane col-xs-12 col-sm-4 col-md-12"><i class="dsd-icon-location-o"></i>Where We Sell</li>
+                                                <li class="profile-tabpane col-xs-12 col-sm-4 col-md-12"><i class="dsd-icon-tag"></i>What We Sell</li>
+                                                <li class="profile-tabpane col-xs-12 col-sm-4 col-md-12"><i class="dsd-icon-awards"></i>Awards</li>
+                                                <li class="profile-tabpane col-xs-12 col-sm-4 col-md-12"><i class="dsd-icon-flag"></i>Association</li>
+                                                <li class="profile-tabpane col-xs-12 col-sm-4 col-md-12"><i class="dsd-icon-key-people"></i>Key People</li>
+                                                <li class="profile-tabpane col-xs-12 col-sm-4 col-md-12"><i class="dsd-icon-key"></i>Set Password</li>
+                                                <li class="link col-xs-12 col-sm-4 col-md-12"><a href="#" target="_blank"><i class="dsd-icon-viewprofile"></i>View Profile</a></li>
                                             </ul>
                                         </div>
 
-                                        <div class="nav-sublist margin-neer-small width-reset">
-                                            <span class="btn btn-black subListBack"> <i class="dsd-icon-back"></i> Back</span>
-                                            <ul class="nav-list">
-                                                <li class="profile-tabpane"><i class="dsd-icon-flag"></i>Association <span class=""></span></li>
-                                                <li class="profile-tabpane"><i class="dsd-icon-key-people"></i>Key People <span class=""></span></li>
-                                                <li class="profile-tabpane"><i class="dsd-icon-key"></i>Set Password <span class=""></span></li>
+                                        <div class="nav-sublist margin-neer-small width-reset container-fluid">
+                                            <!--<span class="btn btn-black subListBack"> <i class="dsd-icon-back"></i> Back</span>-->
+                                            <ul class="nav-list margin-right-neer-base row">
+                                                <li class="profile-tabpane col-xs-12 col-sm-4 col-md-12"><i class="dsd-icon-flag"></i>SupplierAssociation</li>
+                                                <li class="profile-tabpane col-xs-12 col-sm-4 col-md-12"><i class="dsd-icon-key-people"></i>Key People</li>
+                                                <li class="profile-tabpane col-xs-12 col-sm-4 col-md-12"><i class="dsd-icon-key"></i>Set Password</li>
+                                                <li class="link col-xs-12 col-sm-4 col-md-12"><a href="#" target="_blank"><i class="dsd-icon-viewprofile"></i>View Profile</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -124,7 +83,7 @@
             <!-- Right: Map Container -->
             <div class="MainContent col-xs-12 col-sm-12 col-md-9 col-lg-9 col-md-offset-3 col-lg-offset-3">
 
-                <div class=" form-wrapper">
+                <div class="form-wrapper active">
                     <div class="row">
                         <div class="form-head clearfix">
                             <h3>Company Information</h3>

@@ -48,7 +48,6 @@
 
 // Body reset
 html {
-    font-size: 10px;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
@@ -582,5 +581,15 @@ li {
     }
     &:after {
         clear: both;
+    }
+}
+
+
+@media screen and (max-width:@screen-xs-max) {
+    body{
+        font-size:@font-size-large;
+    }
+    [class*="dsd-icon-"]{
+        font-size:@font-size-large;
     }
 }

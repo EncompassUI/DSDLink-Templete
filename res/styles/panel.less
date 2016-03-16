@@ -60,22 +60,40 @@
         .filter-content {
             padding-bottom:20px;
             .tab-pane {
-                display: none;
-                position: relative;
+                /*display: none;*/
+                /*position: relative;*/
+                /*height:100%;*/
                 .nav-sublist {
-                    position: absolute;
-                    top: 0;
-                    transform: translateX(1200%);
+                    /*position: absolute;
+                    top: 0;*/
+                    /*-moz-transform: translateX(-200%);
+                    -ms-transform: translateX(-200%);
+                    -o-transform: translateX(-200%);
+                    -webkit-transform: translateX(-200%);
+                    transform: translateX(-200%);*/
                     &.active{
-                        transform: translateX(0);
+                        /*-moz-transform: translateX(0);
+                        -ms-transform: translateX(0);
+                        -o-transform: translateX(0);
+                        -webkit-transform:translateX(0);
+                        transform: translateX(0);*/
                     }
                     .btn-black{
                         margin: 5px 0 0 0;
+                        &:hover{
+                            background:@main-green;
+                        }
+                    }
+                    .link{
+                        a{
+                            color:@main-green;
+                            text-decoration:underline;
+                        }
                     }
                 }
-                &.active {
+                /*&.active {
                     display: block;
-                }
+                }*/
             }
             .list-group {
                 margin-top: 60px;
@@ -118,7 +136,7 @@
         color: white;
         padding: 5px;
         cursor: pointer;
-        &:hover , &.active {
+        &.profile-tabpane:hover , &.active {
             background: @main-green;
         }
         i {
@@ -140,8 +158,40 @@
                     flex: 1;
                 }
             }
+            .filter-content{
+                padding-bottom:0;
+                .nav-sublist{
+                    .nav-list{
+                        li{
+                            margin:1px 0;
+                        }
+                    }
+                }
+            }
         }
     }
 }
 
-@media screen and (max-width:@screen-xs-max) {}
+@media screen and (max-width:@screen-xs-max) {
+    .nav-panel {
+        .main-panel {
+            .filter-content {
+                background: url("@{background-url-prefix}bg-supplier.jpg") no-repeat;
+                background-size: cover;
+
+                .nav-sublist {
+                    .nav-list {
+                        li {
+                            background: rgba(0,0,0,.8);
+                            margin-top: 10px;
+                            padding: 6px 10px;
+                        }
+                        &:active{
+                            background-color:@main-green;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
