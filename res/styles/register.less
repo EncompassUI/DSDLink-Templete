@@ -1,42 +1,57 @@
 .form-wrapper {
     background: white;
     display: none;
-    &.active{
+
+    @media (max-width: @screen-xs-max) {
+        display: none;
+    }
+
+    &.active {
         display: block;
     }
+
     .form-head {
         background: @main-grey;
         padding: 5px 20px;
+
         h3 {
             display: inline-block;
             color: #b5b5b5;
             font-size: 20px;
+
             i {
                 margin-right: 10px;
             }
         }
     }
+
     .form-content {
         margin: 30px;
-        .card-state{
+
+        .card-state {
             margin: 10px 0;
             border: 1px solid #bbb;
             border-radius: 4px;
             padding: 10px;
-            .card-state-title{
+
+            .card-state-title {
                 margin-bottom: 10px;
                 font-size: 18px;
-                button{
+
+                button {
                     float: right;
                 }
             }
         }
+
         .input-group {
             text-align: right;
             margin: 20px 0;
+
             i {
                 margin-right: 10px;
             }
+
             input {
                 text-align: left;
                 font-size: 16px;
@@ -44,33 +59,40 @@
                 height: 40px;
                 width: 93%;
             }
+
             .uploadimg {
                 display: inline-block;
                 width: 60%;
                 position: relative;
                 text-align: left;
                 margin-right: -3px;
-                .img-thumb{
+
+                .img-thumb {
                     width: 30px;
                 }
+
                 input {
                     width: 100%;
                 }
             }
+
             .uploadbtn {
                 button {
                     margin-left: 20px;
                     height: 40px;
                     margin-bottom: 5px;
                 }
+
                 text-align: left;
                 width: 33%;
                 display: inline-block;
             }
         }
+
         .input-group-addon {
             display: table;
             border-collapse: separate;
+
             .input-addon {
                 border-radius: 4px;
                 border: 1px solid #bbb;
@@ -81,6 +103,7 @@
                 .border-radius(4px 0 0 4px);
                 border-right: 0;
             }
+
             input {
                 display: table-cell;
                 width: 100%;
@@ -88,24 +111,29 @@
             }
         }
     }
-    .form-state , .form-association {
+
+    .form-state, .form-association {
         .input-group {
             margin: 0;
             text-align: left;
+
             input {
                 width: 100%;
             }
         }
+
         button.btn.btn-green {
             height: 38px;
         }
     }
+
     .form-award {
-        .btn-green{
+        .btn-green {
             height: 38px;
         }
+
         .input-group {
-           
+
             input {
                 width: 100%;
             }

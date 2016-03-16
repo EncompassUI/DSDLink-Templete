@@ -35,7 +35,6 @@
   background: transparent;
 }
 html {
-  font-size: 10px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
@@ -337,6 +336,14 @@ li {
 .row:after {
   clear: both;
 }
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 18px;
+  }
+  [class*="dsd-icon-"] {
+    font-size: 18px;
+  }
+}
 /*Reset*/
 .left {
   float: left;
@@ -409,7 +416,7 @@ li {
   padding: 6px 16px;
   line-height: 15px;
   border: 1px solid transparent;
-  font-size: 14px;
+  /*font-size: 14px;*/
   vertical-align: middle;
   outline: none;
   cursor: pointer;
@@ -569,7 +576,7 @@ fieldset[disabled] .btn.btn-black.active {
 }
 .list-group .list {
   color: black;
-  font-size: 14px;
+  /*font-size: 14px;*/
   margin: 5px 5px 5px 20px;
   padding-left: 20px;
 }
@@ -1571,24 +1578,28 @@ fieldset[disabled] .btn.btn-black.active {
 .nav-panel .main-panel .filter-content .tab-pane .nav-sublist {
   /*position: absolute;
                     top: 0;*/
-  -moz-transform: translateX(-200%);
-  -ms-transform: translateX(-200%);
-  -o-transform: translateX(-200%);
-  -webkit-transform: translateX(-200%);
-  transform: translateX(-200%);
+  /*-moz-transform: translateX(-200%);
+                    -ms-transform: translateX(-200%);
+                    -o-transform: translateX(-200%);
+                    -webkit-transform: translateX(-200%);
+                    transform: translateX(-200%);*/
 }
 .nav-panel .main-panel .filter-content .tab-pane .nav-sublist.active {
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  -webkit-transform: translateX(0);
-  transform: translateX(0);
+  /*-moz-transform: translateX(0);
+                        -ms-transform: translateX(0);
+                        -o-transform: translateX(0);
+                        -webkit-transform:translateX(0);
+                        transform: translateX(0);*/
 }
 .nav-panel .main-panel .filter-content .tab-pane .nav-sublist .btn-black {
   margin: 5px 0 0 0;
 }
 .nav-panel .main-panel .filter-content .tab-pane .nav-sublist .btn-black:hover {
   background: #a5cd00;
+}
+.nav-panel .main-panel .filter-content .tab-pane .nav-sublist .link a {
+  color: #a5cd00;
+  text-decoration: underline;
 }
 .nav-panel .main-panel .filter-content .list-group {
   margin-top: 60px;
@@ -1626,7 +1637,7 @@ fieldset[disabled] .btn.btn-black.active {
   padding: 5px;
   cursor: pointer;
 }
-.nav-list li:hover,
+.nav-list li.profile-tabpane:hover,
 .nav-list li.active {
   background: #a5cd00;
 }
@@ -1645,6 +1656,26 @@ fieldset[disabled] .btn.btn-black.active {
   }
   .nav-panel .main-panel .nav li {
     flex: 1;
+  }
+  .nav-panel .main-panel .filter-content {
+    padding-bottom: 0;
+  }
+  .nav-panel .main-panel .filter-content .nav-sublist .nav-list li {
+    margin: 1px 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nav-panel .main-panel .filter-content {
+    background: url("../../img/bg-supplier.jpg") no-repeat;
+    background-size: cover;
+  }
+  .nav-panel .main-panel .filter-content .nav-sublist .nav-list li {
+    background: rgba(0, 0, 0, 0.8);
+    margin-top: 10px;
+    padding: 6px 10px;
+  }
+  .nav-panel .main-panel .filter-content .nav-sublist .nav-list:active {
+    background-color: #a5cd00;
   }
 }
 .logo-group .dsdlogo {
@@ -1908,6 +1939,11 @@ fieldset[disabled] .btn.btn-black.active {
 .form-wrapper {
   background: white;
   display: none;
+}
+@media (max-width: 767px) {
+  .form-wrapper {
+    display: none;
+  }
 }
 .form-wrapper.active {
   display: block;
