@@ -63,7 +63,7 @@
 }
 
 .dsd-icon-location-o:before {/*Where We Sell*/
-    content:"\f293";
+    content:"\f223";
 }
 
 .dsd-icon-phone:before {
@@ -115,19 +115,23 @@
 }
 
 .dsd-icon-information:before {/*Company Information*/
-    content:"\f298";
+    content:"\f221";
 }
 
 .dsd-icon-media:before {/*Social Media*/
-    content:"\f297";
+    content:"\f222";
 }
 
 .dsd-icon-flag:before {/*Associations*/
-    content:"\f294";
+    content:"\f224";
+}
+
+.dsd-icon-awards:before {
+    content: '\f091';
 }
 
 .dsd-icon-key:before {/*Set Password*/
-    content:"\f296";
+    content:"\f225";
 }
 
 .dsd-icon-back:before {
@@ -141,8 +145,11 @@
 .dsd-icon-delete:before {
     content:"\f014";
 }
+.dsd-icon-key-people:before {
+    content:'\f226';
+}
 
-/* Band Icons */
+/* Brand Icons */
 .dsd-icon-youtube-square:before {
     content:"\f166";
     color: #f12b2b;

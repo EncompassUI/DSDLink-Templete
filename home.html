@@ -39,43 +39,51 @@
                     <div class="main-panel clearfix" style="display:block;">
                         <div class="container-fluid">
                             <div class="row">
-                                <ul class="nav nav-tabs col-xs-12 col-sm-12 col-md-3 col-lg-3" role="tablist">
+                                <ul class="nav col-xs-12 col-sm-12 col-md-3 col-lg-3">
 
                                     <li class="col-xs-3 col-sm-3 col-md-12 col-lg-12 col-md-push-0 col-sm-push-3 col-xs-push-3 active"><a href="" role="tab" data-toggle="tab"><i class="dsd-icon-warehouse"></i>Find Distributor</a></li>
                                     <li class="col-xs-3 col-sm-3 col-md-12 col-lg-12 col-md-push-0 col-sm-push-3 col-xs-push-3 "><a href="supplier.html" role="tab" data-toggle="tab"><i class="dsd-icon-beer"></i>Find Supplier</a></li>
                                     <li class="col-xs-3 col-sm-3 col-md-12 col-lg-12 col-md-push-0 col-sm-push-3 col-xs-push-3"><a href="register.html" role="tab" data-toggle="tab"><i class="dsd-icon-register"></i>Register</a></li>
-                                    <li class="col-xs-3 col-sm-3 col-md-12 col-lg-12 col-md-pull-0 col-sm-pull-9 col-xs-pull-9"><a href="www.encompass8.com" target="_blank"><i class="dsd-icon-logo"></i>Contact Us</a></li>
+                                    <li class="col-xs-3 col-sm-3 col-md-12 col-lg-12 col-md-pull-0 col-sm-pull-9 col-xs-pull-9"><a href="http://www.encompass8.com" target="_blank"><i class="dsd-icon-logo"></i>Contact Us</a></li>
 
                                 </ul>
 
-                                <div class="tab-content col-xs-12 col-sm-12 col-md-9 col-lg-9">
+                                <div class="filter-content col-xs-12 col-sm-12 col-md-9 col-lg-9">
 
-                                    <div role="tabpanel" class="tab-pane active ">
+                                    <div class="tab-pane active ">
 
-                                        <div class="input-group">
-                                            <label class="input-label">Beverage Types</label>
-                                            <input type="text">
+                                        <div class="row">
+
+                                            <div class="input-group col-xs-12 col-sm-4 col-md-12">
+                                                <label class="input-label">Beverage Types</label>
+                                                <input type="text">
+                                            </div>
+                                            <div class="input-group col-xs-12 col-sm-4 col-md-12">
+                                                <label class="input-label">Supplier</label>
+                                                <input type="text">
+                                            </div>
+                                            <div class="input-group col-xs-12 col-sm-4 col-md-12">
+                                                <label class="input-label">Brand</label>
+                                                <input type="text">
+                                            </div>
+                                            <div class="input-group col-xs-12 col-sm-4 col-md-12">
+                                                <label class="input-label">State</label>
+                                                <input type="text">
+                                            </div>
+                                            <div class="input-group col-xs-12 col-sm-4 col-md-12">
+                                                <label class="input-label">Distributor</label>
+                                                <input type="text">
+                                            </div>
+                                            <div class="col-xs-12 col-sm-4 col-md-12">
+                                                <label style="visibility:hidden;">Button</label>
+                                                <button class="btn btn-green btn-block">Search</button>
+                                            </div>
+
                                         </div>
-                                        <div class="input-group">
-                                            <label class="input-label">Supplier</label>
-                                            <input type="text">
-                                        </div>
-                                        <div class="input-group">
-                                            <label class="input-label">Brand</label>
-                                            <input type="text">
-                                        </div>
-                                        <div class="input-group">
-                                            <label class="input-label">State</label>
-                                            <input type="text">
-                                        </div>
-                                        <div class="input-group">
-                                            <label class="input-label">Distributor</label>
-                                            <input type="text">
-                                        </div>
-                                        <button class="btn btn-green btn-block">Search</button>
+
                                     </div>
 
-                                    <div id="supplier" role="tabpanel" class="tab-pane ">
+                                    <!--<div id="supplier" role="tabpanel" class="tab-pane ">
                                         <div class="input-group">
                                             <input type="text">
                                             <span class="input-logo dsd-icon-search main-green"></span>
@@ -100,7 +108,7 @@
                                             <li class="sub-tabpane"><i class="dsd-icon-beer"></i>ADD A DISTRIBUTOR <span class=""></span></li>
                                         </ul>
                                         <div class="nav-sublist">
-                                           <button class="btn btn-black" id="subListBack"> <i class=""></i> Back</button>
+                                            <button class="btn btn-black" id="subListBack"> <i class="dsd-icon-back"></i> Back</button>
                                             <ul class="nav-list">
                                                 <li class="profile-tabpane"><i class="dsd-icon-information"></i>COMPANY INFORMATION <span class=""></span></li>
                                                 <li class="profile-tabpane"><i class="dsd-icon-media"></i>SOCIAL MEDIA <span class=""></span></li>
@@ -119,7 +127,7 @@
                                             </ul>
                                         </div>
 
-                                    </div>
+                                    </div>-->
 
                                 </div>
                             </div>
@@ -132,10 +140,12 @@
             <!-- Right: Map Container -->
             <div class="MainContent col-xs-12 col-sm-12 col-md-9 col-lg-9 col-md-offset-3 col-lg-offset-3">
                 <div class="hidden-xs map-container" id="#map-container">
-
+                    <center style="margin-top:20%;">
+                        <h1>This is Map Container</h1>
+                    </center>
                 </div>
 
-                <div class=" form-wrapper">
+                <!--<div class=" form-wrapper">
                     <div class="row">
                         <div class="form-head clearfix">
                             <h3><i class="dsd-icon-information"></i>COMPANY INFORMATION</h3>
@@ -394,7 +404,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
 
         </div>

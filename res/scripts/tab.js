@@ -32,7 +32,7 @@
          
          g.preventDefault();
      });
-     $('#subListBack').click(function () {
+     $('.subListBack').click(function () {
          $('.nav-sublist').removeClass('active');
          $('.nav-list').delay(200).show(1);
      });

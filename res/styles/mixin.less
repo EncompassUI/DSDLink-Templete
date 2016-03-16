@@ -1,3 +1,4 @@
+/*Reset*/
 .left {
     float: left;
 }
@@ -5,23 +6,45 @@
 .right {
     float: right;
 }
-.hidden{
+
+.hidden {
     display: none;
 }
+
+.margin-right-neer-base {
+    margin-right: @margin-neer-base;
+}
+
+.margin-neer-small {
+    margin: 0 @margin-neer-small;
+}
+
+.margin-neer-base {
+    margin:0 @margin-neer-base;
+}
+
+.width-reset {
+    width: 100%;
+}
+
 .img-responsive(@display: block) {
     display: @display;
     max-width: 100%; // Part 1: Set a maximum relative to the parent
     height: auto; // Part 2: Scale the height according to the width, otherwise you get stretching
 }
-.border-radius(@radius:4px 4px 4px 4px){
+
+.border-radius(@radius: 4px 4px 4px 4px) {
     border-radius: @radius;
 }
+
 .main-green {
     color: @main-green;
 }
-.input-block{
+
+.input-block {
     width: 100% !important;
 }
+
 .box-border-radius {
     border-radius: @border-radius-large;
 }
@@ -69,8 +92,9 @@
         font-size: 12px;
         text-align: center;
         width: 100%;
-        &:focus{
-            border:solid 1px @main-green;
+
+        &:focus {
+            border: solid 1px @main-green;
         }
     }
 
@@ -91,13 +115,14 @@
     border: 1px solid transparent;
     font-size: 14px;
     vertical-align: middle;
-    outline:none;
-    cursor:pointer;
+    outline: none;
+    cursor: pointer;
     // Button Color
     &.btn-green {
         .button-variant(#fff, @main-green, @main-green);
     }
-    &.btn-delete{
+
+    &.btn-delete {
         .button-variant(#fff, @main-red, @main-red);
     }
 

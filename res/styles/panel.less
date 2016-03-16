@@ -57,7 +57,8 @@
                 }
             }
         }
-        .tab-content {
+        .filter-content {
+            padding-bottom:20px;
             .tab-pane {
                 display: none;
                 position: relative;
@@ -80,10 +81,10 @@
                 margin-top: 60px;
             }
             .input-group {
-                margin: 15px 0;
+                margin: 5px 0;
             }
             .btn {
-                margin: 25px 0;
+                margin: -2px 0;
             }
         }
     }
@@ -113,7 +114,7 @@
 
 .nav-list {
     li {
-        border-radius: @border-radius-base;
+        border-radius: @border-radius-small;
         color: white;
         padding: 5px;
         cursor: pointer;
@@ -121,7 +122,7 @@
             background: @main-green;
         }
         i {
-            margin-right: 10px;
+            width:26px;
         }
     }
 }
@@ -131,7 +132,7 @@
         position: inherit;
         background-image: none;
         .main-panel {
-            .nav-tabs {
+            .nav {
                 -webkit-flex-direction: row;
                 -moz-flex-direction: row;
                 flex-direction: row;
