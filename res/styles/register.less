@@ -142,27 +142,16 @@
 }
 
 @media (max-width: @screen-xs-max) {
+    .MainContent{
+        padding:0;
+    }
     .form-wrapper {
-        -moz-transform: translateX(-200%);
-        -ms-transform: translateX(-200%);
-        -o-transform: translateX(-200%);
-        -webkit-transform: translateX(-200%);
-        transform: translateX(-200%);
-
-        &.active {
-            -moz-transform: translateX(0);
-            -ms-transform: translateX(0);
-            -o-transform: translateX(0);
-            -webkit-transform: translateX(0);
-            transform: translateX(0);
-        }
 
         .form-head {
             padding: 12px 0;
-            color: @white;
-            background: @dark-black;
             line-height: 32px;
             height: 52px;
+            margin: 0;
 
             h3 {
                 text-align: center;

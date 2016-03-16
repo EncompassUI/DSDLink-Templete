@@ -2062,26 +2062,14 @@ fieldset[disabled] .btn.btn-black.active {
   float: right;
 }
 @media (max-width: 767px) {
-  .form-wrapper {
-    -moz-transform: translateX(-200%);
-    -ms-transform: translateX(-200%);
-    -o-transform: translateX(-200%);
-    -webkit-transform: translateX(-200%);
-    transform: translateX(-200%);
-  }
-  .form-wrapper.active {
-    -moz-transform: translateX(0);
-    -ms-transform: translateX(0);
-    -o-transform: translateX(0);
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
+  .MainContent {
+    padding: 0;
   }
   .form-wrapper .form-head {
     padding: 12px 0;
-    color: #ffffff;
-    background: #141414;
     line-height: 32px;
     height: 52px;
+    margin: 0;
   }
   .form-wrapper .form-head h3 {
     text-align: center;
