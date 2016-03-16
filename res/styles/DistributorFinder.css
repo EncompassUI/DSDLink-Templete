@@ -1561,22 +1561,34 @@ fieldset[disabled] .btn.btn-black.active {
   padding-bottom: 20px;
 }
 .nav-panel .main-panel .filter-content .tab-pane {
-  display: none;
-  position: relative;
+  /*display: none;*/
+  /*position: relative;*/
+  /*height:100%;*/
+  /*&.active {
+                    display: block;
+                }*/
 }
 .nav-panel .main-panel .filter-content .tab-pane .nav-sublist {
-  position: absolute;
-  top: 0;
-  transform: translateX(1200%);
+  /*position: absolute;
+                    top: 0;*/
+  -moz-transform: translateX(-200%);
+  -ms-transform: translateX(-200%);
+  -o-transform: translateX(-200%);
+  -webkit-transform: translateX(-200%);
+  transform: translateX(-200%);
 }
 .nav-panel .main-panel .filter-content .tab-pane .nav-sublist.active {
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 .nav-panel .main-panel .filter-content .tab-pane .nav-sublist .btn-black {
   margin: 5px 0 0 0;
 }
-.nav-panel .main-panel .filter-content .tab-pane.active {
-  display: block;
+.nav-panel .main-panel .filter-content .tab-pane .nav-sublist .btn-black:hover {
+  background: #a5cd00;
 }
 .nav-panel .main-panel .filter-content .list-group {
   margin-top: 60px;
