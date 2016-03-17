@@ -21,7 +21,7 @@
         }
     }
     .form-content {
-        margin: 10px 35px;
+        margin: 10px 50px;
         .card-state {
             margin: 10px 0;
             border-top: 1px solid #ccc;
@@ -46,7 +46,7 @@
         .input-group {
             @height: 30px;
             text-align: right;
-            margin: 15px 0;
+            margin: 10px 0;
             position: relative;
             i {
                 position: absolute;
@@ -60,6 +60,7 @@
                 height: @height;
                 width: 100%;
                 font-weight: lighter;
+                background: #eee;
             }
             .uploadimg {
                 font-size: 0;
@@ -89,7 +90,9 @@
         }
     }
     .form-state,
-    .form-association {
+    .form-association,
+    .form-award,
+    .form-contact{
         .input-with-button {
             button {
                 height: 30px;
@@ -103,10 +106,14 @@
             }
         }
     }
-    .form-award {
-        .btn-green {
-            height: 38px;
+    .form-contact{
+        .input-group{
+             margin: 5px 0;
         }
+       
+    }
+    .form-award {
+       
         .input-group {
             input {
                 width: 100%;
@@ -116,9 +123,9 @@
 }
 
 .card-content {
-    border: 1px solid #bbb;
-    border-radius: 4px;
-    margin-top: 20px;
+    border-top: 1px solid #ccc;
+    
+    margin-top: 15px;
 
     h4 {
         margin: 20px;
@@ -129,14 +136,12 @@
     }
 
     .card-list {
-        margin: 0 20px;
-
+        
         li {
             font-size: 16px;
-
-            .btn.btn-delete {
-                float: right;
-            }
+        }
+        button.btn-delete{
+            margin-right: 10px;
         }
     }
 }

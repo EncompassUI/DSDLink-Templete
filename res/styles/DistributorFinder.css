@@ -394,20 +394,23 @@ li {
   display: block;
 }
 .input-group input {
-  background: #eee;
-  border: 1px solid #eee;
-  height: 18px;
+  background: white;
+  border: 1px solid white;
+  height: 22px;
   font-size: 12px;
   text-align: center;
   width: 100%;
+  border-radius: 1px;
+  color: #000;
 }
 .input-group input:focus {
   border: solid 1px #a5cd00;
 }
 .input-group span.input-logo {
   position: absolute;
-  top: 5px;
-  right: 10px;
+  top: 50%;
+  margin-top: -7.33333333px;
+  right: 5px;
 }
 .btn {
   display: inline-block;
@@ -506,6 +509,9 @@ fieldset[disabled] .btn.btn-delete:active,
 fieldset[disabled] .btn.btn-delete.active {
   background-color: #ff9d02;
   border-color: #ff9d02;
+}
+.btn.btn-delete i {
+  margin-right: 10px;
 }
 .btn.btn-black {
   color: #ffffff;
@@ -1964,7 +1970,7 @@ fieldset[disabled] .btn.btn-black.active {
   margin-left: 10px;
 }
 .form-wrapper .form-content {
-  margin: 10px 35px;
+  margin: 10px 50px;
 }
 .form-wrapper .form-content .card-state {
   margin: 10px 0;
@@ -1987,7 +1993,7 @@ fieldset[disabled] .btn.btn-black.active {
 }
 .form-wrapper .form-content .input-group {
   text-align: right;
-  margin: 15px 0;
+  margin: 10px 0;
   position: relative;
 }
 .form-wrapper .form-content .input-group i {
@@ -2002,6 +2008,7 @@ fieldset[disabled] .btn.btn-black.active {
   height: 30px;
   width: 100%;
   font-weight: lighter;
+  background: #eee;
 }
 .form-wrapper .form-content .input-group .uploadimg {
   font-size: 0;
@@ -2027,28 +2034,33 @@ fieldset[disabled] .btn.btn-black.active {
   font-size: 28px;
 }
 .form-wrapper .form-state .input-with-button button,
-.form-wrapper .form-association .input-with-button button {
+.form-wrapper .form-association .input-with-button button,
+.form-wrapper .form-award .input-with-button button,
+.form-wrapper .form-contact .input-with-button button {
   height: 30px;
 }
 .form-wrapper .form-state .input-group,
-.form-wrapper .form-association .input-group {
+.form-wrapper .form-association .input-group,
+.form-wrapper .form-award .input-group,
+.form-wrapper .form-contact .input-group {
   margin: 0;
   text-align: left;
 }
 .form-wrapper .form-state .input-group input,
-.form-wrapper .form-association .input-group input {
+.form-wrapper .form-association .input-group input,
+.form-wrapper .form-award .input-group input,
+.form-wrapper .form-contact .input-group input {
   width: 100%;
 }
-.form-wrapper .form-award .btn-green {
-  height: 38px;
+.form-wrapper .form-contact .input-group {
+  margin: 5px 0;
 }
 .form-wrapper .form-award .input-group input {
   width: 100%;
 }
 .card-content {
-  border: 1px solid #bbb;
-  border-radius: 4px;
-  margin-top: 20px;
+  border-top: 1px solid #ccc;
+  margin-top: 15px;
 }
 .card-content h4 {
   margin: 20px;
@@ -2056,14 +2068,11 @@ fieldset[disabled] .btn.btn-black.active {
 .card-content h4 button.btn-delete {
   float: right;
 }
-.card-content .card-list {
-  margin: 0 20px;
-}
 .card-content .card-list li {
   font-size: 16px;
 }
-.card-content .card-list li .btn.btn-delete {
-  float: right;
+.card-content .card-list button.btn-delete {
+  margin-right: 10px;
 }
 @media (max-width: 991px) {
   .MainContent .form-wrapper .form-head {

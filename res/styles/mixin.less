@@ -76,8 +76,9 @@
 
 //input button
 .input-group {
+    @input-height:22px;
+    
     position: relative;
-
     label.input-label {
         color: @main-green;
         font-size: 15px;
@@ -86,13 +87,14 @@
     }
 
     input {
-        background: #eee;
-        border: 1px solid #eee;
-        height: 18px;
+        background: white;
+        border: 1px solid white;
+        height: @input-height;
         font-size: 12px;
         text-align: center;
         width: 100%;
-
+        border-radius: 1px;
+        color: #000;
         &:focus {
             border: solid 1px @main-green;
         }
@@ -100,8 +102,9 @@
 
     span.input-logo {
         position: absolute;
-        top: 5px;
-        right: 10px;
+        top: 50%;
+        margin-top: -@input-height/3;
+        right: 5px;
     }
 }
 
@@ -124,6 +127,9 @@
 
     &.btn-delete {
         .button-variant(#fff, @main-orange, @main-orange);
+        i{
+            margin-right: 10px;
+        }
     }
 
     &.btn-black {
