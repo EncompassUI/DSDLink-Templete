@@ -399,7 +399,7 @@ li {
 }
 .input-group input {
   background: white;
-  border: 1px solid white;
+  border: 1px solid transparent;
   height: 22px;
   font-size: 12px;
   text-align: center;
@@ -2045,13 +2045,12 @@ fieldset[disabled] .btn.btn-black.active {
 .form-wrapper .form-association .input-with-button button,
 .form-wrapper .form-award .input-with-button button,
 .form-wrapper .form-contact .input-with-button button {
-  height: 30px;
+  margin: 10px 0;
 }
 .form-wrapper .form-state .input-group,
 .form-wrapper .form-association .input-group,
 .form-wrapper .form-award .input-group,
 .form-wrapper .form-contact .input-group {
-  margin: 0;
   text-align: left;
 }
 .form-wrapper .form-state .input-group input,
