@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Icons';
-    src: url('Command.eot?v=4.4.0');
-    src: url('Command.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('Command.ttf?v=4.4.0') format('truetype'), url('Command.svg?v=4.4.0#fontawesomeregular') format('svg');
+    src: url('dsd.ttf');
+    /*src: url('Command.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('Command.ttf?v=4.4.0') format('truetype'), url('Command.svg?v=4.4.0#fontawesomeregular') format('svg');*/
     font-weight: normal;
     font-style: normal;
 }
@@ -35,148 +35,145 @@
 }
 
 .dsd-icon-warehouse:before {/*Distributor*/
-    content:"\f287";
+    content:"\e900";
 }
 
 .dsd-icon-beer:before {/*Supplier*/
-    content:"\f288";
+    content:"\e901";
 }
 
 .dsd-icon-register:before {/*Register*/
-    content:"\f289";
+    content:"\e902";
 }
 
 .dsd-icon-logo:before {/*Contact Us*/
-    content:"\f28A";
+    content:"\e903";
 }
 
 .dsd-icon-smile:before {
-    content:"\f28B";
+    content:"\e90f";
 }
 
 .dsd-icon-search:before {
-    content:"\f002";
+    content:"\e923";
 }
 
 .dsd-icon-location:before {
-    content:"\f28C";
+    content:"\e90a";
 }
 
 .dsd-icon-location-o:before {/*Where We Sell*/
-    content:"\f223";
+    content:"\e90b";
 }
 
 .dsd-icon-phone:before {
-    content:"\f095";
+    content:"\e910";
 }
 
 .dsd-icon-share:before {
-    content:"\f28D";
+    content:"\e905";
 }
 
 .dsd-icon-mail:before {/* Mistake */
-    content:"\f0e0";
+    content:"\e928";
 }
 
 .dsd-icon-pencil:before {/*Update Profile*/
-    content:"\f28E";
+    content:"\e922";
 }
 
 .dsd-icon-other-location:before {/*Other Location*/
-    content:"\f28F";
+    content:"\e90e";
 }
 
 .dsd-icon-tag:before {/*What we sell*/
-    content:"\f02b";
+    content:"\e90d";
 }
 
 .dsd-icon-chart:before {/*Profile Visits*/
-    content:"\f290";
+    content:"\e913";
 }
 
 .dsd-icon-user-group:before {/*Key People*/
-    content:"\f0c0";
+    content:"\e91a";
 }
 
 .dsd-icon-user-group-o:before {/*Key People*/
-    content:"\f295";
+    content:"\e919";
 }
 
 .dsd-icon-user:before {/*Owner*/
-    content:"\f007";
+    content:"\e91c";
 }
 
 .dsd-icon-converage:before {/*Market Converage*/
-    content:"\f291";
+    content:"\e916";
 }
 
 .dsd-icon-globe:before {/*Website*/
-    content:"\f0ac";
+    content:"\e917";
 }
 
 .dsd-icon-information:before {/*Company Information*/
-    content:"\f221";
+    content:"\e908";
 }
 
 .dsd-icon-media:before {/*Social Media*/
-    content:"\f222";
+    content:"\e909";
 }
 
 .dsd-icon-flag:before {/*Associations*/
-    content:"\f224";
+    content:"\e911";
 }
 
 .dsd-icon-awards:before {
-    content: '\f091';
+    content: '\e914';
 }
 
 .dsd-icon-key:before {/*Set Password*/
-    content:"\f225";
+    content:"\e906";
 }
 
 .dsd-icon-back:before {
-    content:"\f286";
+    content:"\e91e";
 }
 
 .dsd-icon-square:before{/**/
-    content:"\f0c8";
+    content:"\e925";
 }
 
 .dsd-icon-delete:before {
-    content:"\f014";
-}
-.dsd-icon-key-people:before {
-    content:'\f226';
+    content:"\e927";
 }
 
 /* Brand Icons */
 .dsd-icon-youtube-square:before {
-    content:"\f166";
+    content:"\e92d";
     color: #f12b2b;
 }
 
 .dsd-icon-facebook-square:before {
-    content:"\f082";
+    content:"\e929";
     color: #667eb9;
 }
 
 .dsd-icon-twitter-square:before {
-    content:"\f081";
+    content:"\e92c";
     color: #5dd7fc;
 }
 
 .dsd-icon-instagram:before {
-    content:"\f299";
+    content:"\e92a";
     color:#c5ac86;
 }
 
 .dsd-icon-linkin-square:before {
-    content:"\f08c";
+    content:"\e92b";
     color: #38a6d7;
 }
 .dsd-icon-viewprofile:before {
-    content:"\f022";
+    content:"\e90c";
 }
 .dsd-icon-sortdown:before {
-    content:"\f0d7";
+    content:"\e9f";
 }
