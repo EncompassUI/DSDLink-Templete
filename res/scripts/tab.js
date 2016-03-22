@@ -1,5 +1,6 @@
 $(document).ready(function () {
     var isMobile = navigator.appVersion.indexOf("Mobile") != -1;
+    //var isIPad = navigator.userAgent.match(/ipad/) != -1;
 
     if (isMobile) {
         $('.form-wrapper:first').removeClass('active');
@@ -9,7 +10,7 @@ $(document).ready(function () {
      SubTabToggle();
      ProfileSwitch();
      RegistBack();
- });
+});
 
  function TabToggle() {
      $('[role="tablist"] [role="tab"]').click(function (g) {
@@ -46,7 +47,9 @@ $(document).ready(function () {
  };
 
  function ProfileSwitch() {
+     //var isMobile = (navigator.userAgent.match(/(phone|pod|iPhone|iPod|Android|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|BrowserNG|WebOS|Symbian|Windows Phone)/i)) != -1;
      var isMobile = navigator.appVersion.indexOf("Mobile") != -1;
+     var isIPad = navigator.userAgent.toLowerCase().match(/ipad/) != -1;
 
      $('.profile-tabpane').click(function () {
          var index = $(this).index(),
@@ -68,7 +71,9 @@ $(document).ready(function () {
  };
 
  function RegistBack() {
+     //var isMobile = (navigator.userAgent.match(/(phone|pod|iPhone|iPod|Android|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)) != -1,
      var isMobile = navigator.appVersion.indexOf("Mobile") != -1,
+         isIPad = navigator.userAgent.toLowerCase().match(/ipad/) != -1,
          navPanel = $('.nav-panel');
 
      $('.btn-back').click(function () {

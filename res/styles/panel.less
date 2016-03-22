@@ -136,8 +136,12 @@
         color: white;
         padding: 5px;
         cursor: pointer;
-        &.profile-tabpane:hover , &.active {
-            background: @main-green;
+        margin-bottom:0;
+        &.profile-tabpane:hover {
+            background:rgba(255,255,255,.1);
+        }
+        &.active {
+            background: @main-green!important;
         }
         i {
             width:26px;

@@ -12,6 +12,10 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+input,
+button {
+  -webkit-appearance: none;
+}
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -1642,10 +1646,13 @@ fieldset[disabled] .btn.btn-black.active {
   color: white;
   padding: 5px;
   cursor: pointer;
+  margin-bottom: 0;
 }
-.nav-list li.profile-tabpane:hover,
+.nav-list li.profile-tabpane:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
 .nav-list li.active {
-  background: #a5cd00;
+  background: #a5cd00 !important;
 }
 .nav-list li i {
   width: 26px;
@@ -1924,12 +1931,13 @@ fieldset[disabled] .btn.btn-black.active {
   .supplier-container .company-frame h3.box-title {
     padding: 10px 0;
   }
-  .supplier-container .ads-group .col-xs-12,
-  .supplier-container .two-ads-group .col-xs-12 {
+  .supplier-container .ads-group .box-margin,
+  .supplier-container .two-ads-group .box-margin {
     padding: 0;
   }
-  .supplier-container .two-ads-group .box-margin:last-child {
-    margin-top: 20px;
+  .supplier-container .ads-group:not(:last-child),
+  .supplier-container .two-ads-group:not(:last-child) {
+    margin-right: 10px;
   }
   .supplier-container .company-logos {
     padding: 0 5px 5px 5px;
@@ -2090,6 +2098,9 @@ fieldset[disabled] .btn.btn-black.active {
     line-height: 32px;
     height: 52px;
     margin: 0;
+    border-bottom: none;
+    background: #000!important;
+    color: #fff;
   }
   .form-wrapper .form-head h3 {
     text-align: center;
@@ -2097,6 +2108,7 @@ fieldset[disabled] .btn.btn-black.active {
     width: 100%;
     left: 0;
     z-index: 1;
+    color: #fff;
   }
   .form-wrapper .form-head .btn {
     position: absolute;

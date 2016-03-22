@@ -165,13 +165,12 @@
         }
 
         .ads-group, .two-ads-group {
-            .col-xs-12 {
+            .box-margin {
                 padding: 0;
             }
-        }
-
-        .two-ads-group .box-margin:last-child {
-            margin-top: @margin-large;
+            &:not(:last-child){
+                margin-right:@margin-base;
+            }
         }
 
         .company-logos {
