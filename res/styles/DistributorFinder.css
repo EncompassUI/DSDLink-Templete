@@ -1576,13 +1576,12 @@ fieldset[disabled] .btn.btn-black.active {
   color: #a5cd00;
 }
 .nav-panel .main-panel .filter-content {
-  padding: 0 5px 20px 5px;
+  padding: 0 3px 20px 3px;
 }
-.nav-panel .main-panel .filter-content .tab-pane .nav-sublist .btn-black {
-  margin: 5px 0 0 0;
-}
-.nav-panel .main-panel .filter-content .tab-pane .nav-sublist .btn-black:hover {
-  background: #a5cd00;
+.nav-panel .main-panel .filter-content .tab-pane .nav-sublist .nav-list-title {
+  color: #a5cd00;
+  display: block;
+  margin: 10px 0 0 -10px;
 }
 .nav-panel .main-panel .filter-content .tab-pane .nav-sublist .link a {
   color: #a5cd00;
@@ -1618,6 +1617,9 @@ fieldset[disabled] .btn.btn-black.active {
   padding: 20px;
   overflow-y: scroll;
 }
+.nav-list {
+  margin-top: 5px;
+}
 .nav-list:active {
   background: transparent;
 }
@@ -1631,6 +1633,21 @@ fieldset[disabled] .btn.btn-black.active {
   padding: 5px;
   cursor: pointer;
   margin-bottom: 0;
+  margin-top: 5px;
+}
+.nav-list li:after {
+  font-family: Icons;
+  content: '\e91e';
+  display: inline-block;
+  position: absolute;
+  top: 9px;
+  right: 4px;
+  font-size: 10px;
+  transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
 }
 .nav-list li.profile-tabpane:hover {
   background: rgba(255, 255, 255, 0.1);
@@ -1658,9 +1675,15 @@ fieldset[disabled] .btn.btn-black.active {
   .nav-panel .main-panel .filter-content .tab-pane {
     margin: 0 5px;
   }
+  .nav-panel .main-panel .filter-content .tab-pane .nav-sublist .nav-list-title {
+    text-align: center;
+  }
   .nav-panel .main-panel .filter-content .tab-pane .nav-sublist .nav-list li {
     margin: 5px 0;
     background: rgba(255, 255, 255, 0.05);
+  }
+  .nav-panel .main-panel .filter-content .tab-pane .nav-sublist .nav-list li:after {
+    display: none !important;
   }
 }
 @media screen and (max-width: 767px) {
@@ -1672,6 +1695,10 @@ fieldset[disabled] .btn.btn-black.active {
     background: rgba(0, 0, 0, 0.8);
     margin-top: 10px;
     padding: 6px 10px;
+  }
+  .register-panel .main-panel .filter-content .tab-pane .nav-sublist .nav-list li:after {
+    display: inline-block !important;
+    font-size: 14px;
   }
 }
 .logo-group .dsdlogo {
@@ -1944,7 +1971,7 @@ fieldset[disabled] .btn.btn-black.active {
 }
 .form-wrapper .form-head {
   border-bottom: 1px dashed #ccc;
-  margin: 0 50px;
+  margin: 0 20px 0 40px;
   padding: 5px 0px;
 }
 .form-wrapper .form-head h3 {
@@ -1959,7 +1986,7 @@ fieldset[disabled] .btn.btn-black.active {
   margin-left: 10px;
 }
 .form-wrapper .form-content {
-  margin: 10px 50px;
+  margin: 10px 20px 10px 40px;
 }
 .form-wrapper .form-content .card-state {
   margin: 10px 0;
@@ -2091,12 +2118,15 @@ fieldset[disabled] .btn.btn-black.active {
   .MainContent .form-wrapper .form-head {
     background: #f0f0f0;
     margin: 0;
-    padding: 8px 50px;
+    padding: 12px 20px 10px 40px;
   }
 }
 @media (max-width: 767px) {
   .MainContent {
     padding: 0;
+  }
+  .form-wrapper > .row:first-child {
+    margin: 0;
   }
   .form-wrapper .form-head {
     padding: 12px 0;
