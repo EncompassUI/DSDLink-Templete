@@ -2,41 +2,52 @@
     background: #fff;
     display: none;
     padding-top: 10px;
+
     &.active {
         display: block;
     }
+
     .form-head {
         border-bottom: 1px dashed #ccc;
         margin: 0 50px;
         padding: 5px 0px;
+
         h3 {
             display: inline-block;
             color: black;
             font-size: 20px;
+
             i {
                 margin-right: 10px;
             }
         }
+
         button {
             margin-left: 10px;
         }
     }
+
     .form-content {
         margin: 10px 50px;
+
         .card-state {
             margin: 10px 0;
             border-top: 1px solid #ccc;
+
             .card-state-title {
                 margin: 10px 0;
                 font-size: 18px;
+
                 b {
                     margin-left: 10px;
                 }
+
                 span {
                     float: right;
                     font-size: 16px;
                     vertical-align: text-bottom;
                 }
+
                 button {
                     i.dsd-icon-delete {
                         margin-right: 10px;
@@ -44,27 +55,38 @@
                 }
             }
         }
+
         .input-group {
             @height: 30px;
             text-align: right;
             margin: 10px 0;
-            position: relative;
+
             i {
                 position: absolute;
                 left: -10px;
                 top: 10px;
             }
+
             input {
                 text-align: left;
-                /*font-size: 16px;*/
                 padding: 0 10px;
                 height: @height;
                 width: 100%;
                 font-weight: lighter;
                 background: #eee;
+
+                &:focus {
+                    background: #fbfbfb;
+                }
             }
+
+            .input-logo{
+                right:25px;
+            }
+
             .uploadimg {
                 font-size: 0;
+
                 .uploadbtn {
                     font-size: 16px;
                     color: white;
@@ -77,44 +99,75 @@
                     line-height: @height;
                     cursor: pointer;
                 }
+
                 input {
                     width: 70%;
                 }
             }
         }
+
         .input-group-addon {
             i.input-addon {
-                top: 2px;
+                top: 3px;
                 left: -15px;
-                font-size: 28px;
+                font-size: 24px;
+            }
+        }
+
+        &.social-media {
+            .input-group {
+                margin-bottom: @margin-large;
+
+                .dsd-icon-youtube-square {
+                    color: #f12b2b;
+                }
+
+                .dsd-icon-facebook-square {
+                    color: #667eb9;
+                }
+
+                .dsd-icon-twitter-square {
+                    color: #5dd7fc;
+                }
+
+                .dsd-icon-instagram {
+                    color: #c5ac86;
+                }
+
+                .dsd-icon-linkin-square {
+                    color: #38a6d7;
+                }
             }
         }
     }
+
     .form-state,
     .form-association,
     .form-award,
-    .form-contact{
+    .form-contact {
         .input-with-button {
             button {
                 margin: 10px 0;
             }
         }
+
         .input-group {
-            
             text-align: left;
+
             input {
                 width: 100%;
             }
         }
     }
-    .form-contact{
-        .input-group{
-             margin: 5px 0;
+
+    .form-contact {
+        .input-group {
+            margin: 5px 0;
         }
-       
     }
+
     .form-award {
-       
+
         .input-group {
             input {
                 width: 100%;
@@ -151,7 +204,7 @@
     .MainContent {
 
         .form-wrapper {
-
+            padding-top:0;
             .form-head {
                 background: #f0f0f0;
                 margin: 0;

@@ -344,6 +344,9 @@ li {
   body {
     font-size: 18px;
   }
+  body .input-group input {
+    font-size: 14px;
+  }
   [class*="dsd-icon-"] {
     font-size: 18px;
   }
@@ -401,7 +404,6 @@ li {
   background: white;
   border: 1px solid transparent;
   height: 22px;
-  font-size: 12px;
   text-align: center;
   width: 100%;
   border-radius: 1px;
@@ -423,7 +425,6 @@ li {
   padding: 6px 16px;
   line-height: 15px;
   border: 1px solid transparent;
-  /*font-size: 14px;*/
   vertical-align: middle;
   outline: none;
   cursor: pointer;
@@ -1577,11 +1578,6 @@ fieldset[disabled] .btn.btn-black.active {
 .nav-panel .main-panel .filter-content {
   padding: 0 5px 20px 5px;
 }
-.nav-panel .main-panel .filter-content .tab-pane {
-  /*&.active {
-                    display: block;
-                }*/
-}
 .nav-panel .main-panel .filter-content .tab-pane .nav-sublist .btn-black {
   margin: 5px 0 0 0;
 }
@@ -1622,7 +1618,14 @@ fieldset[disabled] .btn.btn-black.active {
   padding: 20px;
   overflow-y: scroll;
 }
+.nav-list:active {
+  background: transparent;
+}
 .nav-list li {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   border-radius: 3px;
   color: white;
   padding: 5px;
@@ -1632,7 +1635,8 @@ fieldset[disabled] .btn.btn-black.active {
 .nav-list li.profile-tabpane:hover {
   background: rgba(255, 255, 255, 0.1);
 }
-.nav-list li.active {
+.nav-list li.active,
+.nav-list li.profile-tabpane:active {
   background: #a5cd00 !important;
 }
 .nav-list li i {
@@ -1668,9 +1672,6 @@ fieldset[disabled] .btn.btn-black.active {
     background: rgba(0, 0, 0, 0.8);
     margin-top: 10px;
     padding: 6px 10px;
-  }
-  .register-panel .main-panel .filter-content .tab-pane .nav-sublist .nav-list:active {
-    background-color: #a5cd00;
   }
 }
 .logo-group .dsdlogo {
@@ -1982,7 +1983,6 @@ fieldset[disabled] .btn.btn-black.active {
 .form-wrapper .form-content .input-group {
   text-align: right;
   margin: 10px 0;
-  position: relative;
 }
 .form-wrapper .form-content .input-group i {
   position: absolute;
@@ -1991,12 +1991,17 @@ fieldset[disabled] .btn.btn-black.active {
 }
 .form-wrapper .form-content .input-group input {
   text-align: left;
-  /*font-size: 16px;*/
   padding: 0 10px;
   height: 30px;
   width: 100%;
   font-weight: lighter;
   background: #eee;
+}
+.form-wrapper .form-content .input-group input:focus {
+  background: #fbfbfb;
+}
+.form-wrapper .form-content .input-group .input-logo {
+  right: 25px;
 }
 .form-wrapper .form-content .input-group .uploadimg {
   font-size: 0;
@@ -2017,9 +2022,27 @@ fieldset[disabled] .btn.btn-black.active {
   width: 70%;
 }
 .form-wrapper .form-content .input-group-addon i.input-addon {
-  top: 2px;
+  top: 3px;
   left: -15px;
-  font-size: 28px;
+  font-size: 24px;
+}
+.form-wrapper .form-content.social-media .input-group {
+  margin-bottom: 20px;
+}
+.form-wrapper .form-content.social-media .input-group .dsd-icon-youtube-square {
+  color: #f12b2b;
+}
+.form-wrapper .form-content.social-media .input-group .dsd-icon-facebook-square {
+  color: #667eb9;
+}
+.form-wrapper .form-content.social-media .input-group .dsd-icon-twitter-square {
+  color: #5dd7fc;
+}
+.form-wrapper .form-content.social-media .input-group .dsd-icon-instagram {
+  color: #c5ac86;
+}
+.form-wrapper .form-content.social-media .input-group .dsd-icon-linkin-square {
+  color: #38a6d7;
 }
 .form-wrapper .form-state .input-with-button button,
 .form-wrapper .form-association .input-with-button button,
@@ -2062,6 +2085,9 @@ fieldset[disabled] .btn.btn-black.active {
   margin-right: 10px;
 }
 @media (max-width: 991px) {
+  .MainContent .form-wrapper {
+    padding-top: 0;
+  }
   .MainContent .form-wrapper .form-head {
     background: #f0f0f0;
     margin: 0;

@@ -1,8 +1,11 @@
 $(document).ready(function () {
+    document.body.addEventListener('touchstart', function () { });//...¿Õº¯Êý¼´¿É
+
     var isMobile = navigator.appVersion.indexOf("Mobile") != -1;
 
-    if (isMobile) {
-        $('.form-wrapper:first').removeClass('active');
+    if (!isMobile) {
+        $('.form-wrapper:first').addClass('active');
+        $('.nav-list .profile-tabpane:first').addClass('active');
     }
 
      TabToggle();
