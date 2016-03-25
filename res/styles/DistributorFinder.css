@@ -404,10 +404,11 @@ li {
   background: white;
   border: 1px solid transparent;
   height: 22px;
-  text-align: center;
+  text-align: left;
   width: 100%;
   border-radius: 1px;
   color: #000;
+  padding-left: 20px;
 }
 .input-group input:focus {
   border: solid 1px #a5cd00;
@@ -516,6 +517,9 @@ fieldset[disabled] .btn.btn-delete.active {
   border-color: #ff9d02;
 }
 .btn.btn-delete i {
+  margin-right: 10px;
+}
+.btn i.btn-icon {
   margin-right: 10px;
 }
 .btn.btn-black {
@@ -636,6 +640,64 @@ fieldset[disabled] .btn.btn-black.active {
 }
 .box-title i.dsd-icon-square {
   color: #a5cd00;
+}
+.Dialog-Mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: black;
+  opacity: 0.5;
+  z-index: 10;
+}
+.DSD-Dialog {
+  background: white;
+  width: 350px;
+  height: 200px;
+  z-index: 20;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -175px;
+  margin-top: -100px;
+  border-radius: 8px;
+}
+.DSD-Dialog.Submit-Dialog {
+  background: #ccc;
+  height: 250px;
+  margin-top: -125px;
+}
+.DSD-Dialog .Dialog-Title {
+  font-size: 16px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  font-weight: 600;
+}
+.DSD-Dialog .CloseButton {
+  font-size: 16px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.DSD-Dialog .Dialog-Content {
+  padding: 25px 20px;
+}
+.DSD-Dialog .Dialog-Content button {
+  height: 40px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+.DSD-Dialog .Dialog-Content button i {
+  font-size: 18px;
+}
+.DSD-Dialog .Dialog-Content .input-group input {
+  border-radius: 8px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+.DSD-Dialog .Dialog-Footer {
+  background: black;
 }
 .container {
   margin-right: auto;

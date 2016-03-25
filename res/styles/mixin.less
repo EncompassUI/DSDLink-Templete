@@ -90,10 +90,11 @@
         background: white;
         border: 1px solid transparent;
         height: @input-height;
-        text-align: center;
+        text-align: left;
         width: 100%;
         border-radius: 1px;
         color: #000;
+        padding-left: 20px;
         &:focus {
             border: solid 1px @main-green;
         }
@@ -128,6 +129,9 @@
         i{
             margin-right: 10px;
         }
+    }
+    i.btn-icon{
+        margin-right: 10px;
     }
 
     &.btn-black {
@@ -224,5 +228,70 @@
 .box-title {
     i.dsd-icon-square {
         color: @main-green;
+    }
+}
+
+.Dialog-Mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: black;
+    opacity: 0.5;
+    z-index: 10;
+}
+.DSD-Dialog {
+    @width:350px;
+    @height:200px;
+    @pos:50%;
+    background: white;
+    width: @width;
+    height: @height;
+    z-index: 20;
+    position: absolute;
+    top: @pos;
+    left: @pos;
+    margin-left: -@width/2;
+    margin-top: -@height/2;
+    border-radius: 8px;
+    &.Submit-Dialog{
+        @height:250px;
+        background: #ccc;
+        height: @height;
+        margin-top: -@height/2;
+    }
+    .Dialog-Title{
+        font-size: 16px;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+        font-weight: 600;
+    }
+    .CloseButton{
+        font-size: 16px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+    .Dialog-Content{
+        padding: 25px 20px;
+        button{
+            height: 40px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            i{
+                font-size: 18px;
+            }
+        }
+        .input-group{
+            input{
+                border-radius: 8px;
+                height: 40px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .Dialog-Footer{
+        background: black;
     }
 }
